@@ -4,6 +4,25 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, MessageSquare, CreditCard, Settings, HelpCircle, Users, Sparkles } from 'lucide-react';
 
+// Type definitions
+interface FAQItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+interface FAQQuestion {
+  question: string;
+  answer: string;
+}
+
+interface FAQCategoryProps {
+  title: string;
+  icon: React.ReactNode;
+  questions: FAQQuestion[];
+}
+
 // Composants de décoration
 const Decorations = () => (
   <>
@@ -15,7 +34,7 @@ const Decorations = () => (
 );
 
 // Composant FAQ
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
   return (
     <div 
       className="border border-violet-100 rounded-xl mb-4 overflow-hidden bg-white hover:shadow-md transition-all duration-300"
@@ -37,10 +56,10 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 };
 
 // Catégories de FAQ
-const FAQCategory = ({ title, icon, questions }) => {
-  const [openQuestionIndex, setOpenQuestionIndex] = useState(null);
+const FAQCategory = ({ title, icon, questions }: FAQCategoryProps) => {
+  const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(null);
   
-  const toggleQuestion = (index) => {
+  const toggleQuestion = (index: number) => {
     if (openQuestionIndex === index) {
       setOpenQuestionIndex(null);
     } else {
