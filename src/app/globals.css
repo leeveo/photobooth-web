@@ -1,0 +1,430 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importation de polices */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #6d28d9;
+  --primary-rgb: 109, 40, 217;
+  --secondary: #2563eb;
+  --accent: #ec4899;
+  --background: #f8f7fc;
+  --background-secondary: #f3f1fc;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[#f8f7fc] font-sora text-gray-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora font-bold;
+  }
+}
+
+/* Titre avec dégradé amélioré */
+.title-gradient {
+  position: relative;
+  line-height: 1.2;
+}
+
+.title-gradient span {
+  position: relative;
+  z-index: 2;
+}
+
+.title-shadow {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(168, 85, 247, 0.05));
+  filter: blur(25px);
+  border-radius: 30px;
+  z-index: 1;
+}
+
+/* Renforce la classe text-gradient existante */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600;
+  background-size: 300% 100%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Components */
+@layer components {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600;
+  }
+  
+  .btn-glow {
+    @apply inline-flex items-center px-8 py-4 font-medium text-lg text-white rounded-lg bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 transition-all duration-300;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center px-8 py-4 font-medium text-lg text-gray-800 rounded-lg border border-gray-300 hover:border-violet-500 hover:bg-white/50 transition-all duration-300;
+  }
+  
+  .nerko-card {
+    @apply relative rounded-2xl backdrop-blur-sm overflow-hidden bg-white;
+    border: 1px solid rgba(220, 220, 250, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+  
+  .nerko-card-inner {
+    @apply p-8 h-full flex flex-col;
+  }
+  
+  .nerko-card:hover {
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.1);
+  }
+  
+  .nerko-card .icon-box {
+    @apply w-16 h-16 rounded-xl flex items-center justify-center text-white bg-gradient-to-br from-purple-500 to-violet-500;
+  }
+  
+  .nerko-link {
+    @apply inline-flex items-center text-violet-600 font-medium hover:text-violet-800 transition-colors gap-2;
+  }
+  
+  .nerko-hero {
+    @apply bg-[#f8f7fc];
+    background-image: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08), transparent 70%);
+  }
+  
+  .nerko-cta {
+    background: linear-gradient(180deg, rgba(107, 33, 168, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
+  }
+  
+  .step-card {
+    @apply relative flex-1 bg-white backdrop-blur-sm rounded-xl p-6 border border-purple-100/50 flex flex-col items-center shadow-sm;
+  }
+  
+  .step-number {
+    @apply absolute top-4 right-4 text-4xl font-bold opacity-10 text-violet-800;
+  }
+  
+  .icon-circle {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white bg-gradient-to-br from-violet-500 to-purple-600;
+  }
+  
+  .gallery-card {
+    @apply relative overflow-hidden transition-transform hover:scale-[1.02] duration-300;
+  }
+  
+  .step-arrow {
+    @apply hidden md:block absolute top-1/2 -right-4 w-8 h-8 transform -translate-y-1/2;
+  }
+
+  .step-arrow:after {
+    content: '';
+    @apply absolute w-6 h-6 border-t-2 border-r-2 border-violet-200 transform rotate-45;
+  }
+  
+  .avatar-circle {
+    @apply w-12 h-12 rounded-full overflow-hidden border-2 border-white bg-violet-50;
+  }
+}
+
+/* SaaS Features Styles */
+.saas-feature-block {
+  @apply bg-white rounded-xl p-6 border border-gray-100 shadow-sm transition-all duration-300;
+}
+
+.saas-feature-block:hover {
+  @apply shadow-md transform translate-y-[-5px];
+}
+
+.icon-container {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+}
+
+.tech-badge {
+  @apply px-3 py-1 rounded-full text-xs font-medium bg-violet-100 text-violet-800;
+}
+
+.tech-feature-item {
+  @apply bg-white rounded-lg p-3 hover:shadow-md transition-all duration-200;
+}
+
+.tech-icon {
+  @apply bg-gradient-to-r from-violet-100 to-indigo-100 w-8 h-8 rounded-lg flex items-center justify-center text-violet-600 mb-2;
+}
+
+.tech-title {
+  @apply text-sm font-semibold text-gray-800 mb-1;
+}
+
+.tech-desc {
+  @apply text-xs text-gray-500;
+}
+
+/* Decoration elements */
+.shape {
+  @apply absolute pointer-events-none;
+}
+
+.shape-1 {
+  top: 120px;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
+}
+
+.shape-2 {
+  bottom: 10%;
+  left: 5%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 70%);
+  filter: blur(30px);
+}
+
+.shape-3 {
+  top: 40%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
+}
+
+.shape-4 {
+  top: 20%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.shape-5 {
+  bottom: 15%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.2) 0%, transparent 70%);
+  filter: blur(30px);
+}
+
+.shape-6 {
+  top: 45%;
+  right: 15%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+  filter: blur(20px);
+}
+
+/* Glow effects */
+.glow-circle-1 {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+  filter: blur(40px);
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.glow-circle-2 {
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.08) 0%, transparent 60%);
+  filter: blur(50px);
+  opacity: 0.7;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Hero image effects */
+.hero-image-wrap {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.5s ease;
+}
+
+.hero-image-wrap:hover {
+  transform: rotateY(0) rotateX(0);
+}
+
+.hero-image-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating-badge-1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-badge-2 {
+  animation: float 8s ease-in-out infinite 1s;
+}
+
+/* CTA Decorations */
+.cta-glow-1 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+  filter: blur(50px);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.cta-glow-2 {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, transparent 60%);
+  filter: blur(60px);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.cta-deco-1 {
+  position: absolute;
+  left: -30px;
+  top: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3));
+  filter: blur(30px);
+  z-index: -1;
+  opacity: 0.3;
+  transform: rotate(-15deg);
+}
+
+.cta-deco-2 {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  width: 180px;
+  height: 100px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(168, 85, 247, 0.2));
+  filter: blur(40px);
+  z-index: -1;
+  opacity: 0.2;
+  transform: rotate(25deg);
+}
+
+.cta-deco-3 {
+  position: absolute;
+  right: 30%;
+  top: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(99, 102, 241, 0.2));
+  filter: blur(25px);
+  z-index: -1;
+  opacity: 0.2;
+}
+
+/* Particles Animation */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particles:before,
+.particles:after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.particles:before {
+  animation: particle1 8s linear infinite;
+  top: 20%;
+  left: 30%;
+}
+
+.particles:after {
+  animation: particle2 12s linear infinite;
+  top: 60%;
+  left: 70%;
+}
+
+@keyframes particle1 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(100px, -100px) scale(0); opacity: 0; }
+}
+
+@keyframes particle2 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-150px, -80px) scale(0); opacity: 0; }
+}
+
+/* Styles pour PixelMotion */
+.animation-card {
+  @apply transition-all duration-300;
+}
+
+.animation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(109, 40, 217, 0.08);
+}
