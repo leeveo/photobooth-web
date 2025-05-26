@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Music, Mic, Star, Video, Share2, Users, Sparkles, Smartphone, Lightning, Monitor } from 'lucide-react';
+import { Music, Mic, Star, Video, Share2, Users, Sparkles, Smartphone, Zap, Monitor } from 'lucide-react';
 
 export default function KaraokeBox() {
   return (
