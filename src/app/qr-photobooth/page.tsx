@@ -59,9 +59,13 @@ export default function QrPhotobooth() {
                   Notre solution sans contact est parfaitement adaptée aux préoccupations sanitaires actuelles, offrant une alternative hygiénique aux écrans tactiles partagés tout en maintenant l'expérience sociale d'un photobooth.
                 </p>
               </div>
-              <Link href="/contact"     className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
-             >
-                Demander un devis
+              <Link 
+                href="https://photobooth.waibooth.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
+              >
+                Connexion à la plateforme
               </Link>
             </div>
             <div className="flex justify-center">
@@ -283,7 +287,7 @@ export default function QrPhotobooth() {
                 href="/contact"
                 className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
               >
-                Commander votre kit
+                contactez nous
               </Link>
               <Link
                 href="/demo"

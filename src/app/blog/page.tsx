@@ -79,7 +79,7 @@ export default function Blog() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Le <span className="gradient-text">Blog</span> PixelMagic
+              Le <span className="gradient-text">Blog</span> WaiBooth.app
             </h1>
             <p className="text-xl text-gray-700 mb-8">
               Actualités, tendances et conseils sur les photobooths IA et l'innovation événementielle

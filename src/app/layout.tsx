@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'PixelMagic - Photobooth IA | Plateforme SaaS',
+  title: 'WaiBooth.app - Photobooth IA | Plateforme SaaS',
   description: 'Créez et personnalisez vos expériences photobooth IA depuis notre plateforme SaaS intuitive',
 };
 

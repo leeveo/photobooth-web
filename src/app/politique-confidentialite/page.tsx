@@ -13,7 +13,7 @@ export default function PolitiqueConfidentialite() {
                 Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
               </p>
               <p className="text-gray-700">
-                PixelMagic SAS accorde une grande importance à la protection de votre vie privée et de vos données personnelles. Cette politique de confidentialité décrit comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez notre site web et nos services de photobooth IA.
+                WaiBooth.app SAS accorde une grande importance à la protection de votre vie privée et de vos données personnelles. Cette politique de confidentialité décrit comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez notre site web et nos services de photobooth IA.
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export default function PolitiqueConfidentialite() {
                 Lorsque vous utilisez nos photobooths, des photos et vidéos sont capturées et peuvent être traitées par notre technologie d'intelligence artificielle. Ces contenus sont stockés de manière sécurisée et conservés pour une durée limitée, en fonction du forfait choisi.
               </p>
               <p className="text-gray-700">
-                Nous vous rappelons que vous êtes responsable d'obtenir le consentement des personnes apparaissant sur les photos prises lors de votre événement. PixelMagic ne pourra être tenu responsable des problèmes liés au droit à l'image des personnes photographiées.
+                Nous vous rappelons que vous êtes responsable d'obtenir le consentement des personnes apparaissant sur les photos prises lors de votre événement. WaiBooth.app ne pourra être tenu responsable des problèmes liés au droit à l'image des personnes photographiées.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export default function PolitiqueConfidentialite() {
                 <li>Droit de ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé</li>
               </ul>
               <p className="text-gray-700 mt-4">
-                Pour exercer ces droits, veuillez nous contacter à rgpd@pixelmagic.fr.
+                Pour exercer ces droits, veuillez nous contacter à rgpd@WaiBooth.app.fr.
               </p>
             </div>
 
@@ -106,7 +106,7 @@ export default function PolitiqueConfidentialite() {
             <div>
               <h2 className="text-2xl font-bold mb-4">9. Contact</h2>
               <p className="text-gray-700">
-                Si vous avez des questions concernant cette politique de confidentialité ou vos données personnelles, veuillez nous contacter à rgpd@pixelmagic.fr ou par courrier à PixelMagic SAS, 123 Avenue de l'Innovation, 75000 Paris.
+                Si vous avez des questions concernant cette politique de confidentialité ou vos données personnelles, veuillez nous contacter à rgpd@WaiBooth.app ou par courrier à WaiBooth.app.
               </p>
             </div>
           </div>

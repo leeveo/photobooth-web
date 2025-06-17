@@ -93,7 +93,9 @@ export default function TechnologieIA() {
               </p>
               <div className="mt-8">
                 <Link
-                  href="/contact"
+                  href="https://photobooth.waibooth.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-colors text-lg"
                 >
                   Essayez notre plateforme Événementielle SaaS
@@ -174,7 +176,9 @@ export default function TechnologieIA() {
                 ))}
               </div>
               <Link
-                href="/demo"
+                href="https://photobooth.waibooth.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 text-white font-semibold shadow-lg hover:from-fuchsia-600 hover:to-violet-700 transition-colors text-lg mt-6"
               >
                 Tester notre technologie

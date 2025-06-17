@@ -22,7 +22,7 @@ export default function KitPhotobooth() {
     },
     {
       title: "iPad Pro 11 pouces",
-      description: "Tablette puissante préinstallée avec notre application PixelMagic et tous les filtres IA premium.",
+      description: "Tablette puissante préinstallée avec notre application WaiBooth.app et tous les filtres IA premium.",
       icon: <Smartphone className="w-10 h-10 text-violet-600" />,
       image: "/kit-photobooth/tablet.jpg"
     },
@@ -487,7 +487,7 @@ export default function KitPhotobooth() {
                 <div className="flex">
                   <div className="w-1/3 p-4 bg-gray-50 font-semibold">Logiciel</div>
                   <div className="w-2/3 p-4">
-                    Application PixelMagic préinstallée, 50+ filtres IA, mode galerie, partage réseaux sociaux, photomosaïque
+                    Application WaiBooth.app préinstallée, 50+ filtres IA, mode galerie, partage réseaux sociaux, photomosaïque
                   </div>
                 </div>
               </div>

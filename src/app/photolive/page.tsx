@@ -144,7 +144,12 @@ export default function PhotoLivePage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-glow">
+                <Link 
+                  href="https://photobooth.waibooth.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-glow"
+                >
                   Réserver pour votre événement
                 </Link>
                 

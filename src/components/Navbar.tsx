@@ -63,7 +63,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-violet-700">PixelMagic</span>
+            <Image 
+              src="/logo.png" 
+              alt="Waibooth.app "
+              width={230} 
+              height={80} 
+              className="h-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -117,12 +123,26 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link 
-              href="/demo" 
-              className="px-6 py-2.5 rounded-lg font-medium shadow-md 
+              href="https://photobooth.waibooth.app" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-6 py-3 rounded-xl font-medium overflow-hidden
                        bg-gradient-to-r from-violet-600 to-purple-600 text-white 
-                       hover:from-violet-700 hover:to-purple-700 transition-all"
+                       hover:shadow-[0_0_25px_rgba(139,92,246,0.5)] transition-all duration-300
+                       border border-violet-400/30 flex items-center space-x-2"
             >
-              Demander une démo
+              <span className="relative z-10">Se Connecter</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5 relative z-10 transform transition-transform group-hover:translate-x-1" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+              <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-violet-700 opacity-0 
+                             group-hover:opacity-100 transition-opacity duration-300 transform 
+                             group-hover:scale-105"></span>
             </Link>
           </div>
 

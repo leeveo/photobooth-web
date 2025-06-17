@@ -11,19 +11,19 @@ export default function MentionsLegales() {
             <div>
               <h2 className="text-2xl font-bold mb-4">1. Informations légales</h2>
               <p className="text-gray-700 mb-4">
-                Le site PixelMagic est édité par la société PixelMagic SAS, société par actions simplifiée au capital de 10 000 €, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 123 456 789, dont le siège social est situé au 123 Avenue de l'Innovation, 75000 Paris.
+                Le site WaiBooth.app est édité par la société WaiBooth.app SAS, société par actions simplifiée au capital de 10 000 €, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 123 456 789, dont le siège social est situé au 123 Avenue de l'Innovation, 75000 Paris.
               </p>
               <p className="text-gray-700">
                 Numéro de TVA intracommunautaire : FR12 123 456 789<br />
                 Numéro de téléphone : +33 1 23 45 67 89<br />
-                Email : contact@pixelmagic.fr
+                Email : contact@WaiBooth.app
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold mb-4">2. Directeur de la publication</h2>
               <p className="text-gray-700">
-                Le directeur de la publication du site est Monsieur Thomas Beaumont, en sa qualité de Président de la société PixelMagic SAS.
+                Le directeur de la publication du site est Monsieur Thomas Beaumont, en sa qualité de Président de la société WaiBooth.app SAS.
               </p>
             </div>
 
@@ -39,10 +39,10 @@ export default function MentionsLegales() {
             <div>
               <h2 className="text-2xl font-bold mb-4">4. Propriété intellectuelle</h2>
               <p className="text-gray-700 mb-4">
-                L'ensemble du contenu de ce site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de la société PixelMagic SAS à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
+                L'ensemble du contenu de ce site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de la société PixelMWaiBooth.appagic SAS à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
               </p>
               <p className="text-gray-700">
-                Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit de PixelMagic SAS.
+                Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit de WaiBooth.app SAS.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export default function MentionsLegales() {
             <div>
               <h2 className="text-2xl font-bold mb-4">7. Contactez-nous</h2>
               <p className="text-gray-700">
-                Pour toute question relative à ces mentions légales ou si vous souhaitez nous contacter, veuillez nous écrire à l'adresse email suivante : juridique@pixelmagic.fr ou par courrier à l'adresse du siège social indiquée ci-dessus.
+                Pour toute question relative à ces mentions légales ou si vous souhaitez nous contacter, veuillez nous écrire à l'adresse email suivante : juridique@WaiBooth.app ou par courrier à l'adresse du siège social indiquée ci-dessus.
               </p>
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function SolutionSaaS() {
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl font-bold mb-6">Une solution tout-en-un pour les professionnels</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Notre plateforme SaaS PixelMagic Pro permet aux organisateurs d'événements, agences et marques de gérer facilement des expériences photobooth sur plusieurs sites simultanément.
+                Notre plateforme SaaS WaiBooth.app Pro permet aux organisateurs d'événements, agences et marques de gérer facilement des expériences photobooth sur plusieurs sites simultanément.
               </p>
               <p className="text-lg text-gray-700 mb-6">
                 De la personnalisation des templates à l'analyse des données post-événement, notre solution cloud centralisée vous donne un contrôle total sur l'ensemble de vos activations photobooths.
@@ -62,7 +62,7 @@ export default function SolutionSaaS() {
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src="/solution-saas/dashboard-preview.jpg"
-                  alt="Dashboard PixelMagic Pro"
+                  alt="Dashboard WaiBooth.app"
                   width={600}
                   height={400}
                   className="w-full h-auto"

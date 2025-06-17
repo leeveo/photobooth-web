@@ -99,8 +99,8 @@ export default function FAQPage() {
       icon: <HelpCircle className="w-5 h-5 text-violet-600" />,
       questions: [
         {
-          question: "Qu'est-ce que PixelMagic et comment fonctionne-t-il ?",
-          answer: "PixelMagic est une plateforme SaaS qui vous permet de créer des expériences de photobooth IA personnalisées pour vos événements. Notre solution utilise l'intelligence artificielle pour transformer des photos ordinaires en œuvres d'art uniques avec différents styles artistiques et effets visuels. Vous pouvez facilement personnaliser, déployer et gérer votre photobooth depuis notre interface web intuitive."
+          question: "Qu'est-ce que WaiBooth.app et comment fonctionne-t-il ?",
+          answer: "WaiBooth.app est une plateforme SaaS qui vous permet de créer des expériences de photobooth IA personnalisées pour vos événements. Notre solution utilise l'intelligence artificielle pour transformer des photos ordinaires en œuvres d'art uniques avec différents styles artistiques et effets visuels. Vous pouvez facilement personnaliser, déployer et gérer votre photobooth depuis notre interface web intuitive."
         },
         {
           question: "Quels types d'événements sont adaptés à vos solutions ?",

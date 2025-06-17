@@ -83,8 +83,8 @@ export default function Home() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link href="/demo" className="btn-glow">
-                  Réserver une démo
+                <Link href="https://photobooth.waibooth.app" target="_blank" rel="noopener noreferrer" className="btn-glow">
+                  Se connecter
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
                     <path d="M14.1667 5.83331L5.83337 14.1666M14.1667 5.83331H6.66671M14.1667 5.83331V13.3333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -410,8 +410,8 @@ export default function Home() {
                   </p>
                   
                   <div className="flex flex-wrap justify-center gap-4">
-                    <Link href="/contact" className="btn-glow">
-                      Demander un devis
+                                       <Link href="https://photobooth.waibooth.app" target="_blank" rel="noopener noreferrer" className="btn-glow">
+                        Se connecter
                     </Link>
                     
                     <Link href="/contact" className="btn-outline">

@@ -102,16 +102,7 @@ export default function Contact() {
               </p>
 
               <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="w-5 h-5 text-violet-700" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Téléphone</h3>
-                    <p className="text-gray-700">+33 1 23 45 67 89</p>
-                    <p className="text-sm text-gray-500 mt-1">Du lundi au vendredi, de 9h à 18h</p>
-                  </div>
-                </div>
+              
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -119,21 +110,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-gray-700">contact@pixelmagic.fr</p>
+                    <p className="text-gray-700">contact@WaiBooth.app</p>
                     <p className="text-sm text-gray-500 mt-1">Nous répondons sous 24h ouvrées</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-violet-700" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Adresse</h3>
-                    <p className="text-gray-700">123 Avenue de l'Innovation<br />75000 Paris, France</p>
-                    <p className="text-sm text-gray-500 mt-1">Sur rendez-vous uniquement</p>
-                  </div>
-                </div>
+          
               </div>
 
               {/* Map */}
@@ -321,8 +303,11 @@ export default function Contact() {
                   answer: "Après validation du devis, nous vous demandons un acompte de 30% pour confirmer la réservation. Le solde est à régler 7 jours avant l'événement."
                 }
               ].map((item, index) => (
-                <div key={index} className="card bg-white">
-                  <h3 className="font-bold mb-2">{item.question}</h3>
+                <div 
+                  key={index} 
+                  className="bg-white p-6 rounded-xl shadow-lg border border-violet-100 hover:shadow-xl transition-shadow duration-300"
+                >
+                  <h3 className="font-bold text-lg mb-3 text-gray-800">{item.question}</h3>
                   <p className="text-gray-700">{item.answer}</p>
                 </div>
               ))}

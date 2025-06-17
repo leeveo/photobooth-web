@@ -299,7 +299,7 @@ export default function BlogArticle() {
                 Les entreprises qui adopteront rapidement ces nouvelles tendances pourront offrir des expériences photobooths véritablement différenciantes. L'innovation dans ce domaine n'est pas seulement technologique, elle est avant tout centrée sur l'humain et l'expérience utilisateur.
               </p>
               <p className="mt-4 mb-0">
-                Chez PixelMagic, nous intégrons déjà ces innovations dans nos solutions pour vous permettre d'être à l'avant-garde de cette révolution.
+                Chez WaiBooth.app, nous intégrons déjà ces innovations dans nos solutions pour vous permettre d'être à l'avant-garde de cette révolution.
               </p>
             </div>
           </div>

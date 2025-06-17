@@ -217,7 +217,7 @@ export default function RealiteAugmentee() {
                 href="/contact"
                 className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
               >
-                Commander votre kit
+                Contactez nous
               </Link>
               <Link
                 href="/demo"
