@@ -9,7 +9,7 @@ export default function StyleGalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   // Get all unique collection IDs for the category buttons
-  const categories = ['all', ...new Set(styleTemplatesData.map(collection => collection.id))];
+  const categories = ['all', ...Array.from(new Set(styleTemplatesData.map(collection => collection.id)))];
   
   // Filter collections based on selected category
   const filteredCollections = selectedCategory === 'all' 
