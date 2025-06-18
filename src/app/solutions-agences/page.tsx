@@ -1,12 +1,17 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 import { Briefcase, Users, Clock, Palette, Share2, Zap, BarChart, CreditCard, Shield, Activity, Award, Globe } from 'lucide-react';
 
 // Component for image with fallback
-const ImageWithFallback = ({ src, fallbackSrc, ...props }) => {
+interface ImageWithFallbackProps extends Omit<ImageProps, 'src'> {
+  src: string;
+  fallbackSrc: string;
+}
+
+const ImageWithFallback = ({ src, fallbackSrc, ...props }: ImageWithFallbackProps) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   const handleError = () => {
