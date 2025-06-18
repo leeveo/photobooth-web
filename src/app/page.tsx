@@ -5,6 +5,18 @@ import Link from 'next/link';
 import { Camera, Wand2, Sparkles, Video, Grid, ArrowRight, MessageCircle, Clock, Figma } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+// Define interface for gallery images
+interface GalleryImage {
+  src: string;
+  title: string;
+  style: string;
+}
+
+// Define interface for brand logos
+interface BrandLogo {
+  src: string;
+}
+
 // Composants de décoration
 const Decorations = () => (
   <>
@@ -38,21 +50,21 @@ const ImageWithFallback = ({ src, fallbackSrc, ...props }: ImageWithFallbackProp
 };
 
 export default function Home() {
-  // Since we're in a client component, we need to fetch this data differently
-  const [galleryImages, setGalleryImages] = useState([]);
-  const [brandLogos, setBrandLogos] = useState([]);
+  // Properly type the state variables
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
+  const [brandLogos, setBrandLogos] = useState<string[]>([]);
   
   useEffect(() => {
     // Fetch gallery images
     fetch('/api/gallery-images')
       .then(response => response.json())
-      .then(data => setGalleryImages(data))
+      .then((data: GalleryImage[]) => setGalleryImages(data))
       .catch(() => setGalleryImages([]));
     
     // Fetch brand logos
     fetch('/api/brand-logos')
       .then(response => response.json())
-      .then(data => setBrandLogos(data))
+      .then((data: string[]) => setBrandLogos(data))
       .catch(() => setBrandLogos([]));
   }, []);
   
