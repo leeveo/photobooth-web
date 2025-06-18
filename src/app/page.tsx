@@ -1,9 +1,9 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Camera, Wand2, Sparkles, Video, Grid, ArrowRight, MessageCircle, Clock, Figma } from 'lucide-react';
-import path from 'path';
-import { readdirSync } from 'fs';
-import fs from 'fs';
+import { useState, useEffect } from 'react';
 
 // Composants de décoration
 const Decorations = () => (
@@ -17,39 +17,39 @@ const Decorations = () => (
   </>
 );
 
-// Fonction utilitaire pour obtenir les images du dossier /public/gallery
-function getGalleryImages() {
-  const galleryDir = path.join(process.cwd(), 'public', 'gallery');
-  const exts = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
-  try {
-    return readdirSync(galleryDir)
-      .filter(file => exts.some(ext => file.toLowerCase().endsWith(ext)))
-      .map((file, idx) => ({
-        src: `/gallery/${file}`,
-        title: `Création IA #${idx + 1}`,
-        style: 'Style artistique généré par IA'
-      }));
-  } catch (e) {
-    return [];
-  }
-}
+// Component for image with fallback
+const ImageWithFallback = ({ src, fallbackSrc, ...props }) => {
+  const [imgSrc, setImgSrc] = useState(src);
 
-// Fonction utilitaire pour obtenir les logos du dossier /public/brand
-function getBrandLogos() {
-  const brandDir = path.join(process.cwd(), 'public', 'brand');
-  const exts = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
-  try {
-    return fs.readdirSync(brandDir)
-      .filter(file => exts.some(ext => file.toLowerCase().endsWith(ext)))
-      .map(file => `/brand/${file}`);
-  } catch (e) {
-    return [];
-  }
-}
+  const handleError = () => {
+    setImgSrc(fallbackSrc);
+  };
+
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
+  return <Image {...props} src={imgSrc} onError={handleError} />;
+};
 
 export default function Home() {
-  const galleryImages = getGalleryImages();
-  const brandLogos = getBrandLogos();
+  // Since we're in a client component, we need to fetch this data differently
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [brandLogos, setBrandLogos] = useState([]);
+  
+  useEffect(() => {
+    // Fetch gallery images
+    fetch('/api/gallery-images')
+      .then(response => response.json())
+      .then(data => setGalleryImages(data))
+      .catch(() => setGalleryImages([]));
+    
+    // Fetch brand logos
+    fetch('/api/brand-logos')
+      .then(response => response.json())
+      .then(data => setBrandLogos(data))
+      .catch(() => setBrandLogos([]));
+  }, []);
   
   return (
     <>
@@ -234,7 +234,7 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Comment ça <span className="text-gradient">fonctionne</span>
+              Photobooth IA : Comment ça <span className="text-gradient">fonctionne</span>
             </h2>
             
             <p className="text-lg text-gray-600">
@@ -248,28 +248,28 @@ export default function Home() {
               number: '01',
               title: "Création de votre projet",
               description: "Démarrez en quelques clics et créez votre projet Photobooth IA sur la plateforme.",
-              image: "/steps/step-1.jpg"
+              image: "/steps/step-1.png"
             },
             {
               icon: <Figma className="w-6 h-6" />,
               number: '02',
               title: "Personnalisation du photobooth",
               description: "Adaptez l’interface, les couleurs et les options à votre événement ou votre marque.",
-              image: "/steps/step-2.jpg"
+              image: "/steps/step-2.png"
             },
             {
               icon: <Wand2 className="w-6 h-6" />,
               number: '03',
               title: "Choix des modèles IA",
               description: "Sélectionnez parmi de nombreux modèles et styles IA pour vos photos.",
-              image: "/steps/step-3.jpg"
+              image: "/steps/step-3.png"
             },
             {
               icon: <Clock className="w-6 h-6" />,
               number: '04',
               title: "Mise en production du photobooth",
               description: "Lancez votre photobooth IA en ligne et profitez d’une expérience innovante.",
-              image: "/steps/step-4.jpg"
+              image: "/steps/step-4.png"
             }].map((step, index) => (
               <div key={index} className="step-card flex-1 flex flex-col items-center">
                 <div className="step-number">{step.number}</div>
@@ -294,6 +294,147 @@ export default function Home() {
                 {index < 3 && <div className="step-arrow"></div>}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Avantages pour les agences événementielles */}
+      <section className="py-24 bg-white relative">
+        <Decorations />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="mb-4 inline-flex items-center px-4 py-2 rounded-full bg-violet-100 border border-violet-200">
+              <span className="mr-2">💼</span>
+              <span className="text-violet-800 text-sm font-medium">Solution complète pour les professionnels</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+              Avantages <span className="text-gradient">exclusifs</span> pour les agences événementielles
+            </h2>
+            
+            <p className="text-lg text-gray-600 mb-12">
+              Offrez des expériences interactives inoubliables et personnalisez chaque événement selon les besoins de vos clients
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/2">
+              <div className="prose prose-lg max-w-none">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Pourquoi les agences événementielles choisissent Waibooth.app</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 bg-violet-100 rounded-full p-2 mr-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-violet-600">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Solution tout-en-un</h4>
+                      <p className="text-gray-600">Accédez à des photobooth IA, karaoké, photomosaïque, quizz et jeux interactifs sur une seule plateforme.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 bg-violet-100 rounded-full p-2 mr-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-violet-600">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Personnalisation avancée</h4>
+                      <p className="text-gray-600">Adaptez chaque animation aux couleurs et à l'identité visuelle de vos clients pour une expérience sur mesure.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 bg-violet-100 rounded-full p-2 mr-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-violet-600">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Déploiement multi-environnements</h4>
+                      <p className="text-gray-600">Utilisez la même solution pour des soirées d'entreprise, salons professionnels, mariages ou animations en magasin.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 bg-violet-100 rounded-full p-2 mr-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-violet-600">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Analytics et engagement</h4>
+                      <p className="text-gray-600">Obtenez des statistiques détaillées sur l'engagement des participants et l'impact de vos animations.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 bg-violet-100 rounded-full p-2 mr-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-violet-600">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Offres adaptées</h4>
+                      <p className="text-gray-600">Facturation flexible selon vos besoins, de l'événement unique aux abonnements pour agences régulières.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <Link href="/solutions-agences" className="nerko-link">
+                    <span>Découvrir nos offres pour agences</span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4767 6.16664L6.00004 1.68998L7.18004 0.509979L13.6667 6.99664L7.18004 13.4833L6.00004 12.3033L10.4767 7.82664H0.333374V6.16664H10.4767Z" fill="currentColor"/>
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="md:w-1/2">
+              <div className="relative">
+                <div className="glow-circle-1"></div>
+                <div className="glow-circle-2"></div>
+                
+                {/* Simplified image container with direct rounded corners and shadow */}
+                <div className="relative overflow-hidden rounded-xl shadow-xl">
+                  <ImageWithFallback 
+                    src="/steps/003_bis.png" 
+                    fallbackSrc="/steps/003_bis.png"
+                    width={600} 
+                    height={500} 
+                    alt="Solutions pour agences événementielles" 
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  {/* Badge flottant */}
+                  <div className="floating-badge-1 absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm text-white border border-white/10">
+                    <span className="flex items-center">
+                      <svg width="14" height="14" className="mr-1.5" viewBox="0 0 16 16" fill="#10B981">
+                        <circle cx="8" cy="8" r="8" />
+                      </svg>
+                      Satisfaction client 98%
+                    </span>
+                  </div>
+                  
+                  {/* Badge flottant */}
+                  <div className="floating-badge-2 absolute bottom-8 right-8 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm text-white border border-white/10">
+                    <span className="flex items-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1.5 text-yellow-400">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
+                      </svg>
+                      Solution préférée des agences
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

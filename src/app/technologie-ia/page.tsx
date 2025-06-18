@@ -273,7 +273,7 @@ export default function TechnologieIA() {
           
           <div className="text-center mt-12">
             <Link
-              href="/contact"
+              href="/style-gallery"
               className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-colors text-lg inline-flex items-center"
             >
               <span>Découvrir tous nos styles</span>
