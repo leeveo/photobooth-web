@@ -28,12 +28,12 @@ export default function Tarifs() {
                 <h3 className="text-2xl font-bold mb-2">Débutant</h3>
                 <p className="text-gray-600 mb-6">Parfait pour les petits événements</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">59€</span>
+                  <span className="text-4xl font-bold">En attente</span>
                   <span className="text-gray-600">/événement</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "1 heure d'utilisation",
+                    
                     "Filtres IA standard",
                     "Galerie en ligne (30 jours)",
                     "Partage sur réseaux sociaux",
@@ -72,12 +72,12 @@ export default function Tarifs() {
                 <h3 className="text-2xl font-bold mb-2">Professionnel</h3>
                 <p className="text-gray-600 mb-6">Idéal pour les événements d'entreprise</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">149€</span>
+                  <span className="text-4xl font-bold">en attente</span>
                   <span className="text-gray-600">/événement</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "4 heures d'utilisation",
+                    
                     "Filtres IA premium",
                     "Photomosaïque standard",
                     "Galerie en ligne (90 jours)",
@@ -111,12 +111,12 @@ export default function Tarifs() {
                 <h3 className="text-2xl font-bold mb-2">Entreprise</h3>
                 <p className="text-gray-600 mb-6">Solution complète pour grands événements</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">349€</span>
+                  <span className="text-4xl font-bold">En attente</span>
                   <span className="text-gray-600">/événement</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "Utilisation illimitée",
+                   
                     "Tous les filtres IA",
                     "Photomosaïque avancée",
                     "Galerie permanente",
