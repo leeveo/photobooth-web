@@ -41,6 +41,12 @@ const megaMenuData = {
           icon: <BrainCog size={18} />
         },
         { 
+          name: 'Photobooth Coiffure', 
+          href: '/photobooth-coiffure', 
+          description: 'IA pour salons de coiffure',
+          icon: <Palette size={18} />
+        },
+        { 
           name: 'Photomosaïque', 
           href: '/photomosaique', 
           description: 'Création collective',
