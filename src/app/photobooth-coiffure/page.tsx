@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Scissors, Palette, Sparkles, Users, Crown, Tablet, Monitor, Globe, ArrowRight, Star, Check, Zap, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import ContactCoiffureForm from '@/components/ContactCoiffureForm';
+import Script from 'next/script';
 
 // Styles de coiffure disponibles
 const hairstyles = [
@@ -724,89 +725,133 @@ export default function PhotoboothCoiffure() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold mb-4">Découvrez notre technologie en action</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Notre IA analyse le visage et applique les styles de coiffure de manière réaliste
+              Testez immédiatement notre photobooth coiffure avec intelligence artificielle
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Styles de coiffure disponibles</h3>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {hairstyles.slice(0, 4).map((style, index) => (
-                  <div key={index} className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
-                    <div className="aspect-square relative">
-                      <Image 
-                        src={style.image}
-                        alt={style.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="absolute bottom-3 left-3 right-3">
-                          <p className="text-white font-medium text-sm">{style.name}</p>
-                          <p className="text-white/80 text-xs">{style.category}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+          {/* Photobooth Button optimisé */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-8">
+              <div className="text-center mb-8">
+                <div className="bg-gradient-to-r from-pink-600 to-purple-600 p-6 rounded-xl text-white mb-6">
+                  <h3 className="text-xl font-bold mb-2">Photobooth Coiffure IA - Démo Interactive</h3>
+                  <p className="opacity-90">Essayez différentes coiffures et couleurs en temps réel</p>
+                </div>
+                
+                {/* Bouton Photobooth - Nouvelle fenêtre */}
+                <div style={{ textAlign: 'center', margin: '20px 0' }}>
+                  <button 
+                    id="photobooth-btn"
+                    onClick={() => {
+                      // Calcul de la taille optimale pour la fenêtre
+                      const screenWidth = window.screen.width;
+                      const screenHeight = window.screen.height;
+                      
+                      // Dimensions de la fenêtre (80% de l'écran)
+                      const windowWidth = Math.min(1200, screenWidth * 0.8);
+                      const windowHeight = Math.min(800, screenHeight * 0.8);
+                      
+                      // Position centrée
+                      const left = (screenWidth - windowWidth) / 2;
+                      const top = (screenHeight - windowHeight) / 2;
+                      
+                      // Options de la fenêtre
+                      const windowFeatures = [
+                        `width=${windowWidth}`,
+                        `height=${windowHeight}`,
+                        `left=${left}`,
+                        `top=${top}`,
+                        'resizable=yes',
+                        'scrollbars=yes',
+                        'status=no',
+                        'menubar=no',
+                        'toolbar=no',
+                        'location=no'
+                      ].join(',');
+                      
+                      // Ouverture de la fenêtre
+                      const photoboothWindow = window.open(
+                        'https://localhost:3000/photobooth-coiffure/coiffure003',
+                        'photobooth',
+                        windowFeatures
+                      );
+                      
+                      // Focus sur la nouvelle fenêtre
+                      if (photoboothWindow) {
+                        photoboothWindow.focus();
+                      } else {
+                        // Fallback si le popup est bloqué
+                        alert('Les popups sont bloqués. Veuillez autoriser les popups pour ce site et réessayer.');
+                      }
+                    }}
+                    style={{
+                      background: 'linear-gradient(135deg, #7f5af0 0%, #ff80b5 100%)',
+                      color: 'white',
+                      border: 'none',
+                      padding: '15px 30px',
+                      fontSize: '18px',
+                      fontWeight: 'bold',
+                      borderRadius: '50px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 15px rgba(127, 90, 240, 0.3)',
+                      transition: 'all 0.3s ease',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(127, 90, 240, 0.4)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(127, 90, 240, 0.3)';
+                    }}
+                  >
+                    📸 Ouvrir le Photobooth
+                  </button>
+                </div>
+                
+                <div className="mt-6 text-sm text-gray-600">
+                  <p className="mb-2">
+                    <strong>🎯 Accès optimal à la caméra :</strong> Le photobooth s'ouvre dans une nouvelle fenêtre pour garantir un accès complet à votre caméra
+                  </p>
+                  <p>
+                    <strong>💡 Astuce :</strong> Autorisez l'accès à la caméra lorsque votre navigateur vous le demande
+                  </p>
+                </div>
               </div>
-              <p className="text-gray-600 mb-6">
-                <strong>+496 autres styles disponibles</strong> incluant des coupes modernes, classiques, et avant-gardistes adaptées à tous les types de cheveux.
+              
+              <div className="bg-gray-50 p-6 rounded-xl text-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                  <div className="flex items-center justify-center space-x-2">
+                    <Sparkles className="w-4 h-4 text-pink-600" />
+                    <span>+500 coiffures</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Palette className="w-4 h-4 text-purple-600" />
+                    <span>+200 couleurs</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Zap className="w-4 h-4 text-indigo-600" />
+                    <span>Temps réel</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Crown className="w-4 h-4 text-pink-600" />
+                    <span>IA générative</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">
+                Impressionné par la technologie ? Découvrez comment l'intégrer dans votre salon
               </p>
               <Link
                 href="#contact"
-                className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold shadow-lg hover:from-pink-700 hover:to-purple-700 transition-colors"
+                className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold shadow-lg hover:from-pink-700 hover:to-purple-700 transition-colors"
               >
-                Demander une démonstration
+                Demander une démonstration personnalisée
               </Link>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Palette de couleurs</h3>
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {hairColors.map((color, index) => (
-                  <div key={index} className="text-center">
-                    <div className="relative w-16 h-16 rounded-full mx-auto mb-2 shadow-lg border-2 border-white overflow-hidden">
-                      <Image
-                        src={color.image}
-                        alt={color.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="text-sm font-medium">{color.name}</p>
-                    <p className="text-xs text-gray-500">{color.description}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6">
-                <strong>+194 autres couleurs</strong> incluant des teintes naturelles, des highlights, des ombré, et des couleurs fantaisie.
-              </p>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="font-bold mb-3 flex items-center">
-                  <Sparkles className="w-5 h-5 text-purple-600 mr-2" />
-                  Technologie avancée
-                </h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-600 mr-2" />
-                    Reconnaissance faciale précise
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-600 mr-2" />
-                    Adaptation selon la forme du visage
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-600 mr-2" />
-                    Rendu ultra-réaliste
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-600 mr-2" />
-                    Traitement en temps réel
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -1333,6 +1378,294 @@ export default function PhotoboothCoiffure() {
           </div>
         </div>
       </section>
+      
+      {/* Container pour le popup photobooth */}
+      <div id="photobooth-popup-container"></div>
+      
+      {/* Script pour le bouton popup photobooth */}
+      <Script id="photobooth-popup-script" strategy="afterInteractive">
+        {`
+          (function() {
+            // Configuration du popup
+            const photoboothConfig = {
+              url: "https://localhost:3000/photobooth-coiffure/coiffure003",
+              buttonText: "📸 Photobooth",
+              buttonColor: "#7f5af0",
+              popupWidth: "480px",
+              popupHeight: "720px", // Augmenté de 600px à 720px pour réduire le scroll
+              useNewWindow: false // Changez à true pour forcer l'ouverture en nouvelle fenêtre
+            };
+
+            // CSS pour le popup
+            const styles = \`
+              #photobooth-trigger-btn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: \${photoboothConfig.buttonColor};
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 15px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 9998;
+                transition: all 0.3s ease;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              }
+              
+              #photobooth-trigger-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+              }
+              
+              #photobooth-popup {
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                width: \${photoboothConfig.popupWidth};
+                height: \${photoboothConfig.popupHeight};
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+                z-index: 9999;
+                display: none;
+                overflow: hidden;
+                border: 2px solid \${photoboothConfig.buttonColor};
+              }
+              
+              #photobooth-popup.show {
+                display: block;
+                animation: slideUp 0.3s ease;
+              }
+              
+              #photobooth-popup iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+              }
+              
+              #photobooth-close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: rgba(0,0,0,0.7);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 18px;
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              
+              #photobooth-newwindow-btn {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background: rgba(127, 90, 240, 0.9);
+                color: white;
+                border: none;
+                border-radius: 15px;
+                padding: 5px 10px;
+                font-size: 12px;
+                cursor: pointer;
+                z-index: 10000;
+                transition: all 0.3s ease;
+              }
+              
+              #photobooth-newwindow-btn:hover {
+                background: rgba(127, 90, 240, 1);
+                transform: scale(1.05);
+              }
+              
+              /* Notification d'aide pour la caméra */
+              #camera-help-notification {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 193, 7, 0.95);
+                color: #856404;
+                padding: 8px 12px;
+                border-radius: 8px;
+                font-size: 11px;
+                font-weight: 500;
+                z-index: 10001;
+                display: none;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                border: 1px solid #ffeaa7;
+              }
+              
+              @keyframes slideUp {
+                from { 
+                  opacity: 0; 
+                  transform: translateY(20px) scale(0.95); 
+                }
+                to { 
+                  opacity: 1; 
+                  transform: translateY(0) scale(1); 
+                }
+              }
+              
+              /* Responsive pour mobile */
+              @media (max-width: 768px) {
+                #photobooth-popup {
+                  bottom: 0;
+                  right: 0;
+                  left: 0;
+                  width: 100% !important;
+                  height: 85vh !important; /* Augmenté de 80vh à 85vh pour plus d'espace */
+                  border-radius: 12px 12px 0 0;
+                  max-height: 90vh; /* Hauteur maximale pour éviter les débordements */
+                }
+                
+                #photobooth-trigger-btn {
+                  bottom: 15px;
+                  right: 15px;
+                  padding: 12px 16px;
+                  font-size: 14px;
+                }
+              }
+              
+              /* Optimisation pour tablettes */
+              @media (max-width: 1024px) and (min-width: 769px) {
+                #photobooth-popup {
+                  width: 500px !important;
+                  height: 750px !important;
+                }
+              }
+            \`;
+
+            // Injection du CSS
+            const styleSheet = document.createElement('style');
+            styleSheet.textContent = styles;
+            document.head.appendChild(styleSheet);
+
+            // Fonction pour ouvrir en nouvelle fenêtre
+            function openInNewWindow() {
+              const screenWidth = window.screen.width;
+              const screenHeight = window.screen.height;
+              const windowWidth = Math.min(1200, screenWidth * 0.8);
+              const windowHeight = Math.min(800, screenHeight * 0.8);
+              const left = (screenWidth - windowWidth) / 2;
+              const top = (screenHeight - windowHeight) / 2;
+              
+              const windowFeatures = [
+                \`width=\${windowWidth}\`,
+                \`height=\${windowHeight}\`,
+                \`left=\${left}\`,
+                \`top=\${top}\`,
+                'resizable=yes',
+                'scrollbars=yes',
+                'status=no',
+                'menubar=no',
+                'toolbar=no',
+                'location=no'
+              ].join(',');
+              
+              const photoboothWindow = window.open(photoboothConfig.url, 'photobooth', windowFeatures);
+              if (photoboothWindow) {
+                photoboothWindow.focus();
+              } else {
+                alert('Les popups sont bloqués. Veuillez autoriser les popups pour ce site.');
+              }
+            }
+
+            // Création du bouton trigger
+            const triggerBtn = document.createElement('button');
+            triggerBtn.id = 'photobooth-trigger-btn';
+            triggerBtn.textContent = photoboothConfig.buttonText;
+            
+            // Création du popup
+            const popup = document.createElement('div');
+            popup.id = 'photobooth-popup';
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.id = 'photobooth-close-btn';
+            closeBtn.innerHTML = '&times;';
+            
+            const newWindowBtn = document.createElement('button');
+            newWindowBtn.id = 'photobooth-newwindow-btn';
+            newWindowBtn.innerHTML = '🚀 Nouvelle fenêtre';
+            newWindowBtn.title = 'Ouvrir dans une nouvelle fenêtre pour un meilleur accès caméra';
+            
+            // Notification d'aide pour la caméra
+            const cameraHelp = document.createElement('div');
+            cameraHelp.id = 'camera-help-notification';
+            cameraHelp.innerHTML = '💡 Caméra bloquée ? Cliquez sur "Nouvelle fenêtre" ↑';
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = photoboothConfig.url;
+            iframe.title = 'Photobooth';
+            // Permissions étendues pour un meilleur accès à la caméra
+            iframe.setAttribute('allow', 'camera *; microphone *; autoplay; encrypted-media; fullscreen; picture-in-picture; display-capture; geolocation');
+            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-presentation allow-downloads');
+            // Ajout de l'attribut importance pour prioriser le chargement
+            iframe.setAttribute('importance', 'high');
+            iframe.setAttribute('loading', 'eager');
+            
+            popup.appendChild(closeBtn);
+            popup.appendChild(newWindowBtn);
+            popup.appendChild(cameraHelp);
+            popup.appendChild(iframe);
+            
+            // Ajout au DOM
+            document.body.appendChild(triggerBtn);
+            document.body.appendChild(popup);
+            
+            // Gestion des événements
+            triggerBtn.addEventListener('click', function() {
+              if (photoboothConfig.useNewWindow) {
+                openInNewWindow();
+              } else {
+                popup.classList.add('show');
+                // Message d'aide pour l'accès caméra
+                setTimeout(() => {
+                  console.log('💡 Astuce: Si la caméra ne s\\'active pas, utilisez le bouton "Nouvelle fenêtre" pour un accès garanti.');
+                }, 1000);
+                
+                // Afficher la notification d'aide après 8 secondes
+                setTimeout(() => {
+                  if (popup.classList.contains('show')) {
+                    cameraHelp.style.display = 'block';
+                    // Masquer la notification après 5 secondes
+                    setTimeout(() => {
+                      cameraHelp.style.display = 'none';
+                    }, 5000);
+                  }
+                }, 8000);
+              }
+            });
+            
+            closeBtn.addEventListener('click', function() {
+              popup.classList.remove('show');
+              cameraHelp.style.display = 'none'; // Masquer la notification
+            });
+            
+            newWindowBtn.addEventListener('click', function() {
+              popup.classList.remove('show');
+              cameraHelp.style.display = 'none'; // Masquer la notification
+              openInNewWindow();
+            });
+            
+            // Fermer en cliquant à l'extérieur
+            document.addEventListener('click', function(e) {
+              if (!popup.contains(e.target) && e.target !== triggerBtn) {
+                popup.classList.remove('show');
+                cameraHelp.style.display = 'none'; // Masquer la notification
+              }
+            });
+          })();
+        `}
+      </Script>
     </>
   );
 }
