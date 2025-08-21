@@ -121,7 +121,7 @@ export default function PhotoboothCoiffure() {
                 <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                   Photobooth Coiffure IA
                 </span>
-                <span className="text-gray-800"> : Révolutionnez votre salon</span>
+                <span className="text-gray-800"> Révolutionnez votre salon</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
                 Permettez à vos clients de visualiser instantanément leur nouvelle coupe et couleur de cheveux grâce à notre intelligence artificielle avancée.
@@ -673,15 +673,6 @@ export default function PhotoboothCoiffure() {
                       <Check className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg">API complète pour développeurs</h4>
-                      <p className="text-gray-600">Intégrez facilement notre technologie dans vos applications existantes avec notre API RESTful documentée.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gradient-to-r from-green-500 to-blue-600 p-2 rounded-lg mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
                       <h4 className="font-semibold text-lg">Branding personnalisé</h4>
                       <p className="text-gray-600">Adaptez l'interface aux couleurs et au style de votre salon pour une expérience cohérente.</p>
                     </div>
@@ -1085,163 +1076,6 @@ export default function PhotoboothCoiffure() {
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Solutions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Nos solutions pour votre salon</h2>
-            <p className="text-lg text-gray-700">
-              Choisissez la formule qui convient le mieux à vos besoins
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Abonnement Plateforme */}
-            <div className="card bg-white p-8 text-center relative">
-              <div className="mb-6">
-                <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Abonnement Plateforme</h3>
-                <p className="text-gray-600 mb-4">Accès illimité à notre plateforme web</p>
-                <div className="text-3xl font-bold text-pink-600">49€<span className="text-lg text-gray-500">/mois</span></div>
-              </div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Accès à tous les styles et couleurs</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Widget pour votre site web</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Support technique inclus</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Mises à jour automatiques</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Utilisation illimitée</span>
-                </li>
-              </ul>
-              <button 
-                onClick={() => setSelectedPlan('platform')}
-                className={`w-full py-3 rounded-full font-semibold transition-colors ${
-                  selectedPlan === 'platform' 
-                    ? 'bg-pink-600 text-white' 
-                    : 'border-2 border-pink-600 text-pink-600 hover:bg-pink-50'
-                }`}
-              >
-                Choisir cette formule
-              </button>
-            </div>
-
-            {/* Location Tablette */}
-            <div className="card bg-white p-8 text-center relative border-2 border-purple-600">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Recommandé
-                </span>
-              </div>
-              <div className="mb-6">
-                <Tablet className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Location Tablette</h3>
-                <p className="text-gray-600 mb-4">Tablette + abonnement plateforme</p>
-                <div className="text-3xl font-bold text-purple-600">89€<span className="text-lg text-gray-500">/mois</span></div>
-              </div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Tablette 10" haute résolution</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Application préinstallée</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Support et pied inclus</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Maintenance et SAV inclus</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Mise à jour automatique</span>
-                </li>
-              </ul>
-              <button 
-                onClick={() => setSelectedPlan('rental')}
-                className={`w-full py-3 rounded-full font-semibold transition-colors ${
-                  selectedPlan === 'rental' 
-                    ? 'bg-purple-600 text-white' 
-                    : 'border-2 border-purple-600 text-purple-600 hover:bg-purple-50'
-                }`}
-              >
-                Choisir cette formule
-              </button>
-            </div>
-
-            {/* Achat Tablette */}
-            <div className="card bg-white p-8 text-center relative">
-              <div className="mb-6">
-                <Monitor className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Achat Tablette</h3>
-                <p className="text-gray-600 mb-4">Tablette + licence à vie</p>
-                <div className="text-3xl font-bold text-indigo-600">1290€<span className="text-lg text-gray-500"> une fois</span></div>
-              </div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Tablette professionnelle incluse</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Licence à vie de la plateforme</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Support premium 24/7</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Garantie 2 ans</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-green-600 mr-3" />
-                  <span>Formation incluse</span>
-                </li>
-              </ul>
-              <button 
-                onClick={() => setSelectedPlan('purchase')}
-                className={`w-full py-3 rounded-full font-semibold transition-colors ${
-                  selectedPlan === 'purchase' 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50'
-                }`}
-              >
-                Choisir cette formule
-              </button>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              Besoin d'une solution personnalisée ? Contactez-nous pour un devis sur mesure.
-            </p>
-            <Link
-              href="#contact"
-              className="inline-block px-6 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
-            >
-              Demander un devis personnalisé
-            </Link>
           </div>
         </div>
       </section>
