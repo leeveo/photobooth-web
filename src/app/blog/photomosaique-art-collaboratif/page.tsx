@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowLeft, Share2, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, Share2, ArrowRight, Grid, Layers, Users, Camera, Monitor, Sparkles, TrendingUp, Zap, Eye, Settings, Brain, Palette } from 'lucide-react';
 
 export default function BlogArticle() {
   // Article metadata
@@ -98,6 +98,49 @@ export default function BlogArticle() {
             </p>
             
             <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Qu'est-ce qu'une photomosaïque ?</h2>
+            
+            {/* Concept Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-blue-600 rounded-full mr-4">
+                    <Eye className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-blue-800">Vision Globale</div>
+                    <div className="text-sm text-blue-600">Vue d'ensemble</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">Image maîtresse visible de loin (logo, portrait, message)</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-purple-600 rounded-full mr-4">
+                    <Grid className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-purple-800">Détail</div>
+                    <div className="text-sm text-purple-600">Vue rapprochée</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">Centaines de photos individuelles composant l'ensemble</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-green-600 rounded-full mr-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-green-800">Collaboratif</div>
+                    <div className="text-sm text-green-600">Temps réel</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">Créée par les participants pendant l'événement</p>
+              </div>
+            </div>
+            
             <p>
               Une photomosaïque est une image principale (souvent un logo, un portrait ou un message) composée de centaines, voire de milliers de photos plus petites. Vue de loin, on perçoit clairement l'image maîtresse, mais en s'approchant, on découvre qu'elle est constituée d'innombrables photos individuelles, chacune racontant sa propre histoire.
             </p>
@@ -112,163 +155,387 @@ export default function BlogArticle() {
             </div>
             
             <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Comment fonctionne la technologie de photomosaïque ?</h2>
-            <p>
-              Le processus de création d'une photomosaïque événementielle comprend plusieurs étapes essentielles, toutes orchestrées par un logiciel spécialisé :
-            </p>
-            <ul className="space-y-4 my-8 list-none">
-              {[
-                "Sélection d'une image maîtresse qui sera reproduite à partir des photos des participants",
-                "Mise en place d'un système de collecte de photos (photobooths, smartphones, hashtags sociaux)",
-                "Analyse algorithmique de chaque photo pour déterminer sa tonalité dominante",
-                "Placement stratégique des photos dans la mosaïque pour reproduire fidèlement l'image maîtresse",
-                "Affichage en temps réel de l'évolution de la mosaïque sur des écrans pendant l'événement"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 flex items-center justify-center text-white mr-4">
-                    {index + 1}
+            
+            {/* Process Steps - Enhanced */}
+            <div className="bg-gradient-to-br from-violet-50 via-indigo-50 to-purple-50 rounded-2xl p-10 my-12 border border-violet-200">
+              <div className="text-center mb-8">
+                <Settings className="w-12 h-12 text-violet-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-violet-800 mb-2">Processus de Création</h3>
+                <p className="text-gray-600">5 étapes orchestrées par un logiciel spécialisé</p>
+              </div>
+              
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: <Monitor className="w-8 h-8 text-white" />,
+                    title: "Sélection Image Maîtresse",
+                    desc: "Choix de l'image principale qui sera reproduite (logo, portrait, message)",
+                    color: "from-blue-500 to-cyan-600"
+                  },
+                  {
+                    icon: <Camera className="w-8 h-8 text-white" />,
+                    title: "Système de Collecte",
+                    desc: "Mise en place des photobooths, smartphones et hashtags sociaux",
+                    color: "from-green-500 to-emerald-600"
+                  },
+                  {
+                    icon: <Brain className="w-8 h-8 text-white" />,
+                    title: "Analyse Algorithmique",
+                    desc: "Analyse de chaque photo pour déterminer sa tonalité dominante",
+                    color: "from-purple-500 to-pink-600"
+                  },
+                  {
+                    icon: <Grid className="w-8 h-8 text-white" />,
+                    title: "Placement Stratégique",
+                    desc: "Positionnement optimal des photos pour reproduire l'image maîtresse",
+                    color: "from-orange-500 to-red-600"
+                  },
+                  {
+                    icon: <Monitor className="w-8 h-8 text-white" />,
+                    title: "Affichage Temps Réel",
+                    desc: "Visualisation de l'évolution de la mosaïque sur écrans pendant l'événement",
+                    color: "from-teal-500 to-blue-600"
+                  }
+                ].map((step, index) => (
+                  <div key={index} className="flex items-center bg-white rounded-xl p-6 shadow-sm border border-violet-100 hover:shadow-md transition-all hover:scale-105">
+                    <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center mr-6`}>
+                      {step.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg text-gray-800 mb-2">{step.title}</h4>
+                      <p className="text-gray-600">{step.desc}</p>
+                    </div>
+                    <div className="text-2xl font-bold text-violet-600 ml-4">
+                      {index + 1}
+                    </div>
                   </div>
-                  <span className="text-gray-700 pt-2">{item}</span>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+            </div>
             
             <p>
               Les algorithmes modernes de photomosaïque sont devenus extrêmement sophistiqués, permettant non seulement de placer les photos selon leur couleur dominante, mais aussi d'ajuster leur luminosité et leur contraste pour une reproduction plus fidèle de l'image maîtresse, tout en préservant la qualité et la reconnaissabilité de chaque photo individuelle.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold mb-3 text-violet-700 flex items-center">
-                  <span className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center mr-2">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                      <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"></path>
-                    </svg>
-                  </span>
-                  Photomosaïque statique
-                </h3>
-                <p className="text-gray-600">Créée à partir d'une collection existante de photos, parfaite pour les rétrospectives ou les hommages.</p>
+            {/* Static vs Dynamic Comparison - Enhanced */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-xl p-8 border border-blue-200 hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mr-4">
+                    <Layers className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-xl text-blue-800">Photomosaïque Statique</h3>
+                </div>
+                <p className="text-gray-700 mb-4">Créée à partir d'une collection existante de photos, parfaite pour les rétrospectives ou les hommages.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Rétrospective</span>
+                  <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">Hommage</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Collection existante</span>
+                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold mb-3 text-indigo-700 flex items-center">
-                  <span className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-2">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
-                    </svg>
-                  </span>
-                  Photomosaïque dynamique
-                </h3>
-                <p className="text-gray-600">Évolue en temps réel pendant l'événement, créant une expérience interactive et engageante pour les participants.</p>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-8 border border-purple-200 hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mr-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-xl text-purple-800">Photomosaïque Dynamique</h3>
+                </div>
+                <p className="text-gray-700 mb-4">Évolue en temps réel pendant l'événement, créant une expérience interactive et engageante pour les participants.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Temps réel</span>
+                  <span className="px-3 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Interactif</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Évolutif</span>
+                </div>
               </div>
             </div>
             
             <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Les bénéfices de la photomosaïque pour votre événement</h2>
+            
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-12">
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-violet-100 hover:shadow-md transition-all hover:scale-105">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-3 text-violet-800">Engagement Collectif</h4>
+                  <p className="text-sm text-gray-600">Rassemble les participants dans une création commune</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-indigo-100 hover:shadow-md transition-all hover:scale-105">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-3 text-indigo-800">Impact Visuel</h4>
+                  <p className="text-sm text-gray-600">Spectacle impressionnant qui marque les esprits</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-green-100 hover:shadow-md transition-all hover:scale-105">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Camera className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-3 text-green-800">Souvenir Durable</h4>
+                  <p className="text-sm text-gray-600">Œuvre unique qui raconte l'histoire de l'événement</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-all hover:scale-105">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-3 text-orange-800">Valeur Ajoutée</h4>
+                  <p className="text-sm text-gray-600">Différenciation forte pour votre événement</p>
+                </div>
+              </div>
+            </div>
+            
             <p>
               Au-delà de l'aspect visuel impressionnant, la photomosaïque offre de nombreux avantages qui en font un élément de plus en plus recherché dans l'événementiel moderne :
             </p>
             
-            <div className="relative my-12 p-6 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl text-white overflow-hidden">
+            {/* Enhanced Impact Statistics */}
+            <div className="relative my-12 p-10 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-2xl text-white overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4">Impact sur l'engagement</h3>
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-                  <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                    <div className="text-3xl font-bold">+70%</div>
-                    <div className="text-sm opacity-80">participation</div>
+                <div className="text-center mb-8">
+                  <TrendingUp className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Impact Mesurable sur l'Engagement</h3>
+                  <p className="opacity-90">Données basées sur plus de 300 événements avec photomosaïque</p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+                  <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                    <div className="text-center">
+                      <Users className="w-8 h-8 mx-auto mb-2 opacity-80" />
+                      <div className="text-3xl font-bold">+70%</div>
+                      <div className="text-sm opacity-80">participation active</div>
+                    </div>
                   </div>
-                  <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                    <div className="text-3xl font-bold">3.5x</div>
-                    <div className="text-sm opacity-80">temps d'engagement</div>
+                  
+                  <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                    <div className="text-center">
+                      <Clock className="w-8 h-8 mx-auto mb-2 opacity-80" />
+                      <div className="text-3xl font-bold">3.5×</div>
+                      <div className="text-sm opacity-80">temps d'engagement</div>
+                    </div>
                   </div>
-                  <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                    <div className="text-3xl font-bold">92%</div>
-                    <div className="text-sm opacity-80">satisfaction</div>
+                  
+                  <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                    <div className="text-center">
+                      <Sparkles className="w-8 h-8 mx-auto mb-2 opacity-80" />
+                      <div className="text-3xl font-bold">92%</div>
+                      <div className="text-sm opacity-80">satisfaction invités</div>
+                    </div>
                   </div>
-                  <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                    <div className="text-3xl font-bold">85%</div>
-                    <div className="text-sm opacity-80">mémorabilité</div>
+                  
+                  <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                    <div className="text-center">
+                      <Brain className="w-8 h-8 mx-auto mb-2 opacity-80" />
+                      <div className="text-3xl font-bold">85%</div>
+                      <div className="text-sm opacity-80">mémorabilité événement</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mt-20 -mr-20"></div>
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full -mb-20 -ml-20"></div>
+              <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-white/5 rounded-full -mt-16 -ml-16"></div>
             </div>
             
             <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Applications concrètes : quand utiliser une photomosaïque ?</h2>
-            <p>
-              La photomosaïque s'adapte à une multitude de contextes et formats d'événements. Voici quelques applications particulièrement efficaces :
-            </p>
-            <ul className="space-y-4 my-8">
-              {[
-                "Mariages : créer un portrait des mariés composé des photos des invités",
-                "Événements corporate : former le logo de l'entreprise avec les portraits des employés",
-                "Lancements de produit : révéler l'image du nouveau produit grâce aux photos des participants",
-                "Conférences : illustrer le thème principal avec les contributions visuelles des participants"
-              ].map((item, index) => (
-                <li key={index} className="flex items-center bg-gray-50 rounded-lg p-3 shadow-sm border-l-4 border-violet-500 hover:bg-violet-50 transition-colors">
-                  <svg className="w-6 h-6 text-violet-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
             
-            <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Considérations techniques pour une photomosaïque réussie</h2>
-            <p>
-              Pour garantir la qualité et l'impact de votre photomosaïque, certains aspects techniques doivent être pris en compte :
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-              {[
-                "Résolution suffisante des photos collectées pour maintenir la qualité visuelle",
-                "Algorithme intelligent d'analyse et de placement pour un rendu optimal",
-                "Système de modération pour filtrer les contenus inappropriés avant intégration",
-                "Affichage de haute qualité pour permettre l'appréciation de l'œuvre finale",
-                "Capacité de traitement rapide pour une expérience en temps réel fluide"
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                  <div className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+            {/* Applications Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-100 rounded-xl p-8 border border-rose-200 hover:shadow-lg transition-all hover:scale-105">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-rose-500 to-pink-600 rounded-full mr-4">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
-                  <span className="text-gray-800">{feature}</span>
+                  <h3 className="font-bold text-xl text-rose-800">Mariages</h3>
                 </div>
-              ))}
+                <p className="text-gray-700 mb-4">Créer un portrait des mariés composé des photos des invités, symbolisant l'union entourée de leurs proches.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full">Portrait couple</span>
+                  <span className="px-3 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Photos invités</span>
+                  <span className="px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full">Souvenir unique</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 border border-blue-200 hover:shadow-lg transition-all hover:scale-105">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mr-4">
+                    <Settings className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-xl text-blue-800">Événements Corporate</h3>
+                </div>
+                <p className="text-gray-700 mb-4">Former le logo de l'entreprise avec les portraits des employés, renforçant l'esprit d'équipe et l'appartenance.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Logo entreprise</span>
+                  <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">Portraits équipe</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Team building</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 border border-green-200 hover:shadow-lg transition-all hover:scale-105">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full mr-4">
+                    <Sparkles className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-xl text-green-800">Lancements Produit</h3>
+                </div>
+                <p className="text-gray-700 mb-4">Révéler l'image du nouveau produit grâce aux photos des participants, créant un dévoilement spectaculaire.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Nouveau produit</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full">Dévoilement</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Impact marketing</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 border border-purple-200 hover:shadow-lg transition-all hover:scale-105">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full mr-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-xl text-purple-800">Conférences</h3>
+                </div>
+                <p className="text-gray-700 mb-4">Illustrer le thème principal avec les contributions visuelles des participants, matérialisant l'esprit collectif.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Thème central</span>
+                  <span className="px-3 py-1 bg-violet-100 text-violet-700 text-xs rounded-full">Participation</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Collectif</span>
+                </div>
+              </div>
             </div>
             
-            <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Le futur de la photomosaïque : innovation et tendances</h2>
             <p>
-              Comme toute technologie visuelle, la photomosaïque continue d'évoluer. Voici quelques tendances émergentes qui façonnent son avenir :
+              La photomosaïque s'adapte à une multitude de contextes et formats d'événements, offrant à chaque fois une expérience unique et mémorable.
             </p>
-            <div className="bg-gray-50 p-6 rounded-2xl my-8">
-              <div className="grid grid-cols-2 gap-6">
+            
+            <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Considérations techniques pour une photomosaïque réussie</h2>
+            
+            {/* Technical Requirements Grid */}
+            <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-10 my-12 border border-gray-200">
+              <div className="text-center mb-8">
+                <Settings className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Exigences Techniques</h3>
+                <p className="text-gray-600">5 piliers pour garantir une qualité optimale</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
-                    title: "Photomosaïque animée",
-                    desc: "Intégration de clips vidéo courts au lieu de photos fixes"
+                    icon: <Camera className="w-6 h-6 text-white" />,
+                    title: "Résolution Photos",
+                    desc: "Qualité suffisante des photos collectées pour maintenir la netteté visuelle",
+                    color: "from-blue-500 to-cyan-600"
                   },
                   {
-                    title: "IA générative",
-                    desc: "Amélioration des photos et adaptation intelligente par intelligence artificielle"
+                    icon: <Brain className="w-6 h-6 text-white" />,
+                    title: "Algorithme Intelligent",
+                    desc: "Analyse et placement optimisés pour un rendu fidèle à l'image maîtresse",
+                    color: "from-purple-500 to-pink-600"
                   },
                   {
-                    title: "Mosaïques 3D",
-                    desc: "Création d'œuvres avec profondeur et perspective pour une immersion accrue"
+                    icon: <Eye className="w-6 h-6 text-white" />,
+                    title: "Système Modération",
+                    desc: "Filtrage automatique des contenus inappropriés avant intégration",
+                    color: "from-green-500 to-emerald-600"
                   },
                   {
-                    title: "Réalité augmentée",
-                    desc: "Visualisation interactive de la mosaïque via smartphone ou lunettes AR"
+                    icon: <Monitor className="w-6 h-6 text-white" />,
+                    title: "Affichage HD",
+                    desc: "Écrans haute définition pour apprécier les détails de l'œuvre finale",
+                    color: "from-orange-500 to-red-600"
+                  },
+                  {
+                    icon: <Zap className="w-6 h-6 text-white" />,
+                    title: "Traitement Rapide",
+                    desc: "Capacité de calcul pour une expérience temps réel fluide",
+                    color: "from-teal-500 to-blue-600"
                   }
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full border-2 border-violet-500 flex items-center justify-center text-violet-500 font-bold text-sm">
-                        {index + 1}
+                ].map((feature, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all hover:scale-105">
+                    <div className="flex items-center mb-4">
+                      <div className={`p-3 bg-gradient-to-r ${feature.color} rounded-full mr-4`}>
+                        {feature.icon}
                       </div>
+                      <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
                     </div>
-                    <div className="ml-3">
-                      <h4 className="font-bold text-gray-800">{item.title}</h4>
-                      <p className="text-sm text-gray-600">{item.desc}</p>
+                    <p className="text-sm text-gray-600">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <p>
+              Pour garantir la qualité et l'impact de votre photomosaïque, ces aspects techniques doivent être maîtrisés pour offrir une expérience sans faille à vos participants.
+            </p>
+            
+            <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Le futur de la photomosaïque : innovation et tendances</h2>
+            
+            {/* Future Trends */}
+            <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 rounded-2xl p-10 my-12 border border-cyan-200">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Sparkles className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-cyan-800 mb-4">Innovations Émergentes</h3>
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  Comme toute technologie visuelle, la photomosaïque continue d'évoluer avec des innovations qui redéfinissent les possibilités créatives.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {[
+                  {
+                    icon: <Zap className="w-8 h-8 text-white" />,
+                    title: "Photomosaïque Animée",
+                    desc: "Intégration de clips vidéo courts au lieu de photos fixes pour des créations dynamiques",
+                    tags: ["Vidéo", "Animation", "Dynamique"],
+                    color: "from-purple-500 to-pink-600"
+                  },
+                  {
+                    icon: <Brain className="w-8 h-8 text-white" />,
+                    title: "IA Générative",
+                    desc: "Amélioration des photos et adaptation intelligente par intelligence artificielle",
+                    tags: ["IA", "Amélioration", "Smart"],
+                    color: "from-blue-500 to-indigo-600"
+                  },
+                  {
+                    icon: <Layers className="w-8 h-8 text-white" />,
+                    title: "Mosaïques 3D",
+                    desc: "Création d'œuvres avec profondeur et perspective pour une immersion accrue",
+                    tags: ["3D", "Profondeur", "Immersion"],
+                    color: "from-green-500 to-emerald-600"
+                  },
+                  {
+                    icon: <Eye className="w-8 h-8 text-white" />,
+                    title: "Réalité Augmentée",
+                    desc: "Visualisation interactive de la mosaïque via smartphone ou lunettes AR",
+                    tags: ["AR", "Interactif", "Mobile"],
+                    color: "from-orange-500 to-red-600"
+                  }
+                ].map((trend, index) => (
+                  <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-cyan-100 hover:shadow-md transition-all hover:scale-105">
+                    <div className="flex items-center mb-6">
+                      <div className={`p-4 bg-gradient-to-br ${trend.color} rounded-full mr-4`}>
+                        {trend.icon}
+                      </div>
+                      <h4 className="font-bold text-xl text-gray-800">{trend.title}</h4>
+                    </div>
+                    <p className="text-gray-700 mb-4">{trend.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {trend.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -276,13 +543,65 @@ export default function BlogArticle() {
             </div>
             
             <h2 className="text-3xl font-bold mb-6 text-gray-800 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-violet-500">Conclusion</h2>
-            <p>
-              La photomosaïque représente bien plus qu'une simple attraction visuelle lors d'un événement. Elle incarne parfaitement l'esprit de notre époque : créer du collectif à partir de contributions individuelles, rassembler la diversité dans un ensemble cohérent, et transformer l'éphémère en souvenir durable.
-            </p>
-            <div className="my-8 p-6 bg-violet-50 rounded-xl border border-violet-100">
-              <p className="text-lg font-medium text-violet-800">
-                À l'heure où les expériences digitales et physiques convergent, la photomosaïque offre une passerelle unique entre l'individuel et le collectif, entre l'instantané et le permanent. Elle donne à chaque participant la satisfaction de contribuer à quelque chose de plus grand, tout en créant pour l'organisateur un souvenir puissant qui continuera de raconter l'histoire de l'événement bien après sa conclusion.
-              </p>
+            
+            {/* Conclusion Section */}
+            <div className="bg-gradient-to-br from-violet-100 via-indigo-100 to-purple-100 rounded-2xl p-10 my-12 border border-violet-200">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-violet-600 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Grid className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-violet-800 mb-4">L'Art Collaboratif Moderne</h3>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <Users className="w-8 h-8 text-violet-600" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2 text-violet-800">Collectif</h4>
+                  <p className="text-sm text-gray-600">Du individuel vers le collaboratif</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <Layers className="w-8 h-8 text-indigo-600" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2 text-indigo-800">Cohérence</h4>
+                  <p className="text-sm text-gray-600">Rassembler la diversité dans l'unité</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <Camera className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2 text-purple-800">Permanence</h4>
+                  <p className="text-sm text-gray-600">Transformer l'éphémère en durable</p>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-lg text-gray-700 mb-6 max-w-4xl mx-auto">
+                  La photomosaïque représente bien plus qu'une simple attraction visuelle lors d'un événement. Elle incarne parfaitement l'esprit de notre époque : créer du collectif à partir de contributions individuelles, rassembler la diversité dans un ensemble cohérent, et transformer l'éphémère en souvenir durable.
+                </p>
+              </div>
+            </div>
+            
+            {/* Final Impact Message */}
+            <div className="bg-gradient-to-r from-violet-100 to-purple-100 rounded-xl p-8 my-10 border border-violet-200">
+              <div className="flex items-start">
+                <div className="p-3 bg-violet-600 rounded-full mr-4 flex-shrink-0">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg mb-3 text-violet-800">Impact Durable</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                    À l'heure où les expériences digitales et physiques convergent, la photomosaïque offre une passerelle unique entre l'individuel et le collectif, entre l'instantané et le permanent.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Elle donne à chaque participant la satisfaction de contribuer à quelque chose de plus grand, tout en créant pour l'organisateur un souvenir puissant qui continuera de raconter l'histoire de l'événement bien après sa conclusion.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

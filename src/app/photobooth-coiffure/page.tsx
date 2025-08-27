@@ -120,13 +120,12 @@ export default function PhotoboothCoiffure() {
             <div className="text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Photobooth Coiffure IA
+                  WAIBOOTH HAIR : Photobooth coiffure IA 
                 </span>
-                <span className="text-gray-800"> Révolutionnez votre salon</span>
+                <span className="text-gray-800">Révolutionnez l’expérience client dans votre salon</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Permettez à vos clients de visualiser instantanément leur nouvelle coupe et couleur de cheveux grâce à notre intelligence artificielle avancée.
-              </p>
+                Permettez à vos clients de visualiser instantanément leur coupe ou coloration idéale grâce à notre technologie d’intelligence artificielle ultra‑réaliste.              </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-pink-100">
                   <Scissors className="w-5 h-5 text-pink-600 mr-2" />
@@ -215,6 +214,113 @@ export default function PhotoboothCoiffure() {
         </div>
       </section>
 
+      {/* Section Fonctionnalités Principales */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-6">Explorez Toutes les Possibilités de WaiBooth Hair</h2>
+            <p className="text-xl text-gray-700">
+              Découvrez notre gamme complète de fonctionnalités IA pour transformer l'expérience coiffure de vos clients
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Essayage de Coiffures */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/web002.jpg"
+                  alt="Essayage de Coiffures"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                    <h3 className="text-lg font-bold text-gray-800">Essayage de Coiffures</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700 mb-4">
+                  Des ondulés aux bobs, des styles masculins aux féminins, et tout, des franges aux coupes audacieuses — 
+                  tant de coiffures à choisir !
+                </p>
+                <div className="flex items-center text-purple-600">
+                  <Scissors className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">+500 styles disponibles</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Essayage de Couleurs */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/web005.jpg"
+                  alt="Essayage de Couleurs"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                    <h3 className="text-lg font-bold text-gray-800">Essayage de Couleurs</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700 mb-4">
+                  Plus de 200 couleurs de cheveux à choisir. 
+                  Mode photo et essayages en direct tous deux pris en charge.
+                </p>
+                <div className="flex items-center text-purple-600">
+                  <Palette className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">Mode photo & temps réel</span>
+                </div>
+              </div>
+            </div>
+
+            {/* IA Hair pour Entreprises */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/web006.jpg"
+                  alt="IA Hair pour Entreprises"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                    <h3 className="text-lg font-bold text-gray-800">IA Hair pour Entreprises</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700 mb-4">
+                  Intégrez facilement la technologie IA de changement de cheveux dans votre site web 
+                  grâce à nos outils conviviaux pour développeurs. Notre équipe est prête à vous accompagner.
+                </p>
+                <div className="flex items-center text-purple-600">
+                  <Globe className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">API & intégration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+            >
+              Découvrir Nos Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Section Avantages pour les salons */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -229,33 +335,33 @@ export default function PhotoboothCoiffure() {
             {[
               {
                 icon: <Users className="w-8 h-8 text-pink-600" />,
-                title: "Augmentez la satisfaction client",
-                description: "Permettez à vos clients de visualiser leur future coiffure avant la coupe, réduisant les déceptions de 85% et augmentant la confiance dans leur choix."
-              },
-              {
-                icon: <Zap className="w-8 h-8 text-purple-600" />,
-                title: "Consultation rapide et interactive",
-                description: "Raccourcissez le temps de consultation de 40% en montrant instantanément différentes options à vos clients grâce à notre technologie temps réel."
-              },
-              {
-                icon: <Star className="w-8 h-8 text-indigo-600" />,
-                title: "Expérience premium différenciante",
-                description: "Offrez une expérience high-tech qui démarque votre salon de la concurrence et attire une clientèle plus jeune et connectée."
-              },
-              {
-                icon: <Palette className="w-8 h-8 text-pink-600" />,
-                title: "Bibliothèque complète de styles",
-                description: "Proposez plus de 500 coupes et 200 couleurs professionnelles pour satisfaire tous les goûts et morphologies de visage."
-              },
-              {
-                icon: <Monitor className="w-8 h-8 text-purple-600" />,
-                title: "Intégration multi-plateformes",
-                description: "Disponible en tablette pour votre salon, widget pour votre site web, et application mobile pour vos clients."
+                title: "Plus de 200 coupes & 50 couleurs",
+                description: "Une large bibliothèque professionnelle pour répondre à tous les styles et morphologies."
               },
               {
                 icon: <Crown className="w-8 h-8 text-indigo-600" />,
-                title: "Résultats hyper-réalistes",
-                description: "Notre IA générative reproduit fidèlement les textures, volumes et reflets pour un aperçu ultra-réaliste du résultat final."
+                title: "Résultats ultra‑réalistes en temps réel",
+                description: "Textures, volumes et reflets fidèlement reproduits pour offrir un aperçu fidèle de la transformation"
+              },
+              {
+                icon: <Zap className="w-8 h-8 text-purple-600" />,
+                title: "Consultation express et interactive",
+                description: "Réduisez le temps de consultation jusqu'à 40 % en faisant défiler instantanément les options coiffure avec vos clients."
+              },
+              {
+                icon: <Star className="w-8 h-8 text-green-600" />,
+                title: "Satisfaction client accrue",
+                description: "Grâce à la visualisation avant coupe, diminuez les déceptions jusqu'à 85 % et augmentez la confiance dans les choix coiffure."
+              },
+              {
+                icon: <Sparkles className="w-8 h-8 text-purple-600" />,
+                title: "Expérience premium & différenciante",
+                description: "Proposez une prestation high-tech qui vous distingue de vos concurrents et attire une clientèle plus jeune et connectée."
+              },
+              {
+                icon: <Monitor className="w-8 h-8 text-indigo-600" />,
+                title: "Disponible sur tous supports",
+                description: "Tablette en salon, widget sur votre site web ou application mobile pour vos clients — WiBooth Hair s'adapte à votre environnement."
               }
             ].map((advantage, index) => (
               <div key={index} className="card bg-white p-6 text-center hover:shadow-lg transition-shadow">
@@ -469,74 +575,7 @@ export default function PhotoboothCoiffure() {
       </section>
 
       {/* Section ROI et Bénéfices Mesurables */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Retour sur Investissement Prouvé</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Nos partenaires coiffeurs constatent des résultats mesurables dès les premières semaines d'utilisation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {[
-              {
-                value: "+65%",
-                label: "Augmentation du CA",
-                description: "En moyenne sur 6 mois",
-                color: "from-green-500 to-emerald-600"
-              },
-              {
-                value: "85%",
-                label: "Satisfaction client",
-                description: "Clients satisfaits de leur coupe",
-                color: "from-blue-500 to-cyan-600"
-              },
-              {
-                value: "-40%",
-                label: "Temps de consultation",
-                description: "Réduction du temps d'échange",
-                color: "from-purple-500 to-indigo-600"
-              },
-              {
-                value: "+3.2",
-                label: "Nouveaux clients/semaine",
-                description: "Via le widget web",
-                color: "from-pink-500 to-rose-600"
-              }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`bg-gradient-to-r ${stat.color} p-6 rounded-2xl text-white mb-4`}>
-                  <div className="text-4xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-lg font-semibold">{stat.label}</div>
-                </div>
-                <p className="text-gray-600 text-sm">{stat.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-center mb-8">Calculez votre ROI personnalisé</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <h4 className="font-bold text-lg mb-2">Investissement Initial</h4>
-                <div className="text-3xl font-bold text-gray-800 mb-2">À partir de 199€/mois</div>
-                <p className="text-sm text-gray-600">Abonnement tout inclus</p>
-              </div>
-              <div className="text-center p-6 bg-green-50 rounded-xl">
-                <h4 className="font-bold text-lg mb-2">Retour Moyen</h4>
-                <div className="text-3xl font-bold text-green-600 mb-2">+1,200€/mois</div>
-                <p className="text-sm text-gray-600">Chiffre d'affaires supplémentaire</p>
-              </div>
-              <div className="text-center p-6 bg-blue-50 rounded-xl">
-                <h4 className="font-bold text-lg mb-2">ROI</h4>
-                <div className="text-3xl font-bold text-blue-600 mb-2">503%</div>
-                <p className="text-sm text-gray-600">Sur la première année</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Section Fonctionnalités Avancées */}
       <section className="py-20">
@@ -549,72 +588,7 @@ export default function PhotoboothCoiffure() {
           </div>
 
           <div className="space-y-16">
-            {/* Analyse Morphologique */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-3xl font-bold mb-6">Analyse Morphologique Intelligente</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-lg mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">Détection automatique de la forme du visage</h4>
-                      <p className="text-gray-600">Ovale, rond, carré, triangle... Notre IA identifie précisément la morphologie pour des recommandations parfaites.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-lg mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">Analyse de la texture capillaire</h4>
-                      <p className="text-gray-600">Cheveux fins, épais, bouclés, raides... Adaptation automatique des coiffures selon le type de cheveux.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-lg mt-1">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">Recommandations personnalisées</h4>
-                      <p className="text-gray-600">Suggestions automatiques basées sur les tendances actuelles et la morphologie du client.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-8 rounded-2xl">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white p-4 rounded-xl shadow-md">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-pink-200 rounded-full mx-auto mb-2"></div>
-                        <span className="text-sm font-medium">Visage Ovale</span>
-                      </div>
-                    </div>
-                    <div className="bg-white p-4 rounded-xl shadow-md">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-purple-200 rounded-full mx-auto mb-2"></div>
-                        <span className="text-sm font-medium">Visage Rond</span>
-                      </div>
-                    </div>
-                    <div className="bg-white p-4 rounded-xl shadow-md">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-indigo-200 rounded-full mx-auto mb-2"></div>
-                        <span className="text-sm font-medium">Visage Carré</span>
-                      </div>
-                    </div>
-                    <div className="bg-white p-4 rounded-xl shadow-md">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-blue-200 rounded-full mx-auto mb-2"></div>
-                        <span className="text-sm font-medium">Visage Triangle</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            
             {/* Simulation Couleur Avancée */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
@@ -711,6 +685,423 @@ export default function PhotoboothCoiffure() {
                         <span className="font-bold text-pink-600">78%</span>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Solution Tablette Tactile */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Contenu texte à gauche */}
+              <div>
+                <div className="mb-6">
+                  <div className="inline-block bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 rounded-full mb-4">
+                    <span className="text-purple-700 font-semibold text-sm">💡 Solution Professionnelle</span>
+                  </div>
+                  <h2 className="text-4xl font-bold mb-6 text-gray-800">
+                    Tablette Tactile Interactive pour Votre Salon
+                  </h2>
+                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                    Offrez à vos clients une expérience unique avec notre tablette tactile dédiée. 
+                    Ils peuvent tester et choisir leur coupe de cheveux en temps réel, directement dans votre salon.
+                  </p>
+                </div>
+
+                {/* Avantages de la solution */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-lg mt-1">
+                      <Check className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg text-gray-800">Consultation Interactive</h4>
+                      <p className="text-gray-600">Vos clients visualisent instantanément le résultat avant la coupe, réduisant les déceptions et augmentant leur satisfaction.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-2 rounded-lg mt-1">
+                      <Check className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg text-gray-800">Gain de Temps Professionnel</h4>
+                      <p className="text-gray-600">Réduisez le temps de consultation jusqu'à 40% et optimisez votre planning avec des choix de coiffure plus rapides.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 p-2 rounded-lg mt-1">
+                      <Check className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg text-gray-800">Image Moderne du Salon</h4>
+                      <p className="text-gray-600">Démarquez-vous de la concurrence avec une technologie innovante qui attire une clientèle jeune et connectée.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-orange-500 to-red-600 p-2 rounded-lg mt-1">
+                      <Check className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg text-gray-800">Chiffre d'Affaires Optimisé</h4>
+                      <p className="text-gray-600">Augmentez vos ventes grâce à des clients plus confiants dans leurs choix et satisfaits du résultat final.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-r from-teal-500 to-cyan-600 p-2 rounded-lg mt-1">
+                      <Check className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg text-gray-800">Installation et Support Inclus</h4>
+                      <p className="text-gray-600">Mise en place rapide, formation de votre équipe et support technique premium pour une utilisation optimale.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Options de tarification */}
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100 mb-8">
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">Solutions Flexibles</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-4 rounded-lg">
+                      <div className="flex items-center mb-2">
+                        <Tablet className="w-5 h-5 text-purple-600 mr-2" />
+                        <span className="font-semibold text-purple-800">Location</span>
+                      </div>
+                      <div className="text-2xl font-bold text-purple-600 mb-1">9,90€</div>
+                      <div className="text-sm text-purple-700">par mois</div>
+                      <div className="text-xs text-purple-600 mt-1">Maintenance incluse</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-lg">
+                      <div className="flex items-center mb-2">
+                        <Crown className="w-5 h-5 text-green-600 mr-2" />
+                        <span className="font-semibold text-green-800">Achat</span>
+                      </div>
+                      <div className="text-2xl font-bold text-green-600 mb-1">149€</div>
+                      <div className="text-sm text-green-700">+ 49€/mois logiciel</div>
+                      <div className="text-xs text-green-600 mt-1">Garantie 2 ans</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="#contact"
+                    className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors text-center"
+                  >
+                    Demander une démo gratuite
+                  </Link>
+                  <Link
+                    href="#demo"
+                    className="inline-block px-8 py-3 rounded-full border-2 border-purple-600 text-purple-600 font-semibold shadow-lg hover:bg-purple-50 transition-colors text-center"
+                  >
+                    Tester la technologie
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image à droite avec badge prix */}
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/coupe-cheveux/web006.jpg"
+                    alt="Tablette tactile interactive dans salon de coiffure"
+                    width={600}
+                    height={400}
+                    className="object-cover w-full h-[400px]"
+                  />
+                  
+                  {/* Badge prix en overlay */}
+                  <div className="absolute top-6 right-6">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-full shadow-xl">
+                      <div className="flex items-center space-x-2">
+                        <Tablet className="w-5 h-5" />
+                        <div className="text-center">
+                          <div className="text-sm font-medium">À partir de</div>
+                          <div className="text-xl font-bold">9,90€/mois</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Badge "Nouveau" */}
+                  <div className="absolute top-6 left-6">
+                    <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full shadow-lg">
+                      <div className="flex items-center space-x-1">
+                        <Sparkles className="w-4 h-4" />
+                        <span className="text-sm font-semibold">Nouveauté</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Overlay avec infos techniques */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <div className="text-white">
+                      <h4 className="text-lg font-bold mb-2">Tablette Professionnelle Incluse</h4>
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <span className="opacity-80">Écran :</span> 12" HD Tactile
+                        </div>
+                        <div>
+                          <span className="opacity-80">Support :</span> Ajustable & Sécurisé
+                        </div>
+                        <div>
+                          <span className="opacity-80">Connexion :</span> WiFi + 4G
+                        </div>
+                        <div>
+                          <span className="opacity-80">Garantie :</span> 2 ans
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Statistiques en bas */}
+                <div className="grid grid-cols-3 gap-4 mt-6">
+                  <div className="bg-white rounded-lg p-4 shadow-md text-center">
+                    <div className="text-2xl font-bold text-purple-600">500+</div>
+                    <div className="text-xs text-gray-600">Salons équipés</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-md text-center">
+                    <div className="text-2xl font-bold text-green-600">95%</div>
+                    <div className="text-xs text-gray-600">Satisfaction client</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-md text-center">
+                    <div className="text-2xl font-bold text-blue-600">40%</div>
+                    <div className="text-xs text-gray-600">Temps gagné</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Styles Populaires */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-6">Explorez les Styles Populaires avec notre Changeur de Coiffure IA</h2>
+            <p className="text-xl text-gray-700">
+              Découvrez notre sélection de coiffures tendance et visualisez instantanément le résultat sur votre visage grâce à notre technologie d'intelligence artificielle avancée.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Bob A-Line */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/a_line_bob_hair_style.jpg"
+                  alt="Bob A-Line"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Bob A-Line</h3>
+                <p className="text-gray-600 text-sm">
+                  Une coupe bob asymétrique moderne qui allonge le visage et apporte sophistication
+                </p>
+              </div>
+            </div>
+
+            {/* Chignon Élégant */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/bun_hair_style.jpg"
+                  alt="Chignon Élégant"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Chignon Élégant</h3>
+                <p className="text-gray-600 text-sm">
+                  Un chignon raffiné parfait pour les occasions spéciales et le quotidien chic
+                </p>
+              </div>
+            </div>
+
+            {/* Coiffure Décoiffée */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/coupe-cheveux/tousled_messy_hair_style.jpg"
+                  alt="Coiffure Décoiffée"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Coiffure Décoiffée</h3>
+                <p className="text-gray-600 text-sm">
+                  Un look naturel et décontracté avec du mouvement et de la texture
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 mb-6">
+              <strong>+497 autres styles disponibles</strong> dans notre photobooth IA
+            </p>
+            <Link
+              href="#demo"
+              className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+            >
+              Essayer maintenant
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Comment l'IA Coiffure Bénéficie aux Secteurs */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-6">Comment les Coiffures IA Bénéficient aux Principales Industries ?</h2>
+            <p className="text-xl text-gray-700">
+              Notre technologie d'intelligence artificielle révolutionne l'expérience client dans de nombreux secteurs d'activité
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {/* Salons & Barbiers */}
+            <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-r from-pink-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Scissors className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Salons de Coiffure & Barbiers</h3>
+              <p className="text-gray-600">
+                Essayez virtuellement les coiffures, coupes et couleurs avant la transformation
+              </p>
+            </div>
+
+            {/* Marques de Soins Capillaires */}
+            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-r from-indigo-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Palette className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Marques de Soins & Colorations</h3>
+              <p className="text-gray-600">
+                Shampoings, après-shampoings et colorations peuvent montrer leur rendu en situation réelle
+              </p>
+            </div>
+
+            {/* Perruques & Extensions */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Crown className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Perruques, Extensions & Détaillants</h3>
+              <p className="text-gray-600">
+                Présentez différents styles, longueurs et couleurs de manière interactive
+              </p>
+            </div>
+
+            {/* E-commerce */}
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-r from-orange-500 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Commerce & Détaillants en Ligne</h3>
+              <p className="text-gray-600">
+                Intégrez l'IA coiffure pour enrichir vos pages produits et conversions
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="#contact"
+              className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+            >
+              Obtenir l'IA pour Mon Entreprise
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Look Parfait */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-gray-800">
+                  Obtenez le Look Parfait avec le Meilleur Site de Coiffure Virtuelle
+                </h2>
+                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  Élevez votre entreprise et captivez vos clients avec la solution d'essayage de coiffures leader de l'industrie. 
+                  Ce filtre de coupe IA est conçu pour s'intégrer parfaitement dans le site e-commerce des marques, 
+                  les bornes en magasin ou les campagnes marketing digitales, offrant une expérience utilisateur transformatrice 
+                  qui génère des résultats mesurables.
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <span className="text-gray-700">Intégration e-commerce transparente</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <span className="text-gray-700">Bornes interactives en magasin</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <span className="text-gray-700">Campagnes marketing digitales</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <span className="text-gray-700">Résultats mesurables et analytics</span>
+                  </div>
+                </div>
+                <Link
+                  href="/contact"
+                  className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-colors"
+                >
+                  Découvrir nos Solutions
+                </Link>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-white rounded-2xl p-8 shadow-2xl">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl p-4 text-center">
+                      <Zap className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-gray-800">98.5%</div>
+                      <div className="text-sm text-gray-600">Précision IA</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl p-4 text-center">
+                      <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-gray-800">+500K</div>
+                      <div className="text-sm text-gray-600">Utilisateurs</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-4 text-center">
+                      <Star className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-gray-800">4.9/5</div>
+                      <div className="text-sm text-gray-600">Satisfaction</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-4 text-center">
+                      <Monitor className="w-8 h-8 text-orange-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-gray-800">&lt;0.5s</div>
+                      <div className="text-sm text-gray-600">Temps de rendu</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-lg font-semibold text-gray-800">Technologie Leader du Marché</p>
+                    <p className="text-sm text-gray-600">Faites confiance à l'expertise WaiBooth Hair</p>
                   </div>
                 </div>
               </div>
@@ -1203,68 +1594,139 @@ export default function PhotoboothCoiffure() {
         </div>
       </section>
 
-      {/* Section Témoignages */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+      {/* Section Articles de Blog */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Ce que disent nos partenaires coiffeurs</h2>
-            <p className="text-lg text-gray-700">
-              Découvrez les retours de professionnels qui ont adopté notre solution
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-6">Articles Recommandés</h2>
+              <p className="text-lg text-gray-700">
+                Découvrez nos conseils d'experts pour sublimer votre style
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Marie Dubois",
-                salon: "Salon Marie & Co",
-                ville: "Lyon",
-                stars: 5,
-                text: "Nos clientes adorent pouvoir visualiser leur future coiffure ! Cela a considérablement réduit les déceptions et augmenté notre satisfaction client de 40%.",
-                avatar: "/avatars/avatar-1.jpg"
-              },
-              {
-                name: "Sophie Martin",
-                salon: "Studio Hair Design",
-                ville: "Marseille",
-                stars: 5,
-                text: "La tablette est devenue indispensable dans notre salon. Les consultations sont plus rapides et nos clients repartent convaincus de leur choix.",
-                avatar: "/avatars/avatar-2.jpg"
-              },
-              {
-                name: "Julie Rousseau",
-                salon: "Beauty & Style",
-                ville: "Bordeaux",
-                stars: 5,
-                text: "Le widget sur notre site web nous apporte 3 nouveaux clients par semaine ! C'est un excellent outil marketing qui se rentabilise rapidement.",
-                avatar: "/avatars/avatar-3.jpg"
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.salon}, {testimonial.ville}</p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Article 1 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/pixie003.jpg"
+                    alt="Cheveux gris avec élégance"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
-                <div className="flex mb-4">
-                  {[...Array(testimonial.stars)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
+                    Cheveux Gris : Comment Les Assumer avec Élégance
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    Découvrez comment sublimer vos cheveux gris naturels et en faire un atout beauté incontournable.
+                  </p>
+                  <Link
+                    href="/blog/cheveux-gris-assumer-elegance"
+                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                  >
+                    Lire l'article
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
                 </div>
-                
-                <p className="text-gray-700 italic">"{testimonial.text}"</p>
               </div>
-            ))}
+
+              {/* Article 2 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/pixie004.jpg"
+                    alt="Coiffures tendance pour seniors"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
+                    Coiffures Tendance pour Femmes Seniors
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    Les styles de coiffures modernes et élégants parfaitement adaptés aux femmes de plus de 50 ans.
+                  </p>
+                  <Link
+                    href="/blog/coiffures-tendance-seniors"
+                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                  >
+                    Lire l'article
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Article 3 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/pixie001.jpg"
+                    alt="Coupe pixie pour femmes seniors"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
+                    La Coupe Pixie : Parfaite pour les Femmes Seniors
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    Pourquoi la coupe pixie est le choix idéal pour un style moderne et facile à entretenir après 50 ans.
+                  </p>
+                  <Link
+                    href="/blog/coupe-pixie-femmes-seniors"
+                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                  >
+                    Lire l'article
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Article 4 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/web006.jpg"
+                    alt="Simulateur de coiffure gratuit"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
+                    Simulateur de Coiffure Gratuit : Guide d'Intégration
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    Comment intégrer facilement un simulateur de coiffure sur votre site web pour améliorer l'expérience client.
+                  </p>
+                  <Link
+                    href="/blog/simulateur-coiffure-gratuit-integration"
+                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                  >
+                    Lire l'article
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/blog"
+                className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+              >
+                Voir tous nos articles
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -1345,7 +1807,9 @@ export default function PhotoboothCoiffure() {
               Prêt à révolutionner votre salon de coiffure ?
             </h2>
             <p className="text-xl opacity-90 mb-8">
-              Rejoignez les centaines de salons qui ont déjà adopté notre technologie pour enchanter leurs clients.
+              Testez la démo dès maintenant ou contactez notre équipe pour découvrir comment intégrer WAIooth Hair dans votre salon !
+
+
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

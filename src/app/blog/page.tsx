@@ -69,6 +69,61 @@ export default function Blog() {
       readTime: "9 min",
       image: "/blog/trends-2024.jpg",
       category: "Tendances"
+    },
+    {
+      id: 7,
+      slug: "coupe-pixie-femmes-seniors",
+      title: "La coupe pixie intemporelle : le guide ultime pour les femmes de 50 ans et plus",
+      excerpt: "Découvrez pourquoi la coupe pixie est le choix parfait pour les femmes matures qui souhaitent adopter un style élégant, moderne et facile à entretenir.",
+      author: "Sophie Martin",
+      date: "15 Août 2024",
+      readTime: "8 min",
+      image: "/coupe-cheveux/pixie001.jpg",
+      category: "Coiffure & Style"
+    },
+    {
+      id: 8,
+      slug: "coiffures-tendance-seniors",
+      title: "Coiffures Tendance pour Seniors 2025 : Style et Élégance à Tout Âge",
+      excerpt: "Découvrez les dernières tendances coiffure spécialement adaptées aux seniors. Coupes modernes, techniques de styling et conseils pour sublimer vos cheveux matures avec style et élégance.",
+      author: "Sophie Martin",
+      date: "27 Août 2025",
+      readTime: "8 min",
+      image: "/coupe-cheveux/pixie002.jpg",
+      category: "Coiffure & Style"
+    },
+    {
+      id: 9,
+      slug: "cheveux-gris-assumer-elegance",
+      title: "Cheveux Gris : Assumer son Élégance Naturelle avec Style",
+      excerpt: "Guide complet pour sublimer et entretenir vos cheveux gris. Découvrez comment transformer vos cheveux argentés en atout beauté avec nos conseils d'expert et tendances 2025.",
+      author: "Sophie Martin",
+      date: "27 Août 2025",
+      readTime: "10 min",
+      image: "/coupe-cheveux/pixie004.jpg",
+      category: "Beauté Naturelle"
+    },
+    {
+      id: 10,
+      slug: "miroir-intelligent-salon-coiffure",
+      title: "Miroir Intelligent avec Filtres Coiffure : Révolution dans les Salons de Beauté",
+      excerpt: "Découvrez comment les miroirs intelligents avec filtres de coiffure transforment l'expérience client dans les salons. Technologie AR, essayage virtuel et personnalisation en temps réel.",
+      author: "Sophie Martin",
+      date: "29 Août 2025",
+      readTime: "12 min",
+      image: "/coupe-cheveux/web005.jpg",
+      category: "Innovation Technologique"
+    },
+    {
+      id: 11,
+      slug: "simulateur-coiffure-gratuit-integration",
+      title: "Simulateur de Coiffure Gratuit : Intégrez l'Essayage Virtuel à Votre Site Web",
+      excerpt: "Découvrez comment intégrer un simulateur de coiffure gratuit à votre site web ou application. Guide complet pour offrir l'essayage virtuel de coupes de cheveux à vos clients.",
+      author: "Sophie Martin",
+      date: "30 Août 2025",
+      readTime: "10 min",
+      image: "/coupe-cheveux/web006.jpg",
+      category: "Guide Technique"
     }
   ];
 
