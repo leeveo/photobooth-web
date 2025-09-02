@@ -46,27 +46,41 @@ export default function Contact() {
       message: 'Envoi en cours...',
     });
     
-    // Simulation d'envoi (à remplacer par votre véritable API)
+    // Envoi via l'API
     try {
-      // Simuler un délai de traitement
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Simule une réussite
-      setFormStatus({
-        status: 'success',
-        message: 'Merci pour votre message ! Nous vous répondrons sous 24h.',
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      
-      // Réinitialiser le formulaire
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        eventType: '',
-        eventDate: '',
-        message: '',
-      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setFormStatus({
+          status: 'success',
+          message: 'Merci pour votre message ! Nous vous répondrons sous 24h. Un email de confirmation vous a été envoyé.',
+        });
+        
+        // Réinitialiser le formulaire
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          eventType: '',
+          eventDate: '',
+          message: '',
+        });
+      } else {
+        setFormStatus({
+          status: 'error',
+          message: result.error || 'Une erreur est survenue lors de l\'envoi.',
+        });
+      }
     } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
       setFormStatus({
         status: 'error',
         message: 'Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.',

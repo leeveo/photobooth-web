@@ -456,6 +456,339 @@ export default function Home() {
         </div>
       </section>
       
+      {/* Section Street Marketing & Grandes Opérations */}
+      <section className="py-24 bg-gradient-to-br from-indigo-600 to-purple-700 relative">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="mb-4 inline-flex items-center px-4 py-2 rounded-full bg-white/20 border border-white/30">
+              <span className="mr-2">🚀</span>
+              <span className="text-white text-sm font-medium">Solutions grande envergure</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Street Marketing & <span className="text-yellow-300">Opérations Massives</span>
+            </h2>
+            
+            <p className="text-xl text-indigo-100 mb-8">
+              Notre plateforme est idéale pour le street marketing et les opérations de grande envergure. 
+              Déployez rapidement sur plusieurs tablettes avec une gestion centralisée complète.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {/* Encart 1 - Déploiement Rapide */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-indigo-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Déploiement Express</h3>
+              <p className="text-indigo-100 text-sm">
+                Activation simultanée sur des dizaines de tablettes. Configuration centralisée en quelques clics pour salons professionnels, fan zones et événements massifs.
+              </p>
+            </div>
+
+            {/* Encart 2 - Collecte de Données */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-indigo-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 00-2 2h2a2 2 0 002-2V5a2 2 0 00-2-2H2a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Collecte de Données</h3>
+              <p className="text-indigo-100 text-sm">
+                Récupération massive d'emails et données utilisateurs. Analytics temps réel sur l'engagement et la portée de vos campagnes marketing.
+              </p>
+            </div>
+
+            {/* Encart 3 - Personnalisation */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-indigo-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5v12a2 2 0 002 2h2V3zM15 3h2a2 2 0 012 2v12a4 4 0 01-4 4h-2V3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Personnalisation Totale</h3>
+              <p className="text-indigo-100 text-sm">
+                Branding complet aux couleurs de votre marque. Interface personnalisée, filtres sur-mesure et intégration de vos assets marketing.
+              </p>
+            </div>
+
+            {/* Encart 4 - Coût Optimisé */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-indigo-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Coût Optimisé</h3>
+              <p className="text-indigo-100 text-sm">
+                Solution économique pour les grandes opérations. Tarifs dégressifs selon le volume et mise en place ultra-rapide sans infrastructure complexe.
+              </p>
+            </div>
+          </div>
+
+          {/* Section CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Prêt pour votre prochaine campagne massive ?
+              </h3>
+              <p className="text-indigo-100 mb-6">
+                Salons professionnels, fan zones, street marketing, événements corporate... 
+                Notre équipe vous accompagne pour un déploiement réussi à grande échelle.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-yellow-400 text-indigo-900 font-semibold hover:bg-yellow-300 transition-colors"
+                >
+                  Demander un devis
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link 
+                  href="/demo" 
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Voir une démo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Photobooth Coiffure */}
+      <section className="py-24 bg-gradient-to-br from-violet-50 to-purple-50 relative">
+        <Decorations />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="mb-4 inline-flex items-center px-4 py-2 rounded-full bg-violet-100 border border-violet-200">
+              <span className="mr-2">✂️</span>
+              <span className="text-violet-800 text-sm font-medium">Innovation coiffure & beauté</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+              Photobooth <span className="text-gradient">Coiffure IA</span> : Révolutionnez l'expérience salon
+            </h2>
+            
+            <div className="prose prose-lg max-w-4xl mx-auto text-gray-700 mb-12">
+              <p className="text-xl leading-relaxed mb-6">
+                Découvrez notre solution révolutionnaire qui transforme l'expérience client dans les salons de coiffure. 
+                Grâce à l'intelligence artificielle générative, vos clients peuvent désormais visualiser instantanément 
+                leur nouvelle coupe ou couleur avant même de s'asseoir dans le fauteuil.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                Notre technologie d'IA avancée analyse la morphologie du visage en temps réel et applique virtuellement 
+                plus de 500 coupes de cheveux et 200 couleurs différentes. Fini les déceptions et les hésitations : 
+                vos clients repartent avec la coiffure de leurs rêves, parfaitement adaptée à leur style et leur personnalité.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                Que ce soit en tablette tactile dans votre salon ou intégré directement sur votre site web, 
+                le Photobooth Coiffure IA devient un outil indispensable pour fidéliser votre clientèle, 
+                attirer de nouveaux clients et moderniser l'image de votre établissement.
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Encart 1 - Essayage Virtuel */}
+            <div className="nerko-card bg-white/80 backdrop-blur-sm">
+              <div className="nerko-card-inner">
+                <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/web006.jpg"
+                    alt="Essayage virtuel de coiffures"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    ✨ Nouveauté
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-gray-800">Essayage Virtuel Instantané</h3>
+                <p className="text-gray-600 mb-6">
+                  Testez plus de 500 coupes de cheveux en temps réel grâce à notre IA générative ultra-performante. 
+                  Visualisation immédiate et ultra-réaliste pour une expérience client exceptionnelle.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    +500 styles de coiffures disponibles
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Rendu en temps réel (&lt; 0.5s)
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Analyse morphologique automatique
+                  </div>
+                </div>
+                
+                <Link href="/photobooth-coiffure" className="nerko-link">
+                  <span>Découvrir l'essayage virtuel</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4767 6.16664L6.00004 1.68998L7.18004 0.509979L13.6667 6.99664L7.18004 13.4833L6.00004 12.3033L10.4767 7.82664H0.333374V6.16664H10.4767Z" fill="currentColor"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Encart 2 - Simulation Couleurs */}
+            <div className="nerko-card bg-white/80 backdrop-blur-sm">
+              <div className="nerko-card-inner">
+                <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/web005.jpg"
+                    alt="Simulation de couleurs de cheveux"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    🎨 Couleurs
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-gray-800">Simulation Couleurs Avancée</h3>
+                <p className="text-gray-600 mb-6">
+                  Explorez plus de 200 teintes et techniques de coloration : balayage, ombré, mèches, couleurs fantaisie. 
+                  Rendu ultra-réaliste des reflets et de la brillance selon l'éclairage.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    +200 couleurs et nuances
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Techniques pro (balayage, ombré)
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Simulation reflets et brillance
+                  </div>
+                </div>
+                
+                <Link href="/photobooth-coiffure" className="nerko-link">
+                  <span>Explorer les couleurs</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4767 6.16664L6.00004 1.68998L7.18004 0.509979L13.6667 6.99664L7.18004 13.4833L6.00004 12.3033L10.4767 7.82664H0.333374V6.16664H10.4767Z" fill="currentColor"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Encart 3 - Solution Salon */}
+            <div className="nerko-card bg-white/80 backdrop-blur-sm">
+              <div className="nerko-card-inner">
+                <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                  <Image
+                    src="/coupe-cheveux/web002.jpg"
+                    alt="Solution tablette pour salon de coiffure"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    📱 Tablette
+                  </div>
+                  <div className="absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    À partir de 9,90€/mois
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-gray-800">Solution Complète pour Salon</h3>
+                <p className="text-gray-600 mb-6">
+                  Tablette tactile professionnelle, widget web personnalisable, branding sur mesure. 
+                  Installation incluse, formation équipe et support technique premium.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Tablette tactile 12" incluse
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Widget web personnalisable
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Formation et support inclus
+                  </div>
+                </div>
+                
+                <Link href="/photobooth-coiffure" className="nerko-link">
+                  <span>Équiper mon salon</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4767 6.16664L6.00004 1.68998L7.18004 0.509979L13.6667 6.99664L7.18004 13.4833L6.00004 12.3033L10.4767 7.82664H0.333374V6.16664H10.4767Z" fill="currentColor"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistiques et CTA */}
+          <div className="mt-16 text-center">
+            <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-violet-600">500+</div>
+                <div className="text-sm text-gray-600">Salons équipés</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">98%</div>
+                <div className="text-sm text-gray-600">Satisfaction client</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-600">40%</div>
+                <div className="text-sm text-gray-600">Temps de consultation réduit</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-violet-600">1M+</div>
+                <div className="text-sm text-gray-600">Essayages réalisés</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/photobooth-coiffure" className="btn-glow">
+                Découvrir la solution complète
+              </Link>
+              <Link href="/contact" className="btn-outline">
+                Demander une démo gratuite
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Galerie */}
       <section className="py-24 bg-white relative">
         <Decorations />

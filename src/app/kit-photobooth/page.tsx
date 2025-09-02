@@ -5,72 +5,72 @@ import { Box, CheckCircle, Camera, Zap, Smartphone, Palette, Clock, Download, Im
 export default function KitPhotobooth() {
   // Définir les features
   const features = [
-    "Installation en moins de 10 minutes",
-    "Technologie IA intégrée",
+    "Configuration automatique en 2 minutes",
+    "Toutes les fonctionnalités IA intégrées",
     "Compatible avec tous les événements",
     "Support technique inclus",
-    "Livraison express en 48h"
+    "Livraison express en 24h"
   ];
 
-  // Définir les éléments du kit
-  const kitItems = [
+  // Définir les éléments de la tablette
+  const tabletFeatures = [
     {
-      title: "Support ajustable premium",
-      description: "Support en aluminium léger mais robuste, réglable en hauteur (120-180 cm) avec fixation sécurisée pour tablette.",
-      icon: <Box className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/support.jpg"
-    },
-    {
-      title: "iPad Pro 11 pouces",
-      description: "Tablette puissante préinstallée avec notre application WaiBooth.app et tous les filtres IA premium.",
+      title: "Tablette iPad Pro 12,9 pouces",
+      description: "Tablette haute performance avec écran Liquid Retina XDR, puce M2 et caméra TrueDepth pour une reconnaissance faciale ultra-précise.",
       icon: <Smartphone className="w-10 h-10 text-violet-600" />,
       image: "/kit-photobooth/tablet.jpg"
     },
     {
-      title: "Éclairage annulaire LED",
-      description: "Anneau lumineux de 48 cm avec réglage de température et d'intensité pour des photos parfaites en toute condition.",
+      title: "Application WaiBooth préinstallée",
+      description: "Interface intuitive avec plus de 500 filtres IA, photomosaïque en temps réel, galerie intelligente et partage instantané.",
       icon: <Camera className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/ring-light.jpg"
+      image: "/kit-photobooth/app-interface.jpg"
     },
     {
-      title: "Imprimante sans fil",
-      description: "Imprimante photo compacte qui se connecte automatiquement pour des impressions instantanées de haute qualité.",
+      title: "Support ajustable intégré",
+      description: "Support pliable et ajustable en hauteur intégré à la coque de protection, stable et discret pour tous types d'événements.",
+      icon: <Box className="w-10 h-10 text-violet-600" />,
+      image: "/kit-photobooth/support.jpg"
+    },
+    {
+      title: "Caméra haute résolution 13MP",
+      description: "Capteur Ultra Wide 13 mégapixels pour des photos d'une netteté exceptionnelle et des détails parfaits même après transformation IA.",
+      icon: <Zap className="w-10 h-10 text-violet-600" />,
+      image: "/kit-photobooth/high-resolution.jpg"
+    },
+    {
+      title: "Impression sans fil instantanée",
+      description: "Connexion directe avec les imprimantes compatibles pour l'impression immédiate des photos personnalisées par l'IA.",
       icon: <Download className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/printer.jpg"
+      image: "/kit-photobooth/wireless-print.jpg"
     },
     {
-      title: "Accessoires personnalisables",
-      description: "Kit d'accessoires thématiques incluant cadres, lunettes, chapeaux et plus encore, personnalisables selon votre événement.",
+      title: "Interface personnalisable",
+      description: "Branding complet aux couleurs de votre événement, logos personnalisés et écrans d'accueil sur mesure disponibles.",
       icon: <Palette className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/accessories.jpg"
-    },
-    {
-      title: "Fond photo réversible",
-      description: "Toile de fond 2x2m avec support pliable, proposant deux textures différentes pour s'adapter à tous les types d'événements.",
-      icon: <ImageIcon className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/backdrop.jpg"
+      image: "/kit-photobooth/custom-interface.jpg"
     }
   ];
 
-  // Étapes d'installation
-  const installSteps = [
+  // Étapes de configuration
+  const setupSteps = [
     {
       step: "1",
-      title: "Déployez le support",
-      description: "Dépliez le support et ajustez-le à la hauteur souhaitée avec le système de verrouillage simple.",
-      icon: <Box className="w-8 h-8 text-white" />
+      title: "Allumez la tablette",
+      description: "Appuyez sur le bouton d'allumage, l'application WaiBooth se lance automatiquement.",
+      icon: <Zap className="w-8 h-8 text-white" />
     },
     {
       step: "2",
-      title: "Montez la tablette",
-      description: "Fixez l'iPad sur le support avec le système de fixation magnétique sécurisé.",
-      icon: <Smartphone className="w-8 h-8 text-white" />
+      title: "Positionnez la tablette",
+      description: "Dépliez le support intégré et ajustez l'angle et la hauteur selon votre besoin.",
+      icon: <Box className="w-8 h-8 text-white" />
     },
     {
       step: "3",
-      title: "Allumez le système",
-      description: "Appuyez sur le bouton d'allumage, l'application se lance automatiquement avec tous vos paramètres.",
-      icon: <Zap className="w-8 h-8 text-white" />
+      title: "Connectez vos services",
+      description: "Activez l'impression sans fil ou le partage sur réseaux sociaux en un clic.",
+      icon: <Smartphone className="w-8 h-8 text-white" />
     },
     {
       step: "4",
@@ -84,47 +84,25 @@ export default function KitPhotobooth() {
   const advantages = [
     {
       title: "Plug & Play",
-      description: "Aucune configuration complexe, tout est préinstallé et prêt à l'emploi.",
+      description: "Aucune configuration complexe, tout est préinstallé et prêt à l'emploi en 2 minutes.",
       icon: <Zap className="w-6 h-6 text-violet-600" />
     },
     {
       title: "Ultra portable",
-      description: "L'ensemble pèse moins de 7kg et tient dans une seule valise de transport (incluse).",
+      description: "Seulement 1,2 kg avec support intégré, se glisse facilement dans un sac de transport.",
       icon: <Box className="w-6 h-6 text-violet-600" />
     },
     {
       title: "Support technique",
-      description: "Assistance téléphonique pendant les événements en cas de besoin.",
+      description: "Assistance téléphonique pendant les événements et chat en direct disponible 24h/24.",
       icon: <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 10h-4V4a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1z" />
       </svg>
     },
     {
       title: "Mises à jour automatiques",
-      description: "Nouveaux filtres et fonctionnalités ajoutés régulièrement via mises à jour cloud.",
+      description: "Nouveaux filtres IA et fonctionnalités ajoutés chaque mois via mises à jour cloud.",
       icon: <Download className="w-6 h-6 text-violet-600" />
-    }
-  ];
-
-  // Options
-  const options = [
-    {
-      title: "Personnalisation visuelle",
-      price: "+149€",
-      description: "Personnalisation complète de l'interface aux couleurs de votre marque, écrans d'accueil personnalisés et impressions avec logo.",
-      image: "/kit-photobooth/option-branding.jpg"
-    },
-    {
-      title: "Kit d'éclairage avancé",
-      price: "+299€",
-      description: "Deux panneaux LED latéraux supplémentaires avec diffuseurs et supports, pour un éclairage professionnel en toute condition.",
-      image: "/kit-photobooth/option-lighting.jpg"
-    },
-    {
-      title: "Arrière-plans premium",
-      price: "+199€",
-      description: "Set de 3 arrière-plans additionnels avec système de fixation rapide : texture or sequin, motif géométrique et fond vert pour montages personnalisés.",
-      image: "/kit-photobooth/option-backdrop.jpg"
     }
   ];
 
@@ -153,28 +131,15 @@ export default function KitPhotobooth() {
   // Options d'achat
   const purchaseOptions = [
     {
-      title: "Achat définitif",
-      price: "2 999€",
-      description: "Kit complet avec garantie 2 ans et accès aux mises à jour pendant 12 mois. Idéal pour une utilisation régulière.",
-      features: [
-        "Kit complet avec tous les accessoires",
-        "Livraison et installation",
-        "Formation à l'utilisation (2h)",
-        "Garantie 2 ans pièces et main d'œuvre",
-        "Support téléphonique prioritaire"
-      ],
-      cta: "Commander"
-    },
-    {
       title: "Location événement",
-      price: "399€",
-      period: "/événement",
-      description: "Location ponctuelle pour un événement spécifique, livraison et récupération incluses. Durée de 24h.",
+      price: "99€",
+      period: "/jour",
+      description: "Location ponctuelle pour un événement spécifique, livraison et récupération incluses. Tablette prête à l'emploi.",
       features: [
-        "Installation par nos techniciens",
-        "Présence d'un opérateur en option (+199€)",
-        "Accessoires personnalisés à votre événement",
-        "Assistance technique 24h/24",
+        "Tablette préinstallée et configurée",
+        "Support technique pendant l'événement",
+        "Livraison et récupération incluses",
+        "Accessoires de nettoyage fournis",
         "Assurance tous risques incluse"
       ],
       cta: "Réserver",
@@ -182,41 +147,54 @@ export default function KitPhotobooth() {
     },
     {
       title: "Location longue durée",
-      price: "299€",
+      price: "199€",
       period: "/mois",
-      description: "Location mensuelle avec possibilité d'achat après 12 mois. Maintenance et mises à jour incluses.",
+      description: "Location mensuelle avec possibilité d'achat. Maintenance et mises à jour incluses.",
       features: [
         "Engagement minimum 3 mois",
-        "Maintenance préventive trimestrielle",
-        "Remplacement matériel sous 24h en cas de panne",
+        "Maintenance préventive incluse",
+        "Remplacement sous 24h en cas de panne",
         "Mises à jour logicielles automatiques",
-        "Option d'achat après 12 mois (-50% des loyers versés)"
+        "Option d'achat après 12 mois (-30% du prix)"
       ],
       cta: "Souscrire"
+    },
+    {
+      title: "Achat définitif",
+      price: "1 299€",
+      description: "Tablette complète avec garantie 2 ans et accès aux mises à jour pendant 24 mois. Idéal pour une utilisation régulière.",
+      features: [
+        "Tablette avec toutes les fonctionnalités",
+        "Garantie 2 ans pièces et main d'œuvre",
+        "Formation à l'utilisation (1h en visio)",
+        "Support téléphonique prioritaire",
+        "Mises à jour gratuites pendant 24 mois"
+      ],
+      cta: "Acheter"
     }
   ];
 
   // FAQ
   const faqItems = [
     {
-      question: "Puis-je utiliser le kit en extérieur ?",
-      answer: "Oui, le kit est conçu pour fonctionner aussi bien en intérieur qu'en extérieur couvert. L'éclairage LED est suffisamment puissant pour compenser la luminosité variable. Notez cependant qu'il n'est pas étanche et doit être protégé en cas de pluie."
+      question: "La tablette fonctionne-t-elle en extérieur ?",
+      answer: "Oui, la tablette est conçue pour fonctionner aussi bien en intérieur qu'en extérieur. L'éclairage LED intégré s'adapte automatiquement à la luminosité ambiante. Elle résiste aux éclaboussures mais doit être protégée en cas de forte pluie."
     },
     {
       question: "Quelle est l'autonomie de la batterie ?",
-      answer: "La tablette et l'imprimante ont une autonomie d'environ 6 heures d'utilisation continue. L'éclairage LED fonctionne pendant 3 heures à pleine puissance. Des batteries externes sont incluses pour prolonger l'autonomie si nécessaire."
+      answer: "La tablette a une autonomie d'environ 8 heures d'utilisation continue. L'éclairage LED intégré fonctionne pendant 6 heures à pleine puissance. Une batterie externe est fournie pour prolonger l'autonomie si nécessaire."
     },
     {
-      question: "Le kit nécessite-t-il une connexion Internet ?",
-      answer: "Le kit peut fonctionner sans connexion Internet grâce au mode hors-ligne. Cependant, une connexion est nécessaire pour les fonctionnalités de partage sur les réseaux sociaux et l'envoi par email, ainsi que pour les mises à jour."
+      question: "La tablette nécessite-t-elle une connexion Internet ?",
+      answer: "Oui, une connexion Internet stable est requise pour le fonctionnement optimal du photobooth IA. Les traitements d'intelligence artificielle, les filtres avancés et la synchronisation en temps réel nécessitent une connexion active. Un accès Wi-Fi ou 4G/5G est inclus selon la formule choisie."
     },
     {
       question: "Combien de temps faut-il pour être opérationnel ?",
-      answer: "L'installation complète prend environ 10 minutes pour une personne seule. Notre record est de 7 minutes ! Un guide d'installation rapide est inclus, et des tutoriels vidéo sont disponibles via un QR code sur l'équipement."
+      answer: "La tablette est prête à l'emploi en moins de 2 minutes ! Il suffit de l'allumer, déplier le support et c'est parti. Un guide de démarrage rapide est affiché automatiquement au premier lancement."
     },
     {
       question: "Puis-je personnaliser l'interface aux couleurs de mon événement ?",
-      answer: "Absolument ! L'application permet une personnalisation basique des couleurs et du logo directement depuis la tablette. Pour des personnalisations plus avancées, notre option 'Personnalisation visuelle' vous offre un service sur mesure."
+      answer: "Absolument ! L'application permet une personnalisation complète des couleurs, logos et écrans d'accueil directement depuis la tablette. Des templates prédéfinis sont disponibles pour différents types d'événements."
     }
   ];
 
@@ -228,25 +206,25 @@ export default function KitPhotobooth() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Kit Photobooth
+                Tablette Photobooth IA
               </span>
-              <span className="text-gray-800"> Express</span>
+              <span className="text-gray-800"> Prête à l'emploi</span>
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              Tout ce dont vous avez besoin pour créer une expérience photobooth professionnelle en quelques minutes.
+              Une seule tablette suffit pour créer une expérience photobooth professionnelle complète avec toutes les fonctionnalités IA intégrées.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
+                className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-colors text-lg"
               >
-                Commander votre kit
+                Louer une tablette
               </Link>
               <Link
-                href="/demo"
-                className="inline-block px-8 py-3 rounded-full bg-violet-300 text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
+                href="/contact"
+                className="inline-block px-8 py-3 rounded-full border-2 border-violet-600 text-violet-600 font-semibold shadow-lg hover:bg-violet-50 transition-colors text-lg"
               >
-                Demander une démonstration
+                Acheter une tablette
               </Link>
             </div>
           </div>
@@ -260,25 +238,27 @@ export default function KitPhotobooth() {
             <div className="relative">
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/kit-photobooth/kit-complet.jpg"
-                  alt="Kit Photobooth Express"
+                  src="/kit-photobooth/tablet-complete.jpg"
+                  alt="Tablette Photobooth IA"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg">
-                <p className="text-sm uppercase font-bold">À partir de</p>
-                <p className="text-2xl font-bold">899€</p>
+                <p className="text-sm uppercase font-bold">Location à partir de</p>
+                <p className="text-2xl font-bold">9,90€/mois</p>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-6">Créez des moments magiques en toute simplicité</h2>
+              <h2 className="text-3xl font-bold mb-6">Une seule tablette, toutes les possibilités</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Le Kit Photobooth Express est une solution clé en main qui vous permet d'installer un photobooth professionnel en moins de 10 minutes, sans compétences techniques particulières.
+                Notre tablette Photobooth IA intègre toutes les fonctionnalités nécessaires pour créer une expérience photo inoubliable. 
+                Pas besoin d'équipements complexes : une tablette suffit pour transformer n'importe quel espace en photobooth professionnel.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Conçu pour les professionnels de l'événementiel, les photographes et les entreprises qui souhaitent offrir une expérience photobooth de qualité sans complications.
+                Prête à l'emploi en 2 minutes, elle offre une interface intuitive, des filtres IA avancés, 
+                et toutes les fonctionnalités de partage et d'impression pour vos événements.
               </p>
               <ul className="space-y-4">
                 {features.map((feature, index) => (
@@ -297,14 +277,14 @@ export default function KitPhotobooth() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Ce qui est inclus dans votre kit</h2>
+            <h2 className="text-3xl font-bold mb-4">Toutes les fonctionnalités intégrées</h2>
             <p className="text-lg text-gray-700">
-              Tout ce dont vous avez besoin pour démarrer immédiatement, sans achat supplémentaire.
+              Une tablette complète avec tout ce qu'il faut pour un photobooth professionnel.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {kitItems.map((item, index) => (
+            {tabletFeatures.map((item, index) => (
               <div key={index} className="card bg-white overflow-hidden">
                 <div className="relative h-48">
                   <Image
@@ -333,15 +313,15 @@ export default function KitPhotobooth() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Installation ultra-rapide en 4 étapes</h2>
+            <h2 className="text-3xl font-bold mb-4">Configuration ultra-rapide en 4 étapes</h2>
             <p className="text-lg text-gray-700">
-              Prêt à l'emploi en moins de 10 minutes, sans compétence technique nécessaire.
+              Prête à l'emploi en moins de 2 minutes, sans compétence technique nécessaire.
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {installSteps.map((step, index) => (
+              {setupSteps.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 flex items-center justify-center mx-auto mb-6">
                     {step.icon}
@@ -353,11 +333,11 @@ export default function KitPhotobooth() {
             </div>
 
             <div className="mt-16 text-center">
-              <Link href="https://www.youtube.com/watch?v=xyz" className="btn-secondary inline-flex items-center" target="_blank">
+              <Link href="/demo" className="btn-secondary inline-flex items-center" target="_blank">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 0C4.477 0 0 4.477 0 10c0 5.523 4.477 10 10 10s10-4.477 10-10C20 4.477 15.523 0 10 0zm3.5 10.5l-5 3c-.17.1-.35-.04-.35-.23v-6c0-.19.18-.33.35-.23l5 3c.17.1.17.33 0 .43z" />
                 </svg>
-                Voir la vidéo d'installation
+                Voir la démo en ligne
               </Link>
             </div>
           </div>
@@ -369,22 +349,141 @@ export default function KitPhotobooth() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Pourquoi choisir notre Kit Photobooth Express</h2>
+              <h2 className="text-3xl font-bold mb-6">Pourquoi choisir notre Tablette Photobooth IA</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Une solution pensée pour les professionnels qui veulent offrir une expérience photobooth de qualité sans les tracas techniques habituels.
+                Une solution révolutionnaire qui concentre toute la puissance d'un photobooth professionnel 
+                dans une seule tablette élégante et performante.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Avantages principaux */}
                 {advantages.map((advantage, index) => (
-                  <div key={index} className="flex items-start">
+                  <div key={index} className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
                     <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
                       {advantage.icon}
                     </div>
                     <div>
-                      <h3 className="font-bold mb-1">{advantage.title}</h3>
-                      <p className="text-gray-700 text-sm">{advantage.description}</p>
+                      <h3 className="font-bold mb-1 text-sm">{advantage.title}</h3>
+                      <p className="text-gray-700 text-xs">{advantage.description}</p>
                     </div>
                   </div>
                 ))}
+                
+                {/* Fonctionnalités IA supplémentaires */}
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <Palette className="w-6 h-6 text-violet-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">+500 filtres IA</h3>
+                    <p className="text-gray-700 text-xs">Styles artistiques variés : pop art, aquarelle, cyberpunk, vintage et bien plus.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <ImageIcon className="w-6 h-6 text-violet-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Photomosaïque temps réel</h3>
+                    <p className="text-gray-700 text-xs">Créez des œuvres collectives où chaque photo contribue à une image globale.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Vidéos IA courtes</h3>
+                    <p className="text-gray-700 text-xs">Créez des clips vidéo de 15 secondes transformés par l'IA en créations cinématographiques.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">QR Code intégré</h3>
+                    <p className="text-gray-700 text-xs">Les invités peuvent utiliser leur smartphone personnel via QR code pour une expérience sans contact.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Galerie live interactive</h3>
+                    <p className="text-gray-700 text-xs">Diffusion en temps réel des créations sur écrans externes ou murs LED pour l'animation de l'événement.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 00-2 2h2a2 2 0 002-2V5a2 2 0 00-2-2H2a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Analytics temps réel</h3>
+                    <p className="text-gray-700 text-xs">Tableaux de bord avec statistiques d'utilisation, engagement et données démographiques.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Collecte de leads</h3>
+                    <p className="text-gray-700 text-xs">Récupérez automatiquement les emails des participants pour vos campagnes marketing.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Réalité augmentée</h3>
+                    <p className="text-gray-700 text-xs">Intégration d'éléments virtuels 3D dans les photos pour des expériences immersives uniques.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">Partage multicanal</h3>
+                    <p className="text-gray-700 text-xs">Partage instantané sur réseaux sociaux, email, QR code ou impression directe.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 bg-white rounded-lg border border-violet-100 shadow-sm">
+                  <div className="rounded-full p-2 bg-violet-100 mr-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1 text-sm">IA adaptative</h3>
+                    <p className="text-gray-700 text-xs">L'IA apprend pendant l'événement et s'adapte aux préférences des participants.</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-first lg:order-last">
@@ -437,7 +536,7 @@ export default function KitPhotobooth() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold mb-4">Spécifications techniques</h2>
             <p className="text-lg text-gray-700">
-              Des équipements de qualité professionnelle pour des résultats impeccables.
+              Une tablette de qualité professionnelle pour des résultats impeccables.
             </p>
           </div>
 
@@ -445,17 +544,9 @@ export default function KitPhotobooth() {
             <div className="card bg-white overflow-hidden">
               <div className="border-b">
                 <div className="flex">
-                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Tablet</div>
+                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Tablette</div>
                   <div className="w-2/3 p-4">
-                    iPad Pro 11 pouces, 256 GB, Puce M1, Caméra 12MP Ultra Wide
-                  </div>
-                </div>
-              </div>
-              <div className="border-b">
-                <div className="flex">
-                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Support</div>
-                  <div className="w-2/3 p-4">
-                    Aluminium aviation, hauteur ajustable 120-180cm, poids max supporté 5kg, pliable
+                    iPad Pro 12,9 pouces, 512 GB, Puce M2, Caméra TrueDepth 12MP Ultra Wide, Face ID
                   </div>
                 </div>
               </div>
@@ -463,23 +554,23 @@ export default function KitPhotobooth() {
                 <div className="flex">
                   <div className="w-1/3 p-4 bg-gray-50 font-semibold">Éclairage</div>
                   <div className="w-2/3 p-4">
-                    LED Ring Light 48cm, 3200-5600K, intensité variable, batterie rechargeable intégrée (autonomie 3h)
+                    LED Ring intégré à la coque, 3200-5600K, intensité variable automatique, autonomie 6h
                   </div>
                 </div>
               </div>
               <div className="border-b">
                 <div className="flex">
-                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Imprimante</div>
+                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Support</div>
                   <div className="w-2/3 p-4">
-                    Imprimante thermique portable, papier 10x15cm, 300 DPI, connexion Wi-Fi/Bluetooth, batterie rechargeable
+                    Support pliable intégré, hauteur et angle ajustables, ultra-stable et discret
                   </div>
                 </div>
               </div>
               <div className="border-b">
                 <div className="flex">
-                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Arrière-plan</div>
+                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Connectivité</div>
                   <div className="w-2/3 p-4">
-                    Toile réversible 2x2m avec support démontable, 2 textures (uni/motif), traitement anti-reflet
+                    Wi-Fi 6E, Bluetooth 5.3, 5G cellulaire, impression AirPrint, partage instantané
                   </div>
                 </div>
               </div>
@@ -487,53 +578,19 @@ export default function KitPhotobooth() {
                 <div className="flex">
                   <div className="w-1/3 p-4 bg-gray-50 font-semibold">Logiciel</div>
                   <div className="w-2/3 p-4">
-                    Application WaiBooth.app préinstallée, 50+ filtres IA, mode galerie, partage réseaux sociaux, photomosaïque
+                    WaiBooth.app préinstallée, +500 filtres IA, photomosaïque, galerie, partage réseaux sociaux
                   </div>
                 </div>
               </div>
               <div>
                 <div className="flex">
-                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Transport</div>
+                  <div className="w-1/3 p-4 bg-gray-50 font-semibold">Autonomie</div>
                   <div className="w-2/3 p-4">
-                    Valise de transport rigide avec roulettes et poignée télescopique, dimensions 65x45x25cm
+                    8h utilisation continue, charge rapide USB-C, batterie externe fournie (+6h)
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Options */}
-      <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Options et personnalisation</h2>
-            <p className="text-lg text-gray-700">
-              Adaptez votre kit à vos besoins spécifiques avec nos options premium.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {options.map((option, index) => (
-              <div key={index} className="card bg-white overflow-hidden">
-                <div className="relative h-48">
-                  <Image
-                    src={option.image}
-                    alt={option.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-3 right-3 bg-violet-600 text-white px-3 py-1 rounded-full font-semibold">
-                    {option.price}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{option.title}</h3>
-                  <p className="text-gray-700">{option.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -635,7 +692,7 @@ export default function KitPhotobooth() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
             <p className="text-lg text-gray-700">
-              Tout ce que vous devez savoir sur notre Kit Photobooth Express.
+              Tout ce que vous devez savoir sur notre Tablette Photobooth IA.
             </p>
           </div>
 
@@ -658,25 +715,25 @@ export default function KitPhotobooth() {
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer vos événements ?</h2>
             <p className="text-xl opacity-90 mb-8">
-              Commandez dès aujourd'hui votre Kit Photobooth Express et recevez-le sous 48h.
+              Louez ou achetez dès aujourd'hui votre Tablette Photobooth IA et recevez-la sous 24h.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
                 className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
               >
-                Commander votre kit
+                Louer une tablette
               </Link>
               <Link
-                href="/demo"
-                className="inline-block px-8 py-3 rounded-full bg-white text-violet-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
+                href="/contact"
+                className="inline-block px-8 py-3 rounded-full border-2 border-white text-white font-semibold shadow-lg hover:bg-white/10 transition-colors text-lg"
               >
-                Demander une démonstration
+                Acheter une tablette
               </Link>
             </div>
             <p className="mt-8 text-sm opacity-80">
               Livraison disponible en France métropolitaine, Belgique, Suisse et Luxembourg.
-              <br />Un conseiller vous contactera dans les 24h suivant votre commande pour confirmer les détails.
+              <br />Un conseiller vous contactera dans les 24h suivant votre demande pour confirmer les détails.
             </p>
           </div>
         </div>

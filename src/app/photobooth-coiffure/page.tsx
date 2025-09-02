@@ -121,7 +121,7 @@ export default function PhotoboothCoiffure() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                   WAIBOOTH HAIR : Photobooth coiffure IA 
-                </span>
+                </span><br />
                 <span className="text-gray-800">Révolutionnez l’expérience client dans votre salon</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
@@ -142,14 +142,8 @@ export default function PhotoboothCoiffure() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="#demo"
-                  className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold shadow-lg hover:from-pink-700 hover:to-purple-700 transition-colors text-lg"
-                >
-                  Essayer la démo
-                </Link>
-                <Link
                   href="#contact"
-                  className="inline-block px-8 py-3 rounded-full border-2 border-pink-600 text-pink-600 font-semibold shadow-lg hover:bg-pink-50 transition-colors text-lg"
+                  className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold shadow-lg hover:from-pink-700 hover:to-purple-700 transition-colors text-lg"
                 >
                   Contacter l'équipe
                 </Link>
@@ -1319,71 +1313,109 @@ export default function PhotoboothCoiffure() {
         </div>
       </section>
 
-      {/* Section Solutions de Déploiement */}
+      {/* Section Grille Tarifaire */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Solutions de Déploiement Flexibles</h2>
+            <h2 className="text-4xl font-bold mb-6">Nos Offres Tarifaires</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Choisissez la solution qui convient le mieux à votre salon et à vos besoins spécifiques
+              Choisissez l'offre qui correspond à vos besoins avec notre système de crédits flexible
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Solution Tablette */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Offre Freemium */}
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Tablet className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-r from-gray-400 to-gray-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Solution Tablette</h3>
-                <p className="text-gray-600">Parfaite pour l'accueil et les consultations</p>
+                <h3 className="text-2xl font-bold mb-2">Offre Freemium</h3>
+                <p className="text-gray-600">Parfait pour tester nos services</p>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Tablette 12" haute résolution incluse</span>
+                  <span>3 crédits inclus</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Support ajustable et sécurisé</span>
+                  <span>Accès aux coiffures de base</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Interface tactile optimisée</span>
+                  <span>Support communautaire</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Branding personnalisé</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>Installation et formation incluses</span>
+                  <span>Résolution standard</span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">599€</div>
-                  <div className="text-sm text-gray-600">À l'achat + 99€/mois</div>
-                  <div className="text-xs text-gray-500 mt-1">ou 149€/mois en location</div>
+                  <div className="text-3xl font-bold text-gray-800">0€</div>
+                  <div className="text-sm text-gray-600">Gratuit</div>
+                  <div className="text-xs text-gray-500 mt-1">3 crédits offerts</div>
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
-                Commander maintenant
+              <button className="w-full bg-gradient-to-r from-gray-400 to-gray-600 text-white py-3 rounded-xl font-semibold hover:from-gray-500 hover:to-gray-700 transition-all duration-300">
+                Commencer gratuitement
               </button>
             </div>
 
-            {/* Solution Widget Web */}
+            {/* Offre Essentiel */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Tablet className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Offre Essentiel</h3>
+                <p className="text-gray-600">Idéal pour les petits salons</p>
+              </div>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>200 crédits inclus</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Accès à toutes les coiffures</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Support par email</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Résolution HD</span>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-4 mb-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-800">49€</div>
+                  <div className="text-sm text-gray-600">par mois</div>
+                  <div className="text-xs text-gray-500 mt-1">200 crédits inclus</div>
+                </div>
+              </div>
+
+              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                Choisir Essentiel
+              </button>
+            </div>
+
+            {/* Offre Pro */}
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group border-2 border-purple-200">
               <div className="text-center mb-6">
-                <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Crown className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Widget Site Web</h3>
-                <p className="text-gray-600">Attirez de nouveaux clients en ligne</p>
+                <h3 className="text-2xl font-bold mb-2">Offre Pro</h3>
+                <p className="text-gray-600">Pour les salons moyens</p>
                 <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mt-2 inline-block">
                   Le plus populaire
                 </div>
@@ -1392,125 +1424,361 @@ export default function PhotoboothCoiffure() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Intégration simple en 5 minutes</span>
+                  <span>500 crédits inclus</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Design responsive et personnalisable</span>
+                  <span>Toutes les fonctionnalités</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Capture de leads automatique</span>
+                  <span>Support prioritaire</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Analytics et rapports détaillés</span>
+                  <span>Analytics avancées</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Support technique inclus</span>
+                  <span>Branding personnalisé</span>
                 </div>
               </div>
 
               <div className="bg-purple-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">199€</div>
+                  <div className="text-3xl font-bold text-gray-800">79€</div>
                   <div className="text-sm text-gray-600">par mois</div>
-                  <div className="text-xs text-gray-500 mt-1">Sans engagement, résiliable à tout moment</div>
+                  <div className="text-xs text-gray-500 mt-1">500 crédits inclus</div>
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300">
-                Commencer l'essai gratuit
+              <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300">
+                Choisir Pro
               </button>
             </div>
 
-            {/* Solution Complete */}
+            {/* Offre Premium */}
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="bg-gradient-to-r from-green-500 to-blue-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Crown className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-r from-orange-500 to-red-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Solution Complète</h3>
-                <p className="text-gray-600">Pour les salons multi-services</p>
+                <h3 className="text-2xl font-bold mb-2">Offre Premium</h3>
+                <p className="text-gray-600">Pour les grands salons</p>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Tablettes multiples + Widget web</span>
+                  <span>1200 crédits inclus</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Écran d'affichage grand format</span>
+                  <span>Toutes les fonctionnalités Pro</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Formation équipe complète</span>
+                  <span>Support dédié 24/7</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Support prioritaire 24/7</span>
+                  <span>API personnalisée</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Personnalisation avancée</span>
+                  <span>Formation équipe incluse</span>
                 </div>
               </div>
 
-              <div className="bg-green-50 rounded-xl p-4 mb-6">
+              <div className="bg-orange-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">399€</div>
+                  <div className="text-3xl font-bold text-gray-800">129€</div>
                   <div className="text-sm text-gray-600">par mois</div>
-                  <div className="text-xs text-gray-500 mt-1">Économisez 30% vs solutions séparées</div>
+                  <div className="text-xs text-gray-500 mt-1">1200 crédits inclus</div>
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 rounded-xl font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300">
-                Demander une démo
+              <button className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300">
+                Choisir Premium
               </button>
             </div>
           </div>
 
-          {/* Comparaison des fonctionnalités */}
+          {/* Explication du système de crédits */}
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-center mb-8">Comparaison des Solutions</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">Comment fonctionnent les crédits ?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">🤖</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2">Consommation selon le modèle IA</h4>
+                <p className="text-gray-600">
+                  La consommation de crédits dépend du modèle IA choisi :
+                  <br />• <strong>Modèle Standard :</strong> 1 crédit par essayage
+                  <br />• <strong>Modèle Avancé :</strong> 2 crédits par essayage
+                  <br />• <strong>Modèle Premium :</strong> 3 crédits par essayage
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">📊</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2">Suivi de consommation en temps réel</h4>
+                <p className="text-gray-600">
+                  Suivez votre consommation de crédits en temps réel avec notre dashboard. 
+                  Chaque essayage consomme 1 crédit, vous gardez le contrôle total de votre utilisation.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-green-500 to-teal-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">+</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2">Recharge automatique</h4>
+                <p className="text-gray-600">
+                  Vos crédits se rechargent automatiquement chaque mois selon votre abonnement. 
+                  Crédits non utilisés reportés sur le mois suivant.
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
+              <div className="text-center">
+                <h4 className="text-lg font-bold mb-2">💡 Besoin de plus de crédits ?</h4>
+                <p className="text-gray-700 mb-4">
+                  Vous pouvez acheter des crédits supplémentaires à tout moment ou passer à une offre supérieure. 
+                  Contactez notre équipe pour des besoins spécifiques.
+                </p>
+                <div className="flex justify-center space-x-4 text-sm">
+                  <span className="bg-white px-3 py-1 rounded-full">
+                    <strong>Pack 100 crédits :</strong> 15€
+                  </span>
+                  <span className="bg-white px-3 py-1 rounded-full">
+                    <strong>Pack 500 crédits :</strong> 65€
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tableau comparatif des offres */}
+          <div className="mt-16 bg-white rounded-2xl p-8 shadow-xl">
+            <h3 className="text-2xl font-bold text-center mb-8">Tableau Comparatif des Offres</h3>
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-4 px-6">Fonctionnalités</th>
-                    <th className="text-center py-4 px-6">Tablette</th>
-                    <th className="text-center py-4 px-6">Widget Web</th>
-                    <th className="text-center py-4 px-6">Solution Complète</th>
+                    <th className="text-left py-4 px-6 font-bold text-gray-800">Fonctionnalités</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-lg font-bold text-gray-800">Freemium</span>
+                        <span className="text-sm text-gray-500">0€</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 font-bold text-blue-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-lg font-bold text-blue-800">Essentiel</span>
+                        <span className="text-sm text-blue-600">49€/mois</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 font-bold text-purple-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-lg font-bold text-purple-800">Pro</span>
+                        <span className="text-sm text-purple-600">79€/mois</span>
+                        <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full mt-1">Populaire</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 font-bold text-orange-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-lg font-bold text-orange-800">Premium</span>
+                        <span className="text-sm text-orange-600">129€/mois</span>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { feature: "Essayage virtuel coiffures", tablet: true, widget: true, complete: true },
-                    { feature: "Simulation couleurs", tablet: true, widget: true, complete: true },
-                    { feature: "Capture de leads", tablet: false, widget: true, complete: true },
-                    { feature: "Analytics avancées", tablet: false, widget: true, complete: true },
-                    { feature: "Branding personnalisé", tablet: true, widget: true, complete: true },
-                    { feature: "Support prioritaire", tablet: false, widget: false, complete: true },
-                    { feature: "Formation équipe", tablet: true, widget: false, complete: true },
-                    { feature: "Écran d'affichage", tablet: false, widget: false, complete: true }
+                    { 
+                      feature: "Crédits mensuels inclus", 
+                      freemium: "3 crédits", 
+                      essentiel: "200 crédits", 
+                      pro: "500 crédits", 
+                      premium: "1200 crédits" 
+                    },
+                    { 
+                      feature: "Essayage virtuel coiffures", 
+                      freemium: true, 
+                      essentiel: true, 
+                      pro: true, 
+                      premium: true 
+                    },
+                    { 
+                      feature: "Simulation couleurs", 
+                      freemium: "Limitée", 
+                      essentiel: true, 
+                      pro: true, 
+                      premium: true 
+                    },
+                    { 
+                      feature: "Résolution d'image", 
+                      freemium: "Standard", 
+                      essentiel: "HD", 
+                      pro: "HD+", 
+                      premium: "Ultra HD" 
+                    },
+                    { 
+                      feature: "Bibliothèque de coiffures", 
+                      freemium: "Basique (50)", 
+                      essentiel: "Complète (500+)", 
+                      pro: "Complète (500+)", 
+                      premium: "Complète (500+)" 
+                    },
+                    { 
+                      feature: "Support client", 
+                      freemium: "Communautaire", 
+                      essentiel: "Email", 
+                      pro: "Prioritaire", 
+                      premium: "Dédié 24/7" 
+                    },
+                    { 
+                      feature: "Branding personnalisé", 
+                      freemium: false, 
+                      essentiel: false, 
+                      pro: true, 
+                      premium: true 
+                    },
+                    { 
+                      feature: "Analytics et rapports", 
+                      freemium: false, 
+                      essentiel: "Basiques", 
+                      pro: "Avancées", 
+                      premium: "Complètes" 
+                    },
+                    { 
+                      feature: "API d'intégration", 
+                      freemium: false, 
+                      essentiel: false, 
+                      pro: "Standard", 
+                      premium: "Personnalisée" 
+                    },
+                    { 
+                      feature: "Formation équipe", 
+                      freemium: false, 
+                      essentiel: false, 
+                      pro: "En ligne", 
+                      premium: "Sur site incluse" 
+                    },
+                    { 
+                      feature: "Sauvegarde cloud", 
+                      freemium: "7 jours", 
+                      essentiel: "30 jours", 
+                      pro: "90 jours", 
+                      premium: "Illimitée" 
+                    },
+                    { 
+                      feature: "Export des données", 
+                      freemium: false, 
+                      essentiel: "CSV", 
+                      pro: "CSV, PDF", 
+                      premium: "Tous formats" 
+                    },
+                    { 
+                      feature: "Accès multi-utilisateurs", 
+                      freemium: "1 utilisateur", 
+                      essentiel: "3 utilisateurs", 
+                      pro: "10 utilisateurs", 
+                      premium: "Illimité" 
+                    },
+                    { 
+                      feature: "Watermark sur photos", 
+                      freemium: true, 
+                      essentiel: true, 
+                      pro: false, 
+                      premium: false 
+                    },
+                    { 
+                      feature: "Crédits supplémentaires", 
+                      freemium: "0.25€/crédit", 
+                      essentiel: "0.20€/crédit", 
+                      pro: "0.15€/crédit", 
+                      premium: "0.10€/crédit" 
+                    }
                   ].map((row, index) => (
-                    <tr key={index} className="border-b border-gray-100">
-                      <td className="py-4 px-6 font-medium">{row.feature}</td>
-                      <td className="py-4 px-6 text-center">
-                        {row.tablet ? <Check className="w-5 h-5 text-green-500 mx-auto" /> : <span className="text-gray-300">—</span>}
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                      <td className="py-4 px-6 font-medium text-gray-800">{row.feature}</td>
+                      
+                      {/* Freemium */}
+                      <td className="py-4 px-4 text-center">
+                        {typeof row.freemium === 'boolean' ? (
+                          row.freemium ? (
+                            <Check className="w-5 h-5 text-green-500 mx-auto" />
+                          ) : (
+                            <span className="text-gray-300 text-lg">—</span>
+                          )
+                        ) : (
+                          <span className="text-gray-700 text-sm">{row.freemium}</span>
+                        )}
                       </td>
-                      <td className="py-4 px-6 text-center">
-                        {row.widget ? <Check className="w-5 h-5 text-green-500 mx-auto" /> : <span className="text-gray-300">—</span>}
+                      
+                      {/* Essentiel */}
+                      <td className="py-4 px-4 text-center">
+                        {typeof row.essentiel === 'boolean' ? (
+                          row.essentiel ? (
+                            <Check className="w-5 h-5 text-green-500 mx-auto" />
+                          ) : (
+                            <span className="text-gray-300 text-lg">—</span>
+                          )
+                        ) : (
+                          <span className="text-blue-700 text-sm font-medium">{row.essentiel}</span>
+                        )}
                       </td>
-                      <td className="py-4 px-6 text-center">
-                        {row.complete ? <Check className="w-5 h-5 text-green-500 mx-auto" /> : <span className="text-gray-300">—</span>}
+                      
+                      {/* Pro */}
+                      <td className="py-4 px-4 text-center bg-purple-50">
+                        {typeof row.pro === 'boolean' ? (
+                          row.pro ? (
+                            <Check className="w-5 h-5 text-green-500 mx-auto" />
+                          ) : (
+                            <span className="text-gray-300 text-lg">—</span>
+                          )
+                        ) : (
+                          <span className="text-purple-700 text-sm font-medium">{row.pro}</span>
+                        )}
+                      </td>
+                      
+                      {/* Premium */}
+                      <td className="py-4 px-4 text-center">
+                        {typeof row.premium === 'boolean' ? (
+                          row.premium ? (
+                            <Check className="w-5 h-5 text-green-500 mx-auto" />
+                          ) : (
+                            <span className="text-gray-300 text-lg">—</span>
+                          )
+                        ) : (
+                          <span className="text-orange-700 text-sm font-medium">{row.premium}</span>
+                        )}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+            
+            {/* Call to action sous le tableau */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-4">
+                Besoin d'aide pour choisir la meilleure offre pour votre salon ?
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="#contact"
+                  className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+                >
+                  Parler à un expert
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -1817,12 +2085,6 @@ export default function PhotoboothCoiffure() {
                 className="inline-block px-8 py-3 rounded-full bg-white text-purple-700 font-semibold shadow-lg hover:bg-gray-100 transition-colors text-lg"
               >
                 Demander une démonstration
-              </Link>
-              <Link
-                href="#demo"
-                className="inline-block px-8 py-3 rounded-full border-2 border-white text-white font-semibold shadow-lg hover:bg-white/10 transition-colors text-lg"
-              >
-                Voir la démo
               </Link>
             </div>
             <div className="mt-8 flex justify-center items-center space-x-8 text-white/80">
