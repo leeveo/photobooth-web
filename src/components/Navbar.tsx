@@ -115,6 +115,9 @@ export default function Navbar() {
             <Link href="/faq" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               FAQ
             </Link>
+            <Link href="/demo" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
+              Démo
+            </Link>
             <Link href="/contact" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Contact
             </Link>
@@ -220,6 +223,13 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
               >
                 FAQ
+              </Link>
+              <Link 
+                href="/demo" 
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
+                onClick={closeMobileMenu}
+              >
+                Démo
               </Link>
               <Link 
                 href="/contact" 

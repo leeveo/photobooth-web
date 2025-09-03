@@ -179,6 +179,19 @@ export default function EventPage() {
           <p className="text-xl text-gray-300 mb-12">
             Découvrez nos concepts créatifs pour engager vos invités et transformer votre événement en une expérience mémorable et partageante.
           </p>
+          
+          {/* Image d'activation événementielle */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/event/ar-experience.jpg"
+                alt="Activation événementielle"
+                width={800}
+                height={400}
+                className="object-cover w-full h-[400px]"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -257,6 +270,26 @@ export default function EventPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Des solutions éprouvées qui transforment vos événements en expériences mémorables
               </p>
+              
+              {/* Image d'illustration des activations */}
+              <div className="max-w-3xl mx-auto mt-12 mb-8">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/event/team-mosaic.jpg"
+                    alt="Team building et activations créatives"
+                    width={600}
+                    height={300}
+                    className="object-cover w-full h-[300px]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                      <h4 className="text-md font-bold text-gray-800">Activations Team Building</h4>
+                      <p className="text-gray-600 text-xs">Créez des souvenirs collectifs et renforcez l'esprit d'équipe</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

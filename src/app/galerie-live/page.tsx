@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Monitor, Camera, Smartphone, Grid, Zap, Layout, Shield, RefreshCw, Share2, ArrowRight, Eye, Sparkles, Users, BarChart } from 'lucide-react';
@@ -6,36 +8,396 @@ export default function GalerieLive() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
+      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900"></div>
+        
+        {/* Animated Background Lights */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-violet-500/30 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float-medium"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/25 rounded-full blur-3xl animate-float-fast"></div>
+        </div>
+
+        {/* Animated Hair Style Images Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Row 1 - Hair Style Images */}
+          <div className="absolute top-20 left-10 animate-float-random-1">
+            <div className="w-16 h-16 rounded-lg opacity-20 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/pixie001.jpg" alt="" width={64} height={64} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-40 right-32 animate-float-random-2">
+            <div className="w-20 h-20 rounded-lg opacity-25 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web001.jpg" alt="" width={80} height={80} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-32 left-24 animate-float-random-3">
+            <div className="w-14 h-14 rounded-lg opacity-18 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/a_line_bob_hair_style.jpg" alt="" width={56} height={56} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-80 right-60 animate-float-random-4">
+            <div className="w-18 h-18 rounded-lg opacity-22 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/bun_hair_style.jpg" alt="" width={72} height={72} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-80 left-60 animate-float-random-5">
+            <div className="w-22 h-22 rounded-lg opacity-28 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/pixie002.jpg" alt="" width={88} height={88} className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Row 2 - More Hair Styles */}
+          <div className="absolute top-32 right-16 animate-float-random-6">
+            <div className="w-17 h-17 rounded-lg opacity-23 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/buzz_cut_hair_style.jpg" alt="" width={68} height={68} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-40 right-20 animate-float-random-7">
+            <div className="w-19 h-19 rounded-lg opacity-30 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/pixie003.jpg" alt="" width={76} height={76} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-60 left-16 animate-float-random-8">
+            <div className="w-16 h-16 rounded-lg opacity-21 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/slicked_back_hair_style.jpg" alt="" width={64} height={64} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-20 left-80 animate-float-random-9">
+            <div className="w-15 h-15 rounded-lg opacity-19 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/tied_hair_style.jpg" alt="" width={60} height={60} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-90 right-80 animate-float-random-10">
+            <div className="w-21 h-21 rounded-lg opacity-27 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/top_bun_hair_style.jpg" alt="" width={84} height={84} className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Row 3 - Additional Hair Styles */}
+          <div className="absolute top-48 left-32 animate-float-random-11">
+            <div className="w-18 h-18 rounded-lg opacity-24 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/tousled_messy_hair_style.jpg" alt="" width={72} height={72} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-24 right-40 animate-float-random-12">
+            <div className="w-16 h-16 rounded-lg opacity-20 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/voluminous_hair_style.jpg" alt="" width={64} height={64} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-16 left-60 animate-float-random-13">
+            <div className="w-17 h-17 rounded-lg opacity-25 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web002.jpg" alt="" width={68} height={68} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-64 right-16 animate-float-random-14">
+            <div className="w-20 h-20 rounded-lg opacity-29 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web003.jpg" alt="" width={80} height={80} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-72 right-24 animate-float-random-15">
+            <div className="w-17 h-17 rounded-lg opacity-23 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web004.jpg" alt="" width={68} height={68} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-48 left-40 animate-float-random-16">
+            <div className="w-19 h-19 rounded-lg opacity-26 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web005.jpg" alt="" width={76} height={76} className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Row 4 - Final Hair Styles */}
+          <div className="absolute top-24 right-70 animate-float-random-17">
+            <div className="w-18 h-18 rounded-lg opacity-22 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web006.jpg" alt="" width={72} height={72} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-72 left-70 animate-float-random-18">
+            <div className="w-16 h-16 rounded-lg opacity-20 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/pixie004.jpg" alt="" width={64} height={64} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-36 left-48 animate-float-random-19">
+            <div className="w-15 h-15 rounded-lg opacity-21 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/pixie001.jpg" alt="" width={60} height={60} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-36 right-48 animate-float-random-20">
+            <div className="w-17 h-17 rounded-lg opacity-24 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/bun_hair_style.jpg" alt="" width={68} height={68} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-84 left-36 animate-float-random-21">
+            <div className="w-21 h-21 rounded-lg opacity-28 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/a_line_bob_hair_style.jpg" alt="" width={84} height={84} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-84 right-36 animate-float-random-22">
+            <div className="w-18 h-18 rounded-lg opacity-25 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/web001.jpg" alt="" width={72} height={72} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute top-56 right-52 animate-float-random-23">
+            <div className="w-16 h-16 rounded-lg opacity-23 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/slicked_back_hair_style.jpg" alt="" width={64} height={64} className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-52 left-52 animate-float-random-24">
+            <div className="w-19 h-19 rounded-lg opacity-27 overflow-hidden border border-white/20">
+              <Image src="/coupe-cheveux/top_bun_hair_style.jpg" alt="" width={76} height={76} className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Galerie Live
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 mb-8">
+              <Monitor className="w-5 h-5 text-violet-300" />
+              <span className="text-white/90 font-medium">Galerie temps réel</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Galerie
               </span>
-              <span className="text-gray-800"> : Le mur photo interactif</span>
+              <br />
+              <span className="text-white">Live</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Affichez en temps réel toutes les photos de votre événement sur un écran dynamique et captivant qui évolue en direct.
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Le mur photo interactif qui affiche en temps réel toutes les créations de votre événement et captive vos invités.
             </p>
-            <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/galerie-live/gallery-hero.jpg"
-                alt="Galerie Live en action lors d'un événement"
-                width={1200}
-                height={675}
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6">
-                  <span className="px-3 py-1 bg-violet-600 text-white text-sm font-medium rounded-full">
-                    Mise à jour en temps réel
-                  </span>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              >
+                <span className="relative z-10">Installer ma galerie</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
+                Voir une démo
+              </Link>
+            </div>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Sparkles className="w-8 h-8 text-violet-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Mise à jour live</h3>
+                  <p className="text-gray-300 text-sm">Photos en temps réel</p>
+                </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Users className="w-8 h-8 text-pink-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Engagement collectif</h3>
+                  <p className="text-gray-300 text-sm">Expérience partagée</p>
+                </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <BarChart className="w-8 h-8 text-blue-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Impact visuel</h3>
+                  <p className="text-gray-300 text-sm">Point focal captivant</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Animated CSS */}
+        <style jsx>{`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-20px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-5px); }
+          }
+          @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(15px) translateX(-10px); }
+            66% { transform: translateY(-10px) translateX(15px); }
+          }
+          @keyframes float-fast {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-15px) translateX(8px); }
+          }
+          
+          /* Hair Style Images Animations */
+          @keyframes float-random-1 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.2; }
+            25% { transform: translateY(-30px) translateX(20px) rotate(3deg); opacity: 0.3; }
+            50% { transform: translateY(-15px) translateX(-10px) rotate(-2deg); opacity: 0.25; }
+            75% { transform: translateY(-40px) translateX(15px) rotate(4deg); opacity: 0.35; }
+          }
+          @keyframes float-random-2 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.25; }
+            20% { transform: translateY(-25px) translateX(-15px) rotate(-3deg); opacity: 0.3; }
+            60% { transform: translateY(-35px) translateX(25px) rotate(5deg); opacity: 0.4; }
+            80% { transform: translateY(-10px) translateX(-5px) rotate(-1deg); opacity: 0.2; }
+          }
+          @keyframes float-random-3 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.18; }
+            30% { transform: translateY(-20px) translateX(10px) rotate(2deg); opacity: 0.28; }
+            70% { transform: translateY(-30px) translateX(-20px) rotate(-4deg); opacity: 0.23; }
+          }
+          @keyframes float-random-4 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.22; }
+            40% { transform: translateY(-40px) translateX(-25px) rotate(-5deg); opacity: 0.32; }
+            80% { transform: translateY(-15px) translateX(30px) rotate(3deg); opacity: 0.27; }
+          }
+          @keyframes float-random-5 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.28; }
+            25% { transform: translateY(-35px) translateX(15px) rotate(6deg); opacity: 0.38; }
+            75% { transform: translateY(-20px) translateX(-10px) rotate(-2deg); opacity: 0.33; }
+          }
+          @keyframes float-random-6 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.23; }
+            35% { transform: translateY(-25px) translateX(-30px) rotate(-6deg); opacity: 0.33; }
+            65% { transform: translateY(-45px) translateX(20px) rotate(4deg); opacity: 0.28; }
+          }
+          @keyframes float-random-7 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.30; }
+            20% { transform: translateY(-30px) translateX(25px) rotate(5deg); opacity: 0.40; }
+            60% { transform: translateY(-10px) translateX(-15px) rotate(-3deg); opacity: 0.25; }
+            90% { transform: translateY(-35px) translateX(10px) rotate(1deg); opacity: 0.35; }
+          }
+          @keyframes float-random-8 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.21; }
+            50% { transform: translateY(-40px) translateX(-20px) rotate(-5deg); opacity: 0.31; }
+          }
+          @keyframes float-random-9 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.19; }
+            30% { transform: translateY(-25px) translateX(35px) rotate(7deg); opacity: 0.29; }
+            70% { transform: translateY(-35px) translateX(-15px) rotate(-3deg); opacity: 0.24; }
+          }
+          @keyframes float-random-10 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.27; }
+            40% { transform: translateY(-30px) translateX(-25px) rotate(-4deg); opacity: 0.37; }
+            80% { transform: translateY(-50px) translateX(20px) rotate(6deg); opacity: 0.32; }
+          }
+          @keyframes float-random-11 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.24; }
+            25% { transform: translateY(-20px) translateX(40px) rotate(8deg); opacity: 0.34; }
+            75% { transform: translateY(-35px) translateX(-30px) rotate(-5deg); opacity: 0.29; }
+          }
+          @keyframes float-random-12 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.20; }
+            50% { transform: translateY(-45px) translateX(15px) rotate(3deg); opacity: 0.30; }
+          }
+          @keyframes float-random-13 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.25; }
+            33% { transform: translateY(-30px) translateX(-40px) rotate(-7deg); opacity: 0.35; }
+            66% { transform: translateY(-15px) translateX(25px) rotate(4deg); opacity: 0.30; }
+          }
+          @keyframes float-random-14 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.29; }
+            45% { transform: translateY(-35px) translateX(-20px) rotate(-6deg); opacity: 0.39; }
+            85% { transform: translateY(-25px) translateX(35px) rotate(5deg); opacity: 0.34; }
+          }
+          @keyframes float-random-15 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.23; }
+            20% { transform: translateY(-40px) translateX(30px) rotate(6deg); opacity: 0.33; }
+            60% { transform: translateY(-20px) translateX(-25px) rotate(-4deg); opacity: 0.28; }
+            90% { transform: translateY(-50px) translateX(10px) rotate(2deg); opacity: 0.38; }
+          }
+          @keyframes float-random-16 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.26; }
+            35% { transform: translateY(-30px) translateX(-35px) rotate(-8deg); opacity: 0.36; }
+            75% { transform: translateY(-40px) translateX(20px) rotate(5deg); opacity: 0.31; }
+          }
+          @keyframes float-random-17 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.22; }
+            25% { transform: translateY(-35px) translateX(25px) rotate(5deg); opacity: 0.32; }
+            75% { transform: translateY(-20px) translateX(-20px) rotate(-3deg); opacity: 0.27; }
+          }
+          @keyframes float-random-18 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.20; }
+            40% { transform: translateY(-45px) translateX(-30px) rotate(-6deg); opacity: 0.30; }
+            80% { transform: translateY(-25px) translateX(35px) rotate(4deg); opacity: 0.25; }
+          }
+          @keyframes float-random-19 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.21; }
+            30% { transform: translateY(-30px) translateX(40px) rotate(7deg); opacity: 0.31; }
+            70% { transform: translateY(-40px) translateX(-25px) rotate(-5deg); opacity: 0.26; }
+          }
+          @keyframes float-random-20 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.24; }
+            50% { transform: translateY(-50px) translateX(20px) rotate(6deg); opacity: 0.34; }
+          }
+          @keyframes float-random-21 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.28; }
+            20% { transform: translateY(-25px) translateX(-40px) rotate(-8deg); opacity: 0.38; }
+            60% { transform: translateY(-35px) translateX(30px) rotate(6deg); opacity: 0.33; }
+            90% { transform: translateY(-15px) translateX(-15px) rotate(-2deg); opacity: 0.23; }
+          }
+          @keyframes float-random-22 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.25; }
+            35% { transform: translateY(-40px) translateX(25px) rotate(9deg); opacity: 0.35; }
+            75% { transform: translateY(-20px) translateX(-30px) rotate(-6deg); opacity: 0.30; }
+          }
+          @keyframes float-random-23 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.23; }
+            45% { transform: translateY(-35px) translateX(-20px) rotate(-7deg); opacity: 0.33; }
+            85% { transform: translateY(-45px) translateX(35px) rotate(5deg); opacity: 0.28; }
+          }
+          @keyframes float-random-24 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.27; }
+            25% { transform: translateY(-30px) translateX(45px) rotate(10deg); opacity: 0.37; }
+            75% { transform: translateY(-50px) translateX(-25px) rotate(-4deg); opacity: 0.32; }
+          }
+
+          .animate-float-slow {
+            animation: float-slow 12s ease-in-out infinite;
+          }
+          .animate-float-medium {
+            animation: float-medium 15s ease-in-out infinite;
+          }
+          .animate-float-fast {
+            animation: float-fast 18s ease-in-out infinite;
+          }
+          
+          /* Hair Style Images Animation Classes */
+          .animate-float-random-1 { animation: float-random-1 20s ease-in-out infinite; }
+          .animate-float-random-2 { animation: float-random-2 25s ease-in-out infinite; }
+          .animate-float-random-3 { animation: float-random-3 18s ease-in-out infinite; }
+          .animate-float-random-4 { animation: float-random-4 22s ease-in-out infinite; }
+          .animate-float-random-5 { animation: float-random-5 28s ease-in-out infinite; }
+          .animate-float-random-6 { animation: float-random-6 24s ease-in-out infinite; }
+          .animate-float-random-7 { animation: float-random-7 26s ease-in-out infinite; }
+          .animate-float-random-8 { animation: float-random-8 20s ease-in-out infinite; }
+          .animate-float-random-9 { animation: float-random-9 23s ease-in-out infinite; }
+          .animate-float-random-10 { animation: float-random-10 27s ease-in-out infinite; }
+          .animate-float-random-11 { animation: float-random-11 21s ease-in-out infinite; }
+          .animate-float-random-12 { animation: float-random-12 25s ease-in-out infinite; }
+          .animate-float-random-13 { animation: float-random-13 29s ease-in-out infinite; }
+          .animate-float-random-14 { animation: float-random-14 19s ease-in-out infinite; }
+          .animate-float-random-15 { animation: float-random-15 24s ease-in-out infinite; }
+          .animate-float-random-16 { animation: float-random-16 26s ease-in-out infinite; }
+          .animate-float-random-17 { animation: float-random-17 22s ease-in-out infinite; }
+          .animate-float-random-18 { animation: float-random-18 30s ease-in-out infinite; }
+          .animate-float-random-19 { animation: float-random-19 18s ease-in-out infinite; }
+          .animate-float-random-20 { animation: float-random-20 27s ease-in-out infinite; }
+          .animate-float-random-21 { animation: float-random-21 24s ease-in-out infinite; }
+          .animate-float-random-22 { animation: float-random-22 31s ease-in-out infinite; }
+          .animate-float-random-23 { animation: float-random-23 23s ease-in-out infinite; }
+          .animate-float-random-24 { animation: float-random-24 28s ease-in-out infinite; }
+        `}</style>
       </section>
 
       {/* Section Galerie Live Interactive */}

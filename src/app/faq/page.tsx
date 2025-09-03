@@ -10,7 +10,6 @@ import {
   HelpCircle, 
   Users, 
   Sparkles,
-  Search,
   Mail,
   Phone,
   Clock,
@@ -197,9 +196,6 @@ export default function FAQPage() {
       ]
     }
   ];
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredCategories, setFilteredCategories] = useState(faqCategories);
   
   return (
     <>
@@ -226,28 +222,6 @@ export default function FAQPage() {
             <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
               Trouvez rapidement les réponses à vos questions sur notre plateforme de photobooth IA et nos services d'activation d'événements.
             </p>
-            
-            {/* Barre de recherche moderne */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-2xl blur"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-2 border border-white/20">
-                  <div className="flex items-center">
-                    <Search className="w-6 h-6 text-gray-400 ml-4" />
-                    <input 
-                      type="text" 
-                      placeholder="Rechercher une question..." 
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="flex-1 py-4 px-4 bg-transparent text-white placeholder-gray-400 focus:outline-none text-lg"
-                    />
-                    <button className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white p-3 rounded-xl hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 mr-2">
-                      <Search className="w-5 h-5" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -291,7 +265,7 @@ export default function FAQPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            {filteredCategories.map((category, index) => (
+            {faqCategories.map((category, index) => (
               <div key={index} id={`category-${index}`}>
                 <FAQCategory 
                   title={category.title} 
