@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Box, CheckCircle, Camera, Zap, Smartphone, Palette, Clock, Download, Image as ImageIcon } from 'lucide-react';
@@ -201,34 +203,114 @@ export default function KitPhotobooth() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
+      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900"></div>
+        
+        {/* Animated Background Lights */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-violet-500/30 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float-medium"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/25 rounded-full blur-3xl animate-float-fast"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Tablette Photobooth IA
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 mb-8">
+              <Box className="w-5 h-5 text-violet-300" />
+              <span className="text-white/90 font-medium">Kit Tablette Professionnel</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Kit Photobooth
               </span>
-              <span className="text-gray-800"> Prête à l'emploi</span>
+              <br />
+              <span className="text-white">Express</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Une seule tablette suffit pour créer une expérience photobooth professionnelle complète avec toutes les fonctionnalités IA intégrées.
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Une tablette complète prête à l'emploi avec toutes les fonctionnalités IA intégrées pour créer une expérience photobooth professionnelle instantanée.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-colors text-lg"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                Louer une tablette
+                <span className="relative z-10">Louer une tablette</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 rounded-full border-2 border-violet-600 text-violet-600 font-semibold shadow-lg hover:bg-violet-50 transition-colors text-lg"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:scale-105"
               >
                 Acheter une tablette
               </Link>
             </div>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Zap className="w-8 h-8 text-violet-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Configuration 2 min</h3>
+                  <p className="text-gray-300 text-sm">Prêt à l'emploi instantanément</p>
+                </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Camera className="w-8 h-8 text-pink-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">IA Intégrée</h3>
+                  <p className="text-gray-300 text-sm">500+ filtres et effets</p>
+                </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Smartphone className="w-8 h-8 text-blue-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Ultra Portable</h3>
+                  <p className="text-gray-300 text-sm">Support intégré inclus</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Animated CSS */}
+        <style jsx>{`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-20px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-5px); }
+          }
+          @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(15px) translateX(-10px); }
+            66% { transform: translateY(-10px) translateX(15px); }
+          }
+          @keyframes float-fast {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-15px) translateX(8px); }
+          }
+          .animate-float-slow {
+            animation: float-slow 12s ease-in-out infinite;
+          }
+          .animate-float-medium {
+            animation: float-medium 15s ease-in-out infinite;
+          }
+          .animate-float-fast {
+            animation: float-fast 18s ease-in-out infinite;
+          }
+        `}</style>
       </section>
 
       {/* Présentation du produit */}

@@ -438,3 +438,82 @@
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* Animations Glow Mobiles Simplifiées */
+@keyframes glow-move {
+  0% { 
+    transform: translate(-100px, -100px);
+    opacity: 0.5;
+  }
+  25% { 
+    transform: translate(50vw, 20vh);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translate(80vw, 60vh);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: translate(20vw, 80vh);
+    opacity: 0.7;
+  }
+  100% { 
+    transform: translate(-100px, -100px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow-move-2 {
+  0% { 
+    transform: translate(100vw, 50vh);
+    opacity: 0.4;
+  }
+  33% { 
+    transform: translate(10vw, 10vh);
+    opacity: 0.6;
+  }
+  66% { 
+    transform: translate(60vw, 90vh);
+    opacity: 0.5;
+  }
+  100% { 
+    transform: translate(100vw, 50vh);
+    opacity: 0.4;
+  }
+}
+
+@keyframes glow-move-3 {
+  0% { 
+    transform: translate(50vw, 100vh);
+    opacity: 0.3;
+  }
+  40% { 
+    transform: translate(80vw, 20vh);
+    opacity: 0.5;
+  }
+  80% { 
+    transform: translate(5vw, 40vh);
+    opacity: 0.4;
+  }
+  100% { 
+    transform: translate(50vw, 100vh);
+    opacity: 0.3;
+  }
+}
+
+.animate-glow-move {
+  animation: glow-move 20s ease-in-out infinite;
+}
+
+.animate-glow-move-2 {
+  animation: glow-move-2 25s ease-in-out infinite;
+}
+
+.animate-glow-move-3 {
+  animation: glow-move-3 30s ease-in-out infinite;
+}
+
+/* Gradient radial personnalisé */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}

@@ -2,7 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, MessageSquare, CreditCard, Settings, HelpCircle, Users, Sparkles } from 'lucide-react';
+import { 
+  ChevronDown, 
+  MessageSquare, 
+  CreditCard, 
+  Settings, 
+  HelpCircle, 
+  Users, 
+  Sparkles,
+  Search,
+  Mail,
+  Phone,
+  Clock,
+  CheckCircle,
+  Star,
+  Zap
+} from 'lucide-react';
 
 // Type definitions
 interface FAQItemProps {
@@ -23,39 +38,33 @@ interface FAQCategoryProps {
   questions: FAQQuestion[];
 }
 
-// Composants de décoration
-const Decorations = () => (
-  <>
-    <div className="shape shape-1"></div>
-    <div className="shape shape-2"></div>
-    <div className="shape shape-3"></div>
-    <div className="shape shape-4"></div>
-  </>
-);
-
-// Composant FAQ
+// Composant FAQ moderne
 const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
   return (
     <div 
-      className="border border-violet-100 rounded-xl mb-4 overflow-hidden bg-white hover:shadow-md transition-all duration-300"
+      className="bg-white/80 backdrop-blur-sm rounded-2xl mb-4 overflow-hidden border border-violet-100/50 hover:border-violet-200/70 transition-all duration-300 shadow-sm hover:shadow-lg group"
       onClick={onClick}
     >
-      <div className="flex justify-between items-center p-5 cursor-pointer">
-        <h3 className="font-semibold text-gray-800">{question}</h3>
-        <ChevronDown 
-          className={`w-5 h-5 text-violet-500 transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''}`} 
-        />
-      </div>
-      {isOpen && (
-        <div className="px-5 pb-5 pt-0 text-gray-600 border-t border-violet-50">
-          <p>{answer}</p>
+      <div className="flex justify-between items-center p-6 cursor-pointer">
+        <h3 className="font-semibold text-gray-800 group-hover:text-violet-700 transition-colors text-lg">{question}</h3>
+        <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center group-hover:bg-violet-200 transition-colors">
+          <ChevronDown 
+            className={`w-5 h-5 text-violet-600 transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''}`} 
+          />
         </div>
-      )}
+      </div>
+      <div className={`transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-violet-50">
+          <div className="pt-4">
+            <p>{answer}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-// Catégories de FAQ
+// Catégories de FAQ modernes
 const FAQCategory = ({ title, icon, questions }: FAQCategoryProps) => {
   const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(null);
   
@@ -68,15 +77,18 @@ const FAQCategory = ({ title, icon, questions }: FAQCategoryProps) => {
   };
   
   return (
-    <div className="mb-12">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center">
+    <div className="mb-16">
+      <div className="flex items-center gap-4 mb-8">
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg">
           {icon}
         </div>
-        <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">{title}</h2>
+          <p className="text-gray-500">{questions.length} questions</p>
+        </div>
       </div>
       
-      <div>
+      <div className="space-y-3">
         {questions.map((q, index) => (
           <FAQItem 
             key={index} 
@@ -96,7 +108,7 @@ export default function FAQPage() {
   const faqCategories = [
     {
       title: "Généralités sur notre service",
-      icon: <HelpCircle className="w-5 h-5 text-violet-600" />,
+      icon: <HelpCircle className="w-6 h-6 text-white" />,
       questions: [
         {
           question: "Qu'est-ce que WaiBooth.app et comment fonctionne-t-il ?",
@@ -114,7 +126,7 @@ export default function FAQPage() {
     },
     {
       title: "Fonctionnalités et IA",
-      icon: <Sparkles className="w-5 h-5 text-violet-600" />,
+      icon: <Sparkles className="w-6 h-6 text-white" />,
       questions: [
         {
           question: "Comment fonctionne la technologie d'IA dans vos photobooth ?",
@@ -132,7 +144,7 @@ export default function FAQPage() {
     },
     {
       title: "Tarification et abonnements",
-      icon: <CreditCard className="w-5 h-5 text-violet-600" />,
+      icon: <CreditCard className="w-6 h-6 text-white" />,
       questions: [
         {
           question: "Comment fonctionne la tarification de votre service ?",
@@ -150,7 +162,7 @@ export default function FAQPage() {
     },
     {
       title: "Configuration et support",
-      icon: <Settings className="w-5 h-5 text-violet-600" />,
+      icon: <Settings className="w-6 h-6 text-white" />,
       questions: [
         {
           question: "Combien de temps faut-il pour configurer un photobooth IA ?",
@@ -168,7 +180,7 @@ export default function FAQPage() {
     },
     {
       title: "Utilisation et partage",
-      icon: <Users className="w-5 h-5 text-violet-600" />,
+      icon: <Users className="w-6 h-6 text-white" />,
       questions: [
         {
           question: "Comment les invités peuvent-ils accéder aux photos ?",
@@ -185,84 +197,224 @@ export default function FAQPage() {
       ]
     }
   ];
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredCategories, setFilteredCategories] = useState(faqCategories);
   
   return (
     <>
-      {/* Header Section */}
-      <section className="py-24 bg-gradient-to-br from-white to-violet-50/30 relative overflow-hidden">
-        <Decorations />
+      {/* Hero Section avec Glassmorphisme */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="mb-4 inline-flex items-center px-4 py-2 rounded-full bg-violet-100 border border-violet-200">
-              <MessageSquare className="w-4 h-4 mr-2 text-violet-600" />
-              <span className="text-violet-800 text-sm font-medium">Questions fréquentes</span>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-violet-500/20 to-indigo-500/20 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm border border-violet-500/30">
+              <MessageSquare className="w-5 h-5 mr-3" />
+              Centre d'Aide
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800">
-              Foire aux <span className="text-gradient">questions</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Foire aux <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Questions</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Consultez les réponses aux questions les plus fréquentes sur notre plateforme de photobooth IA et nos services
+            <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Trouvez rapidement les réponses à vos questions sur notre plateforme de photobooth IA et nos services d'activation d'événements.
             </p>
+            
+            {/* Barre de recherche moderne */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-2xl blur"></div>
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-2 border border-white/20">
+                  <div className="flex items-center">
+                    <Search className="w-6 h-6 text-gray-400 ml-4" />
+                    <input 
+                      type="text" 
+                      placeholder="Rechercher une question..." 
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="flex-1 py-4 px-4 bg-transparent text-white placeholder-gray-400 focus:outline-none text-lg"
+                    />
+                    <button className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white p-3 rounded-xl hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 mr-2">
+                      <Search className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          {/* Search Box (non-fonctionnel pour cet exemple) */}
-          <div className="max-w-2xl mx-auto mt-8">
-            <div className="relative">
-              <input 
-                type="text" 
-                placeholder="Rechercher une question..." 
-                className="w-full py-4 px-6 rounded-full border border-gray-200 focus:outline-none focus:border-violet-300 shadow-sm text-gray-600"
-              />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-violet-600 text-white p-3 rounded-full hover:bg-violet-700">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
+        </div>
+      </section>
+
+      {/* Section de navigation rapide */}
+      <section className="py-16 bg-gradient-to-b from-violet-50 to-white relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Navigation rapide</h2>
+              <p className="text-gray-600">Accédez directement à la catégorie qui vous intéresse</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {faqCategories.map((category, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    const element = document.getElementById(`category-${index}`);
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-violet-100/50 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-lg text-center"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {category.icon}
+                  </div>
+                  <h3 className="font-semibold text-gray-800 text-sm leading-tight">{category.title}</h3>
+                  <p className="text-xs text-gray-500 mt-1">{category.questions.length} questions</p>
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </section>
       
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      {/* FAQ Section avec design moderne */}
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05),transparent_50%)]"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            {faqCategories.map((category, index) => (
-              <FAQCategory 
-                key={index} 
-                title={category.title} 
-                icon={category.icon} 
-                questions={category.questions} 
-              />
+            {filteredCategories.map((category, index) => (
+              <div key={index} id={`category-${index}`}>
+                <FAQCategory 
+                  title={category.title} 
+                  icon={category.icon} 
+                  questions={category.questions} 
+                />
+              </div>
             ))}
           </div>
         </div>
       </section>
-      
-      {/* Still Have Questions CTA */}
-      <section className="py-20 bg-gradient-to-br from-violet-50/50 to-indigo-50/50 relative overflow-hidden">
+
+      {/* Section Support Premium */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-violet-900 to-indigo-900 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto">
-            <div className="nerko-cta p-8 md:p-12 rounded-2xl border border-violet-100 bg-white/70 backdrop-blur-sm relative overflow-hidden shadow-lg text-center">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">
-                Vous avez d'autres questions ?
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-violet-500/20 to-indigo-500/20 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm border border-violet-500/30">
+                <Star className="w-5 h-5 mr-3" />
+                Support Premium
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Besoin d'une aide <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">personnalisée</span> ?
               </h2>
-              
-              <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-                Notre équipe de support est disponible pour répondre à toutes vos interrogations et vous accompagner dans votre projet.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Notre équipe d'experts est disponible pour vous accompagner dans tous vos projets.
               </p>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="btn-glow">
-                  Contacter le support
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Chat en direct */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <MessageSquare className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Chat en Direct</h3>
+                <p className="text-gray-300 mb-6">Assistance instantanée pendant les heures ouvrables</p>
+                <div className="flex items-center justify-center text-green-400 text-sm mb-4">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                  En ligne maintenant
+                </div>
+                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 rounded-xl font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
+                  Démarrer le chat
+                </button>
+              </div>
+
+              {/* Support Email */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Support Email</h3>
+                <p className="text-gray-300 mb-6">Réponse garantie sous 24h</p>
+                <div className="flex items-center justify-center text-blue-400 text-sm mb-4">
+                  <Clock className="w-4 h-4 mr-2" />
+                  Réponse rapide
+                </div>
+                <Link 
+                  href="mailto:support@waibooth.app"
+                  className="block w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
+                >
+                  Envoyer un email
                 </Link>
-                
-                <Link href="/demo" className="btn-outline">
-                  Réserver une démo
+              </div>
+
+              {/* Support Téléphone */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Support Téléphone</h3>
+                <p className="text-gray-300 mb-6">Assistance directe pour les urgences</p>
+                <div className="flex items-center justify-center text-violet-400 text-sm mb-4">
+                  <Zap className="w-4 h-4 mr-2" />
+                  Support prioritaire
+                </div>
+                <Link 
+                  href="tel:+33123456789"
+                  className="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Appeler maintenant
                 </Link>
+              </div>
+            </div>
+
+            {/* CTA Final */}
+            <div className="text-center">
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-2xl blur-xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <div className="flex items-center justify-center mb-6">
+                    <CheckCircle className="w-8 h-8 text-green-400 mr-3" />
+                    <span className="text-green-400 font-semibold">Support inclus dans tous nos plans</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    Commencez votre projet maintenant
+                  </h3>
+                  <p className="text-gray-300 mb-6 text-lg">
+                    Bénéficiez de notre support expert dès votre première utilisation.
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/demo"
+                      className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 text-lg"
+                    >
+                      Réserver une démo
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-block px-8 py-4 rounded-full bg-white/20 text-white font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300 text-lg backdrop-blur-sm"
+                    >
+                      Contacter un expert
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

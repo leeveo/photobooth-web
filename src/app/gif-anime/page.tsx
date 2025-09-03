@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Camera, FastForward, Clock, Share2, Users, Sparkles, Smartphone, Download, MessageSquare, Palette } from 'lucide-react';
+import { Camera, FastForward, Clock, Share2, Users, Sparkles, Smartphone, Download, MessageSquare, Palette, ArrowRight, Eye, BarChart } from 'lucide-react';
 
 export default function GifAnime() {
   return (
@@ -11,12 +11,12 @@ export default function GifAnime() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                GIF Animé
+                Boomerang
               </span>
-              <span className="text-gray-800"> : Capturez l'instant en mouvement</span>
+              <span className="text-gray-800"> : L'effet vidéo qui captive</span>
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              Ajoutez une dimension dynamique à votre photobooth avec nos animations GIF interactives et partagez des moments vivants instantanément.
+              Créez des animations hypnotiques avec notre technologie Boomerang IA qui transforme vos moments en boucles vidéo captivantes et virales.
             </p>
             <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
               <div className="aspect-video relative">
@@ -33,8 +33,215 @@ export default function GifAnime() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                   <div className="p-6">
                     <span className="px-3 py-1 bg-violet-600 text-white text-sm font-medium rounded-full">
-                      Animation boosted by IA
+                      Effet Boomerang IA
                     </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Boomerang Viral */}
+      <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 text-sm font-medium mb-8 backdrop-blur-sm border border-purple-500/30">
+                <FastForward className="w-5 h-5 mr-3" />
+                Effet Boomerang Viral
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Créez des <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">boucles hypnotiques</span> qui captivent
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                L'effet Boomerang transforme chaque mouvement en animation captivante qui se répète à l'infini. 
+                Parfait pour créer du contenu viral sur tous les réseaux sociaux.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Interface Boomerang */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
+                <div className="relative bg-slate-800/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-white">Studio Boomerang</h3>
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-900/80 rounded-xl p-6 space-y-4">
+                    {/* Simulation de timeline boomerang */}
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-lg border border-pink-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center">
+                          <FastForward className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Mode Boomerang Actif</span>
+                      </div>
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">REC</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg border border-blue-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                          <Clock className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Durée: 3 secondes</span>
+                      </div>
+                      <div className="text-blue-300 text-sm">Aller • Retour</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-lg border border-violet-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
+                          <Sparkles className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Optimisation IA</span>
+                      </div>
+                      <div className="bg-violet-500 text-white px-3 py-1 rounded-full text-xs font-bold">AUTO</div>
+                    </div>
+
+                    {/* Timeline visuelle */}
+                    <div className="mt-6 p-4 bg-gradient-to-r from-slate-700/50 to-slate-800/50 rounded-lg">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <div className="text-white text-sm font-medium">Timeline:</div>
+                        <div className="flex-1 flex space-x-1">
+                          {[1,2,3,4,5,4,3,2,1].map((frame, index) => (
+                            <div 
+                              key={index} 
+                              className={`h-2 rounded-full flex-1 ${
+                                index === 4 ? 'bg-purple-400' : 'bg-gradient-to-r from-purple-500/60 to-blue-500/60'
+                              }`}
+                            ></div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="text-gray-400 text-xs text-center">∞ Boucle infinie</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      ⚡ Création: 5 secondes
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      🔄 Boucle: Parfaite
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Avantages Boomerang */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Effet hypnotique</h4>
+                      <p className="text-gray-300">
+                        Le mouvement de va-et-vient capte immédiatement l'attention et maintient l'engagement plus longtemps qu'une vidéo classique.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Viral sur tous réseaux</h4>
+                      <p className="text-gray-300">
+                        Format idéal pour Instagram Stories, TikTok, Facebook et Twitter. Les Boomerangs génèrent 4x plus d'engagement que les photos statiques.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <BarChart className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Optimisation IA</h4>
+                      <p className="text-gray-300">
+                        Notre IA analyse le mouvement pour créer la boucle parfaite, éliminant les saccades et optimisant la fluidité automatiquement.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
+              <h3 className="text-3xl font-bold text-white text-center mb-8">
+                Performances Boomerang impressionnantes
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">+400%</div>
+                  <p className="text-gray-300 text-sm">Engagement vs photo</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">95%</div>
+                  <p className="text-gray-300 text-sm">Taux de partage</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent mb-2">8.5 sec</div>
+                  <p className="text-gray-300 text-sm">Temps d'attention moyen</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">x7</div>
+                  <p className="text-gray-300 text-sm">Mémorisation</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-3xl blur-xl"></div>
+                <div className="relative bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Prêt à créer des <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Boomerangs captivants</span> ?
+                  </h3>
+                  <p className="text-xl text-gray-300 mb-8">
+                    Transformez vos événements en créant du contenu viral avec l'effet Boomerang optimisé par IA.
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-lg group"
+                    >
+                      <span>Activer les Boomerangs</span>
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      href="/demo"
+                      className="inline-flex items-center px-8 py-4 rounded-2xl bg-transparent border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300 text-lg"
+                    >
+                      <Eye className="mr-2 w-5 h-5" />
+                      Voir des Boomerangs en action
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -48,20 +255,20 @@ export default function GifAnime() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que le GIF Animé Photobooth ?</h2>
+              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que le Boomerang Photobooth ?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Notre solution GIF Animé transforme le traditionnel photobooth en un studio d'animation instantané. En capturant une séquence rapide de photos et en les assemblant automatiquement, nous créons des animations GIF dynamiques et engageantes.
+                Notre solution Boomerang transforme le traditionnel photobooth en un studio de création de contenus hypnotiques. En capturant une courte séquence vidéo et en la retournant automatiquement, nous créons des boucles parfaites qui captivent l'attention.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Idéal pour tous types d'événements, le GIF Animé ajoute une dimension ludique et mémorable à l'expérience de vos invités, tout en augmentant considérablement le potentiel de partage sur les réseaux sociaux.
+                Idéal pour tous types d'événements, l'effet Boomerang ajoute une dimension ludique et moderne à l'expérience de vos invités, tout en maximisant considérablement le potentiel viral sur les réseaux sociaux.
               </p>
               <div className="bg-violet-50 border border-violet-100 rounded-lg p-6 mb-8">
                 <h3 className="font-bold text-lg mb-3 flex items-center">
                   <FastForward className="w-5 h-5 text-violet-600 mr-2" />
-                  Plus qu'une simple photo
+                  L'effet qui captive tous les regards
                 </h3>
                 <p className="text-gray-700">
-                  Les GIFs capturent l'ambiance et l'énergie de votre événement d'une façon qu'une photo statique ne peut pas faire. Ils sont statistiquement partagés 3 fois plus souvent sur les réseaux sociaux que les photos traditionnelles.
+                  Les Boomerangs hypnotisent par leur mouvement de va-et-vient infini. Ils sont statistiquement visionnés 4 fois plus longtemps et partagés 5 fois plus souvent que les vidéos traditionnelles sur les réseaux sociaux.
                 </p>
               </div>
               <Link 
@@ -76,37 +283,37 @@ export default function GifAnime() {
                 <div className="rounded-xl overflow-hidden shadow-md">
                   <Image
                     src="/gif-anime/exemple-gif-1.jpg"
-                    alt="Exemple de GIF animé - Boomerang"
+                    alt="Exemple de Boomerang - Effet classique"
                     width={300}
                     height={400}
                     className="w-full h-auto"
                   />
                   <div className="p-3 bg-white">
-                    <p className="font-medium text-center">Mode Boomerang</p>
+                    <p className="font-medium text-center">Boomerang Classique</p>
                   </div>
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-md mt-8">
                   <Image
                     src="/gif-anime/exemple-gif-2.jpg"
-                    alt="Exemple de GIF animé - Séquence"
+                    alt="Exemple de Boomerang - Slow motion"
                     width={300}
                     height={400}
                     className="w-full h-auto"
                   />
                   <div className="p-3 bg-white">
-                    <p className="font-medium text-center">Mode Séquence</p>
+                    <p className="font-medium text-center">Boomerang Slow Motion</p>
                   </div>
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-md col-span-2">
                   <Image
                     src="/gif-anime/exemple-gif-3.jpg"
-                    alt="Exemple de GIF animé - Groupe"
+                    alt="Exemple de Boomerang - Groupe"
                     width={600}
                     height={300}
                     className="w-full h-auto"
                   />
                   <div className="p-3 bg-white">
-                    <p className="font-medium text-center">Mode Groupe</p>
+                    <p className="font-medium text-center">Boomerang de Groupe</p>
                   </div>
                 </div>
               </div>
@@ -115,54 +322,128 @@ export default function GifAnime() {
         </div>
       </section>
 
-      {/* Comment ça marche */}
-      <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Comment fonctionne le GIF Animé ?</h2>
-            <p className="text-lg text-gray-700">
-              Un processus simple et intuitif pour des résultats spectaculaires.
+      {/* Section Processus en 5 étapes */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">
+              <FastForward className="w-4 h-4 mr-2" />
+              Processus Boomerang
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comment ça marche ?
+            </h2>
+            <p className="text-xl text-gray-300">
+              Un processus simple en 5 étapes pour créer des Boomerangs parfaits à chaque fois
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Camera className="w-12 h-12 text-violet-600" />,
-                title: "Posez",
-                description: "Les participants se préparent et la séquence de photos démarre automatiquement (généralement 3 à 6 clichés)."
-              },
-              {
-                icon: <Clock className="w-12 h-12 text-violet-600" />,
-                title: "Capturez",
-                description: "Notre système capture rapidement plusieurs images à intervalle rapproché pour créer l'effet de mouvement."
-              },
-              {
-                icon: <Sparkles className="w-12 h-12 text-violet-600" />,
-                title: "Animez",
-                description: "Le logiciel assemble instantanément les images en une animation fluide avec l'effet choisi (boucle, boomerang, etc.)."
-              },
-              {
-                icon: <Share2 className="w-12 h-12 text-violet-600" />,
-                title: "Partagez",
-                description: "Le GIF est immédiatement disponible pour être partagé par email, SMS ou sur les réseaux sociaux."
-              }
-            ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-white rounded-full shadow-md flex items-center justify-center mx-auto mb-4">
-                  {step.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-gray-700">{step.description}</p>
-                {index < 3 && (
-                  <div className="hidden md:block absolute mt-10 left-full">
-                    <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="#8B5CF6"/>
-                    </svg>
+          {/* Timeline avec icônes centrées */}
+          <div className="relative max-w-7xl mx-auto">
+            {/* Ligne de timeline */}
+            <div className="absolute top-0 left-8 md:left-0 md:top-1/2 w-1 md:w-full md:h-1 h-full md:h-auto bg-gradient-to-b md:bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 md:transform md:-translate-y-1/2"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+              {[
+                {
+                  step: "01",
+                  title: "Positionnez-vous",
+                  description: "Placez-vous face à la caméra et préparez votre mouvement",
+                  color: "from-purple-500 to-pink-500",
+                  icon: <Camera className="w-12 h-12" />
+                },
+                {
+                  step: "02", 
+                  title: "Action !",
+                  description: "Effectuez votre mouvement pendant 3 secondes avec fluidité",
+                  color: "from-blue-500 to-purple-500",
+                  icon: <Clock className="w-12 h-12" />
+                },
+                {
+                  step: "03",
+                  title: "Génération IA",
+                  description: "Notre IA analyse et optimise la séquence automatiquement",
+                  color: "from-green-500 to-blue-500",
+                  icon: <Sparkles className="w-12 h-12" />
+                },
+                {
+                  step: "04",
+                  title: "Effet Boomerang",
+                  description: "Transformation en boucle hypnotique aller-retour",
+                  color: "from-orange-500 to-red-500",
+                  icon: <FastForward className="w-12 h-12" />
+                },
+                {
+                  step: "05",
+                  title: "Partagez",
+                  description: "Diffusion instantanée sur tous vos réseaux sociaux",
+                  color: "from-pink-500 to-purple-500",
+                  icon: <Share2 className="w-12 h-12" />
+                }
+              ].map((step, index) => (
+                <div key={index} className="relative group">
+                  {/* Card avec icône centrée */}
+                  <div className="ml-12 md:ml-0 md:mt-12 group-hover:transform group-hover:-translate-y-2 transition-all duration-500">
+                    {/* Container avec icône centrée */}
+                    <div className="relative mb-6 mx-auto w-32 h-32 md:w-40 md:h-40">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.color} rounded-3xl shadow-2xl group-hover:shadow-purple-500/50 transition-all duration-500 group-hover:scale-105`}></div>
+                      <div className="relative h-full flex items-center justify-center text-white">
+                        {step.icon}
+                      </div>
+                      
+                      {/* Badge étape */}
+                      <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-xl transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                        {step.step}
+                      </div>
+                    </div>
+                    
+                    {/* Contenu textuel */}
+                    <div className="text-center">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed px-2">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                )}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* CTA section moderne */}
+          <div className="text-center mt-20">
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                    <FastForward className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Simple, Hypnotique, <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Viral !</span>
+                </h3>
+                <p className="text-xl text-gray-300 mb-8">
+                  Créez des <span className="text-purple-400 font-bold">Boomerangs captivants</span> qui marquent les esprits et génèrent de l'engagement.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-lg group"
+                >
+                  <span>Découvrir nos Boomerangs</span>
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -319,41 +600,71 @@ export default function GifAnime() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold mb-4">Parfait pour tous types d'événements</h2>
             <p className="text-lg text-gray-700">
-              Le GIF animé s'adapte à toutes les occasions pour créer des moments mémorables et viraux.
+              Le Boomerang s'adapte à toutes les occasions pour créer des moments mémorables et viraux.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Mariages",
-                description: "Offrez à vos invités une façon amusante de célébrer votre union avec des animations qui capturent la joie et les moments spontanés.",
-                image: "/gif-anime/event-mariage.jpg"
+                title: "Expérience AR",
+                description: "Intégrez des éléments de réalité augmentée dans vos Boomerangs pour une expérience immersive et futuriste qui fascine vos invités.",
+                image: "/event/ar-experience.jpg"
               },
               {
-                title: "Événements corporate",
-                description: "Dynamisez vos événements d'entreprise avec une activité interactive qui favorise l'engagement des participants.",
-                image: "/gif-anime/event-corporate.jpg"
+                title: "Cartes à collectionner",
+                description: "Créez des Boomerangs uniques qui deviennent de véritables cartes à collectionner numériques pour vos participants.",
+                image: "/event/collectible-cards.jpg"
               },
               {
-                title: "Salons et foires",
-                description: "Attirez les visiteurs sur votre stand avec une animation ludique qui met en valeur votre marque de façon mémorable.",
-                image: "/gif-anime/event-salon.jpg"
+                title: "Mur de galerie",
+                description: "Affichez vos Boomerangs en temps réel sur un mur digital pour créer une galerie vivante et interactive.",
+                image: "/event/gallery-wall.jpg"
               },
               {
-                title: "Fêtes privées",
-                description: "Ajoutez une touche spéciale à vos célébrations avec des GIFs qui illustrent parfaitement l'ambiance festive.",
-                image: "/gif-anime/event-fete.jpg"
+                title: "Lounge professionnel",
+                description: "Proposez des Boomerangs de qualité studio dans un espace dédié avec éclairage professionnel et accessoires premium.",
+                image: "/event/headshot-lounge.jpg"
               },
               {
-                title: "Lancements de produits",
-                description: "Créez du buzz autour de votre nouveau produit avec des animations partageables qui amplifient votre portée marketing.",
-                image: "/gif-anime/event-lancement.jpg"
+                title: "Couverture magazine",
+                description: "Transformez vos invités en stars avec des Boomerangs façon couverture de magazine personnalisée à votre événement.",
+                image: "/event/magazine-cover.jpg"
               },
               {
-                title: "Concerts et festivals",
-                description: "Offrez une expérience supplémentaire aux festivaliers qui pourront capturer et partager leur enthousiasme.",
-                image: "/gif-anime/event-festival.jpg"
+                title: "Moments mascotte",
+                description: "Créez des interactions amusantes entre vos invités et la mascotte de votre marque avec des Boomerangs mémorables.",
+                image: "/event/mascot-moments.jpg"
+              },
+              {
+                title: "Cadres surdimensionnés",
+                description: "Utilisez des cadres géants comme décor pour des Boomerangs spectaculaires qui marquent les esprits.",
+                image: "/event/oversized-frames.jpg"
+              },
+              {
+                title: "Sondages persona",
+                description: "Associez la création de Boomerangs à des questionnaires interactifs pour mieux connaître votre audience.",
+                image: "/event/persona-surveys.jpg"
+              },
+              {
+                title: "Mise en avant produit",
+                description: "Intégrez vos produits dans des Boomerangs créatifs pour un marketing authentique et engageant.",
+                image: "/event/product-spotlight.jpg"
+              },
+              {
+                title: "Accessoires pro",
+                description: "Équipez votre espace de props professionnels pour des Boomerangs de qualité supérieure et thématiques.",
+                image: "/event/professional-props.jpg"
+              },
+              {
+                title: "Événements saisonniers",
+                description: "Adaptez vos Boomerangs aux saisons et fêtes avec des décors et filtres spécialement conçus pour l'occasion.",
+                image: "/event/seasonal.jpg"
+              },
+              {
+                title: "Mosaïque d'équipe",
+                description: "Créez une mosaïque collective avec les Boomerangs de tous vos collaborateurs pour renforcer l'esprit d'équipe.",
+                image: "/event/team-mosaic.jpg"
               }
             ].map((event, index) => (
               <div key={index} className="card bg-white overflow-hidden">
@@ -488,104 +799,6 @@ export default function GifAnime() {
                     <p className="font-bold">{testimonial.author}</p>
                     <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Options et prix */}
-      <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Nos forfaits GIF animé</h2>
-            <p className="text-lg text-gray-700">
-              Des solutions adaptées à vos besoins et à votre budget.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                title: "Essentiel",
-                price: "499€",
-                description: "Pour les petits événements et occasions privées",
-                features: [
-                  "GIF booth pendant 3h",
-                  "2 modes d'animation",
-                  "Personnalisation basique",
-                  "Galerie en ligne (14 jours)",
-                  "Partage social"
-                ],
-                cta: "Réserver"
-              },
-              {
-                title: "Premium",
-                price: "899€",
-                description: "Pour les événements moyens à grands",
-                features: [
-                  "GIF booth pendant 5h",
-                  "Tous les modes d'animation",
-                  "Personnalisation complète",
-                  "Galerie en ligne (30 jours)",
-                  "Partage social avancé",
-                  "Assistant sur place",
-                  "Accessoires thématiques"
-                ],
-                popular: true,
-                cta: "Réserver"
-              },
-              {
-                title: "Entreprise",
-                price: "Sur mesure",
-                description: "Pour les besoins professionnels spécifiques",
-                features: [
-                  "Durée personnalisée",
-                  "Animations sur mesure",
-                  "Branding complet",
-                  "Intégration API",
-                  "Statistiques d'engagement",
-                  "Support technique dédié",
-                  "Livraison des fichiers source"
-                ],
-                cta: "Demander un devis"
-              }
-            ].map((plan, index) => (
-              <div 
-                key={index}
-                className={`card bg-white ${plan.popular ? 'border-violet-400 shadow-lg relative transform scale-105' : 'border-violet-100'}`}
-              >
-                {plan.popular && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <span className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Le plus populaire
-                    </span>
-                  </div>
-                )}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
-                  <p className="text-gray-600 mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    {plan.price !== "Sur mesure" && <span className="text-gray-600">/événement</span>}
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-center">
-                        <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href="/contact" 
-                    className={plan.popular ? "btn-primary w-full text-center block" : "btn-secondary w-full text-center block"}
-                  >
-                    {plan.cta}
-                  </Link>
                 </div>
               </div>
             ))}

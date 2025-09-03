@@ -74,14 +74,14 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Accueil
             </Link>
             
             {/* Menu Fonctionnalités avec MegaMenu */}
             <div className="relative" ref={megaMenuRef}>
               <button 
-                className="font-medium text-gray-700 hover:text-violet-700 transition-colors flex items-center"
+                className="font-bold text-yellow-300 hover:text-orange-400 transition-colors flex items-center"
                 onMouseEnter={handleMegaMenuEnter}
                 onMouseLeave={handleMegaMenuLeave}
               >
@@ -103,19 +103,19 @@ export default function Navbar() {
               )}
             </div>
             
-            <Link href="/event" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/event" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Événements
             </Link>
-            <Link href="/tarifs" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/tarifs" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Tarifs
             </Link>
-            <Link href="/blog" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/blog" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Blog
             </Link>
-            <Link href="/faq" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/faq" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               FAQ
             </Link>
-            <Link href="/contact" className="font-medium text-gray-700 hover:text-violet-700 transition-colors">
+            <Link href="/contact" className="font-bold text-yellow-300 hover:text-orange-400 transition-colors">
               Contact
             </Link>
           </nav>
@@ -167,7 +167,7 @@ export default function Navbar() {
             <nav className="flex flex-col space-y-2">
               <Link 
                 href="/" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Accueil
@@ -177,8 +177,8 @@ export default function Navbar() {
               <div>
                 <button 
                   onClick={() => setIsMegaMenuMobile(!isMegaMenuMobile)}
-                  className="flex justify-between items-center w-full text-left py-3 px-4 rounded-lg font-medium
-                            hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                  className="flex justify-between items-center w-full text-left py-3 px-4 rounded-lg font-bold text-violet-900
+                            hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 >
                   <span>Fonctionnalités</span>
                   <svg className={`w-4 h-4 transform ${isMegaMenuMobile ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,35 +195,35 @@ export default function Navbar() {
               
               <Link 
                 href="/event" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Événements
               </Link>
               <Link 
                 href="/tarifs" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Tarifs
               </Link>
               <Link 
                 href="/blog" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Blog
               </Link>
               <Link 
                 href="/faq" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 FAQ
               </Link>
               <Link 
                 href="/contact" 
-                className="block py-3 px-4 rounded-lg font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="block py-3 px-4 rounded-lg font-bold text-violet-900 hover:bg-violet-50 hover:text-orange-400 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Contact

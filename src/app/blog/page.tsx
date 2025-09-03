@@ -242,13 +242,76 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-purple-700 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Blog WaiBooth
+      <section className="bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 py-20 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-600/5 to-indigo-600/5 rounded-full blur-3xl"></div>
+          
+          {/* Lumière animée qui se ballade */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-96 h-96 bg-gradient-radial from-yellow-300/60 via-orange-400/40 to-yellow-200/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight 12s ease-in-out infinite',
+                   animationDelay: '0s'
+                 }}>
+            </div>
+            <div className="absolute w-64 h-64 bg-gradient-radial from-purple-300/50 via-violet-400/30 to-purple-200/15 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight2 15s ease-in-out infinite reverse',
+                   animationDelay: '2s'
+                 }}>
+            </div>
+            <div className="absolute w-80 h-80 bg-gradient-radial from-indigo-300/40 via-blue-400/25 to-indigo-200/12 rounded-full blur-2xl" 
+                 style={{
+                   animation: 'floatingLight3 18s ease-in-out infinite',
+                   animationDelay: '4s'
+                 }}>
+            </div>
+          </div>
+        </div>
+        
+        <style jsx>{`
+          @keyframes floatingLight {
+            0% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+            25% { transform: translate(120%, 20%) scale(1.2); opacity: 1.0; }
+            50% { transform: translate(80%, -10%) scale(0.9); opacity: 0.8; }
+            75% { transform: translate(-10%, 30%) scale(1.1); opacity: 0.9; }
+            100% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+          }
+          
+          @keyframes floatingLight2 {
+            0% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+            30% { transform: translate(-20%, 40%) scale(1.0); opacity: 0.9; }
+            60% { transform: translate(60%, 90%) scale(0.8); opacity: 0.7; }
+            100% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+          }
+          
+          @keyframes floatingLight3 {
+            0% { transform: translate(50%, 100%) scale(0.6); opacity: 0.5; }
+            35% { transform: translate(-30%, 10%) scale(1.3); opacity: 0.8; }
+            70% { transform: translate(100%, 50%) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(50%, 100%) scale(0.6); opacity: 0.5; }
+          }
+        `}</style>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-500/20 text-violet-300 text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+              Blog & Actualités
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Découvrez l'{' '}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Univers WaiBooth
+              </span>
             </h1>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Découvrez les dernières tendances, conseils et innovations dans l'univers des photobooths et de l'expérience événementielle
             </p>
             <div className="flex flex-wrap justify-center gap-4">

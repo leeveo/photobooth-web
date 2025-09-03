@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-violet-800 to-indigo-700 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
@@ -64,6 +64,20 @@ const Footer = () => {
               <li><Link href="/videobooth" className="text-violet-100 hover:text-white transition-colors inline-block py-1">VideoBooth</Link></li>
               <li><Link href="/technologie-ia" className="text-violet-100 hover:text-white transition-colors inline-block py-1">Solutions IA</Link></li>
               <li><Link href="/event" className="text-violet-100 hover:text-white transition-colors inline-block py-1">Services événementiels</Link></li>
+            </ul>
+          </div>
+
+          {/* Blog */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white opacity-90">Blog & Actualités</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/photobooth-ia-salon-coiffure" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">Photobooth IA Salon de Coiffure</Link></li>
+              <li><Link href="/blog/campagne-photobooth-ia-cout-reduit" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">Campagnes à Coût Réduit</Link></li>
+              <li><Link href="/blog/ia-revolution-photobooth" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">IA & Révolution Photobooth</Link></li>
+              <li><Link href="/blog/tendances-photobooth-2024" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">Tendances 2024</Link></li>
+              <li><Link href="/blog/photomosaique-art-collaboratif" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">Art de la Photomosaïque</Link></li>
+              <li><Link href="/blog/photobooth-realite-augmentee-evenements" className="text-violet-100 hover:text-white transition-colors inline-block py-1 text-sm">Réalité Augmentée</Link></li>
+              <li><Link href="/blog" className="text-violet-200 hover:text-white transition-colors inline-block py-1 text-sm font-medium">Voir tous les articles →</Link></li>
             </ul>
           </div>
 

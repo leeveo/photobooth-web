@@ -1,6 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Camera, Users, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
 
 // Concepts d'activation avec descriptions et images
 const activationConcepts = [
@@ -108,32 +110,404 @@ export default function EventPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Concepts d'Activation d'Événements
+      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-[60vh] flex items-center">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-600/5 to-indigo-600/5 rounded-full blur-3xl"></div>
+          
+          {/* Lumière animée qui se ballade */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-96 h-96 bg-gradient-radial from-yellow-300/60 via-orange-400/40 to-yellow-200/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight 12s ease-in-out infinite',
+                   animationDelay: '0s'
+                 }}>
+            </div>
+            <div className="absolute w-64 h-64 bg-gradient-radial from-purple-300/50 via-violet-400/30 to-purple-200/15 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight2 15s ease-in-out infinite reverse',
+                   animationDelay: '2s'
+                 }}>
+            </div>
+            <div className="absolute w-80 h-80 bg-gradient-radial from-indigo-300/40 via-blue-400/25 to-indigo-200/12 rounded-full blur-2xl" 
+                 style={{
+                   animation: 'floatingLight3 18s ease-in-out infinite',
+                   animationDelay: '4s'
+                 }}>
+            </div>
+          </div>
+        </div>
+        
+        <style jsx>{`
+          @keyframes floatingLight {
+            0% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+            25% { transform: translate(120%, 20%) scale(1.2); opacity: 1.0; }
+            50% { transform: translate(80%, -10%) scale(0.9); opacity: 0.8; }
+            75% { transform: translate(-10%, 30%) scale(1.1); opacity: 0.9; }
+            100% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+          }
+          
+          @keyframes floatingLight2 {
+            0% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+            30% { transform: translate(-20%, 40%) scale(1.0); opacity: 0.9; }
+            60% { transform: translate(60%, 90%) scale(0.8); opacity: 0.7; }
+            100% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+          }
+          
+          @keyframes floatingLight3 {
+            0% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+            40% { transform: translate(80%, 10%) scale(1.1); opacity: 0.8; }
+            80% { transform: translate(10%, 60%) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+          }
+        `}</style>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-500/20 text-violet-300 text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Concepts d'Événements
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            Activations{' '}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Événementielles
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-12">
+            Découvrez nos concepts créatifs pour engager vos invités et transformer votre événement en une expérience mémorable et partageante.
+          </p>
+        </div>
+      </section>
+
+      {/* Section Information avec encarts */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Des Concepts Créatifs pour{' '}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Vos Événements
               </span>
-            </h1>
-            <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-              Découvrez nos concepts créatifs pour engager vos invités et transformer votre événement en une expérience mémorable et partageante.
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Votre événement mérite quelque chose d'original et d'engageant. Voici une sélection de concepts créatifs 
+              que nous pouvons personnaliser pour s'adapter parfaitement à votre marque, à votre public et à vos objectifs.
             </p>
+
+            {/* Encarts modernes flottants */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {/* Encart 1 - Personnalisation */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">100% Personnalisable</h3>
+                <p className="text-gray-300 text-sm">
+                  Chaque concept s'adapte à votre identité visuelle et aux spécificités de votre événement
+                </p>
+              </div>
+
+              {/* Encart 2 - Engagement */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Engagement Maximal</h3>
+                <p className="text-gray-300 text-sm">
+                  Activations conçues pour captiver et faire participer activement tous vos invités
+                </p>
+              </div>
+
+              {/* Encart 3 - ROI */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">ROI Mesurable</h3>
+                <p className="text-gray-300 text-sm">
+                  Analytics détaillés pour mesurer l'impact et le succès de votre activation
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-12 bg-gradient-to-b from-violet-50 to-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold mb-4 text-center">Des idées fraîches pour dynamiser vos événements</h2>
-            <p className="text-gray-700 mb-4">
-              Votre événement mérite quelque chose d'original et d'engageant. Voici une sélection de concepts créatifs que nous pouvons personnaliser pour s'adapter parfaitement à votre marque, à votre public et à vos objectifs.
-            </p>
-            <p className="text-gray-700">
-              Cliquez sur chaque concept pour découvrir comment nous pouvons l'adapter à votre événement spécifique et créer une expérience qui restera dans la mémoire de vos invités.
-            </p>
+      {/* Section Statistiques & Avantages */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Pourquoi Choisir Nos{' '}
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                  Activations Événementielles
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Des solutions éprouvées qui transforment vos événements en expériences mémorables
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Stat 1 */}
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">+40%</div>
+                <div className="text-purple-300 font-medium mb-1">Engagement</div>
+                <div className="text-gray-400 text-sm">Taux de participation moyen</div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Camera className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-blue-300 font-medium mb-1">Événements</div>
+                <div className="text-gray-400 text-sm">Réalisés avec succès</div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">50K+</div>
+                <div className="text-green-300 font-medium mb-1">Participants</div>
+                <div className="text-gray-400 text-sm">Expériences créées</div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">4.9/5</div>
+                <div className="text-yellow-300 font-medium mb-1">Satisfaction</div>
+                <div className="text-gray-400 text-sm">Note moyenne clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Expérience Événementielle Premium */}
+      <section className="py-20 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-violet-500/20 to-indigo-500/20 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm border border-violet-500/30">
+                <Star className="w-5 h-5 mr-3" />
+                Expérience Événementielle Premium
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Créez des <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">moments inoubliables</span> pour vos invités
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Nos concepts d'activation transforment chaque événement en expérience mémorable. 
+                De la planification à l'exécution, nous créons des moments qui marquent les esprits.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Interface Événementielle */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-3xl blur-xl"></div>
+                <div className="relative bg-slate-800/90 backdrop-blur-xl rounded-3xl p-8 border border-violet-500/30">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-white">Studio Événementiel</h3>
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-900/80 rounded-xl p-6 space-y-4">
+                    {/* Concepts d'activation */}
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-lg border border-pink-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center">
+                          <Camera className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">14 Concepts d'Activation</span>
+                      </div>
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">LIVE</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg border border-blue-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                          <Users className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Engagement +300%</span>
+                      </div>
+                      <div className="text-blue-300 text-sm">vs Standard</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-lg border border-violet-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
+                          <Sparkles className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Personnalisation IA</span>
+                      </div>
+                      <div className="bg-violet-500 text-white px-3 py-1 rounded-full text-xs font-bold">SMART</div>
+                    </div>
+
+                    {/* Métriques d'impact */}
+                    <div className="mt-6 p-4 bg-gradient-to-r from-slate-700/50 to-slate-800/50 rounded-lg">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <div className="text-white text-sm font-medium">Impact Social:</div>
+                        <div className="flex-1 flex space-x-1">
+                          {[100,85,92,78,95,88,90,82,96].map((value, index) => (
+                            <div 
+                              key={index} 
+                              className={`h-2 rounded-full flex-1 ${
+                                value > 90 ? 'bg-green-400' : value > 80 ? 'bg-blue-400' : 'bg-violet-400'
+                              }`}
+                              style={{height: `${value/5}px`}}
+                            ></div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="text-gray-400 text-xs text-center">📊 Partages instantanés</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      ⚡ Setup: 15 minutes
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      🎯 ROI: +250%
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Avantages Événementiels */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Impact viral garanti</h4>
+                      <p className="text-gray-300">
+                        Nos concepts d'activation génèrent en moyenne 300% plus de partages sur les réseaux sociaux comparé aux événements traditionnels.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Engagement authentique</h4>
+                      <p className="text-gray-300">
+                        Créez des connexions véritables entre votre marque et vos invités grâce à des expériences interactives personnalisées et mémorables.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Mise en place rapide</h4>
+                      <p className="text-gray-300">
+                        De la conception à l'activation, notre équipe déploie votre concept en moins de 15 minutes pour une expérience sans stress.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Statistiques d'impact */}
+            <div className="bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-violet-500/20 mb-16">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">L'impact de nos activations</h3>
+                <p className="text-gray-300 text-lg">Des résultats mesurables qui transforment vos événements</p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text mb-2">500+</div>
+                  <div className="text-gray-300 text-sm">Événements réalisés</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Taux de satisfaction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-2">+300%</div>
+                  <div className="text-gray-300 text-sm">Partages sociaux</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text mb-2">14</div>
+                  <div className="text-gray-300 text-sm">Concepts uniques</div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA section moderne */}
+            <div className="text-center">
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-2xl blur-xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    Prêt à révolutionner votre prochain événement ?
+                  </h3>
+                  <p className="text-gray-300 mb-6 text-lg">
+                    Découvrez comment nos concepts d'activation peuvent transformer votre événement en expérience virale.
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/demo"
+                      className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 text-lg"
+                    >
+                      Voir nos concepts en action
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-block px-8 py-4 rounded-full bg-white/20 text-white font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300 text-lg backdrop-blur-sm"
+                    >
+                      Conseil personnalisé
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

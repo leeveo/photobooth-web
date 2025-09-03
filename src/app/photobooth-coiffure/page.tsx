@@ -1,8 +1,9 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Scissors, Palette, Sparkles, Users, Crown, Tablet, Monitor, Globe, ArrowRight, Star, Check, Zap, ChevronDown, ChevronUp } from 'lucide-react';
+import { Scissors, Palette, Sparkles, Users, Crown, Tablet, Monitor, Globe, ArrowRight, Star, Check, Zap, ChevronDown, ChevronUp, Camera, Share2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import ContactCoiffureForm from '@/components/ContactCoiffureForm';
 import Script from 'next/script';
@@ -113,18 +114,72 @@ export default function PhotoboothCoiffure() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-[60vh] flex items-center">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-600/5 to-indigo-600/5 rounded-full blur-3xl"></div>
+          
+          {/* Lumière animée qui se ballade */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-96 h-96 bg-gradient-radial from-yellow-300/60 via-orange-400/40 to-yellow-200/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight 12s ease-in-out infinite',
+                   animationDelay: '0s'
+                 }}>
+            </div>
+            <div className="absolute w-64 h-64 bg-gradient-radial from-purple-300/50 via-violet-400/30 to-purple-200/15 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight2 15s ease-in-out infinite reverse',
+                   animationDelay: '2s'
+                 }}>
+            </div>
+            <div className="absolute w-80 h-80 bg-gradient-radial from-indigo-300/40 via-blue-400/25 to-indigo-200/12 rounded-full blur-2xl" 
+                 style={{
+                   animation: 'floatingLight3 18s ease-in-out infinite',
+                   animationDelay: '4s'
+                 }}>
+            </div>
+          </div>
+        </div>
+        
+        <style jsx>{`
+          @keyframes floatingLight {
+            0% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+            25% { transform: translate(120%, 20%) scale(1.2); opacity: 1.0; }
+            50% { transform: translate(80%, -10%) scale(0.9); opacity: 0.8; }
+            75% { transform: translate(-10%, 30%) scale(1.1); opacity: 0.9; }
+            100% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+          }
+          
+          @keyframes floatingLight2 {
+            0% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+            30% { transform: translate(-20%, 40%) scale(1.0); opacity: 0.9; }
+            60% { transform: translate(60%, 90%) scale(0.8); opacity: 0.7; }
+            100% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+          }
+          
+          @keyframes floatingLight3 {
+            0% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+            40% { transform: translate(80%, 10%) scale(1.1); opacity: 0.8; }
+            80% { transform: translate(10%, 60%) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+          }
+        `}</style>
+
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Texte à gauche */}
             <div className="text-left">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  WAIBOOTH HAIR : Photobooth coiffure IA 
-                </span><br />
-                <span className="text-gray-800">Révolutionnez l’expérience client dans votre salon</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+                Photobooth{' '}
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                  IA Coiffure
+                </span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-white mb-8">
                 Permettez à vos clients de visualiser instantanément leur coupe ou coloration idéale grâce à notre technologie d’intelligence artificielle ultra‑réaliste.              </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-pink-100">
@@ -202,6 +257,128 @@ export default function PhotoboothCoiffure() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Information avec encarts */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Révolutionnez Votre{' '}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Salon de Coiffure
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Notre technologie IA transforme l'expérience client et modernise votre salon avec des outils innovants 
+              qui impressionnent et fidélisent votre clientèle.
+            </p>
+
+            {/* Encarts modernes flottants */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {/* Encart 1 - Essayage Virtuel */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Scissors className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Essayage Virtuel</h3>
+                <p className="text-gray-300 text-sm">
+                  +500 styles de coiffures et couleurs pour des simulations ultra-réalistes
+                </p>
+              </div>
+
+              {/* Encart 2 - Expérience Client */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Satisfaction Client</h3>
+                <p className="text-gray-300 text-sm">
+                  Réduisez les déceptions et augmentez la confiance de vos clients
+                </p>
+              </div>
+
+              {/* Encart 3 - Modernité */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Image Moderne</h3>
+                <p className="text-gray-300 text-sm">
+                  Démarquez-vous avec une technologie innovante qui attire les clients
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Statistiques & Performance */}
+      <section className="py-20 bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+                Performance de Notre{' '}
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                  Solution Coiffure
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Des chiffres qui prouvent l'efficacité de notre technologie pour les salons
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Stat 1 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-pink-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Scissors className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">500+</div>
+                <div className="text-pink-600 font-medium mb-1">Coiffures</div>
+                <div className="text-gray-500 text-sm">Styles disponibles</div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-purple-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Palette className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">200+</div>
+                <div className="text-purple-600 font-medium mb-1">Couleurs</div>
+                <div className="text-gray-500 text-sm">Nuances disponibles</div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-blue-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">&lt;2s</div>
+                <div className="text-blue-600 font-medium mb-1">Traitement</div>
+                <div className="text-gray-500 text-sm">Résultat instantané</div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-green-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Crown className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">98%</div>
+                <div className="text-green-600 font-medium mb-1">Satisfaction</div>
+                <div className="text-gray-500 text-sm">Clients satisfaits</div>
               </div>
             </div>
           </div>
@@ -366,6 +543,148 @@ export default function PhotoboothCoiffure() {
                 <p className="text-gray-600">{advantage.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Processus en 5 étapes */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Processus coiffure IA
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comment ça marche ?
+            </h2>
+            <p className="text-xl text-gray-300">
+              Un workflow révolutionnaire en 5 étapes pour découvrir votre coiffure idéale
+            </p>
+          </div>
+
+          {/* Timeline avec grandes images */}
+          <div className="relative max-w-7xl mx-auto">
+            {/* Ligne de timeline verticale pour mobile, horizontale pour desktop */}
+            <div className="absolute top-0 left-8 md:left-0 md:top-1/2 w-1 md:w-full md:h-1 h-full md:h-auto bg-gradient-to-b md:bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 md:transform md:-translate-y-1/2"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+              {[
+                {
+                  step: "01",
+                  title: "Prenez une photo",
+                  description: "Activez votre caméra et capturez votre visage",
+                  image: "/steps/step-1.png",
+                  color: "from-purple-500 to-pink-500",
+                  icon: <Camera className="w-4 h-4" />
+                },
+                {
+                  step: "02", 
+                  title: "Choisissez une coupe",
+                  description: "Parcourez plus de 500 styles de coiffures",
+                  image: "/steps/step-2.png",
+                  color: "from-blue-500 to-purple-500",
+                  icon: <Scissors className="w-4 h-4" />
+                },
+                {
+                  step: "03",
+                  title: "IA Coiffure en action",
+                  description: "Notre IA applique la coupe instantanément",
+                  image: "/steps/step-3.png",
+                  color: "from-green-500 to-blue-500",
+                  icon: <Sparkles className="w-4 h-4" />
+                },
+                {
+                  step: "04",
+                  title: "Votre nouveau look",
+                  description: "Admirez votre transformation virtuelle",
+                  image: "/steps/step-4.png",
+                  color: "from-orange-500 to-red-500",
+                  icon: <Crown className="w-4 h-4" />
+                },
+                {
+                  step: "05",
+                  title: "Partagez & Réservez",
+                  description: "Sauvegardez et prenez rendez-vous",
+                  image: "/steps/step-5.png",
+                  color: "from-pink-500 to-purple-500",
+                  icon: <Share2 className="w-4 h-4" />
+                }
+              ].map((step, index) => (
+                <div key={index} className="relative group">
+                  {/* Point sur la timeline avec icône */}
+                  <div className="absolute left-4 md:left-1/2 md:top-1/2 w-8 h-8 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white z-20 shadow-lg border-2 border-white">
+                    {step.icon}
+                  </div>
+                  
+                  {/* Card avec image grande */}
+                  <div className="ml-12 md:ml-0 md:mt-12 group-hover:transform group-hover:-translate-y-2 transition-all duration-500">
+                    {/* Image principale - beaucoup plus grande */}
+                    <div className="relative mb-6 mx-auto w-32 h-32 md:w-40 md:h-40">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.color} rounded-3xl shadow-2xl group-hover:shadow-purple-500/50 transition-all duration-500 group-hover:scale-105`}></div>
+                      <div className="relative p-6 md:p-8 h-full flex items-center justify-center">
+                        <Image 
+                          src={step.image}
+                          alt={step.title}
+                          width={120}
+                          height={120}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      
+                      {/* Badge étape avec style moderne */}
+                      <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-xl transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                        {step.step}
+                      </div>
+                    </div>
+                    
+                    {/* Contenu textuel moderne */}
+                    <div className="text-center">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed px-2">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* CTA section moderne */}
+          <div className="text-center mt-20">
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                    <Scissors className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Simple, Rapide, <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Révolutionnaire !</span>
+                </h3>
+                <p className="text-xl text-gray-300 mb-8">
+                  En moins de <span className="text-purple-400 font-bold">30 secondes</span>, découvrez votre coiffure idéale grâce à notre IA coiffure avancée.
+                </p>
+                <Link
+                  href="#demo"
+                  className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-lg group"
+                >
+                  <span>Essayer maintenant</span>
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

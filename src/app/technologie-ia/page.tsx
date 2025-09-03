@@ -76,19 +76,77 @@ export default function TechnologieIA() {
 
   return (
     <>
-      {/* Hero Section - layout restructuré avec texte à gauche et carrousel vertical à droite */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-50 to-indigo-50">
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-[60vh] flex items-center">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-600/5 to-indigo-600/5 rounded-full blur-3xl"></div>
+          
+          {/* Lumière animée qui se ballade */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-96 h-96 bg-gradient-radial from-yellow-300/60 via-orange-400/40 to-yellow-200/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight 12s ease-in-out infinite',
+                   animationDelay: '0s'
+                 }}>
+            </div>
+            <div className="absolute w-64 h-64 bg-gradient-radial from-purple-300/50 via-violet-400/30 to-purple-200/15 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]" 
+                 style={{
+                   animation: 'floatingLight2 15s ease-in-out infinite reverse',
+                   animationDelay: '2s'
+                 }}>
+            </div>
+            <div className="absolute w-80 h-80 bg-gradient-radial from-indigo-300/40 via-blue-400/25 to-indigo-200/12 rounded-full blur-2xl" 
+                 style={{
+                   animation: 'floatingLight3 18s ease-in-out infinite',
+                   animationDelay: '4s'
+                 }}>
+            </div>
+          </div>
+        </div>
+        
+        <style jsx>{`
+          @keyframes floatingLight {
+            0% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+            25% { transform: translate(120%, 20%) scale(1.2); opacity: 1.0; }
+            50% { transform: translate(80%, -10%) scale(0.9); opacity: 0.8; }
+            75% { transform: translate(-10%, 30%) scale(1.1); opacity: 0.9; }
+            100% { transform: translate(-20%, 80%) scale(0.8); opacity: 0.7; }
+          }
+          
+          @keyframes floatingLight2 {
+            0% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+            30% { transform: translate(-20%, 40%) scale(1.0); opacity: 0.9; }
+            60% { transform: translate(60%, 90%) scale(0.8); opacity: 0.7; }
+            100% { transform: translate(110%, -20%) scale(0.7); opacity: 0.6; }
+          }
+          
+          @keyframes floatingLight3 {
+            0% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+            40% { transform: translate(80%, 10%) scale(1.1); opacity: 0.8; }
+            80% { transform: translate(10%, 60%) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(20%, 100%) scale(0.6); opacity: 0.5; }
+          }
+        `}</style>
+
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto relative z-10">
             {/* Texte à gauche */}
             <div className="text-left">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  Technologie IA
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-500/20 text-violet-300 text-sm font-medium mb-6">
+                <CircuitBoard className="w-4 h-4 mr-2" />
+                Technologie Avancée
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+                Technologie{' '}
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                  IA
                 </span>
-                <span className="text-gray-800"> : Le cœur de notre innovation</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Découvrez comment notre intelligence artificielle avancée transforme de simples photos en œuvres d'art uniques et personnalisées.
               </p>
               <div className="mt-8">
@@ -96,9 +154,10 @@ export default function TechnologieIA() {
                   href="https://photobooth.waibooth.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-colors text-lg"
+                  className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 text-lg group"
                 >
-                  Essayez notre plateforme Événementielle SaaS
+                  <span>Tester l'IA maintenant</span>
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -149,6 +208,128 @@ export default function TechnologieIA() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Information avec encarts */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              L'IA au Service de{' '}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Votre Créativité
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Notre technologie d'intelligence artificielle révolutionnaire transforme vos photos en œuvres d'art 
+              uniques, offrant une expérience personnalisée et immersive à vos invités.
+            </p>
+
+            {/* Encarts modernes flottants */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {/* Encart 1 - IA Générative */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">IA Générative</h3>
+                <p className="text-gray-300 text-sm">
+                  Modèles d'IA de pointe pour des transformations artistiques ultra-réalistes et créatives
+                </p>
+              </div>
+
+              {/* Encart 2 - Temps Réel */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Wand2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Traitement Instantané</h3>
+                <p className="text-gray-300 text-sm">
+                  Résultats générés en quelques secondes pour une expérience fluide et interactive
+                </p>
+              </div>
+
+              {/* Encart 3 - Qualité */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Camera className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">Haute Résolution</h3>
+                <p className="text-gray-300 text-sm">
+                  Images de qualité professionnelle parfaites pour l'impression et le partage
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Statistiques & Performance */}
+      <section className="py-20 bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+                Performance de Notre{' '}
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                  Intelligence Artificielle
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Des chiffres qui témoignent de l'excellence de notre technologie IA
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Stat 1 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-purple-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Lightbulb className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">50+</div>
+                <div className="text-purple-600 font-medium mb-1">Styles IA</div>
+                <div className="text-gray-500 text-sm">Filtres artistiques uniques</div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-blue-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <CircuitBoard className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">&lt;3s</div>
+                <div className="text-blue-600 font-medium mb-1">Traitement</div>
+                <div className="text-gray-500 text-sm">Génération ultra-rapide</div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-green-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Camera className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">4K</div>
+                <div className="text-green-600 font-medium mb-1">Résolution</div>
+                <div className="text-gray-500 text-sm">Qualité professionnelle</div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-orange-200/50 shadow-xl text-center group hover:bg-white/90 hover:shadow-2xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">99.5%</div>
+                <div className="text-yellow-600 font-medium mb-1">Précision</div>
+                <div className="text-gray-500 text-sm">Reconnaissance faciale</div>
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Glasses, Monitor, Users, Zap, Share2, Sparkles, Camera, Smartphone, Palette, Globe } from 'lucide-react';
@@ -6,32 +8,234 @@ export default function RealiteAugmentee() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-violet-50 to-indigo-50">
-        <div className="container mx-auto px-4">
+      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900"></div>
+        
+        {/* Animated Background Lights */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-violet-500/30 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float-medium"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/25 rounded-full blur-3xl animate-float-fast"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Réalité Augmentée
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 mb-8">
+              <Glasses className="w-5 h-5 text-violet-300" />
+              <span className="text-white/90 font-medium">Innovation 2025</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Réalité
               </span>
-              <span className="text-gray-800"> : Expériences immersives pour vos événements</span>
+              <br />
+              <span className="text-white">Augmentée</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Fusionnez le monde réel et virtuel pour créer des expériences interactives époustouflantes qui marqueront vos invités.
             </p>
-            <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/realite-augmentee/ar-hero.jpg"
-                alt="Expérience en réalité augmentée"
-                width={1200}
-                height={675}
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6">
-                  <span className="px-3 py-1 bg-violet-600 text-white text-sm font-medium rounded-full">
-                    Innovation 2025
-                  </span>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              >
+                <span className="relative z-10">Demander une démonstration</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
+                Découvrir nos solutions
+              </Link>
+            </div>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Sparkles className="w-8 h-8 text-violet-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Sans application</h3>
+                  <p className="text-gray-300 text-sm">Accès direct via navigateur</p>
                 </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Palette className="w-8 h-8 text-pink-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Personnalisation</h3>
+                  <p className="text-gray-300 text-sm">Totalement sur mesure</p>
+                </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <Zap className="w-8 h-8 text-blue-400 mb-4 mx-auto" />
+                  <h3 className="text-white font-semibold mb-2">Temps réel</h3>
+                  <p className="text-gray-300 text-sm">Interactivité instantanée</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Animated CSS */}
+        <style jsx>{`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-20px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-5px); }
+          }
+          @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(15px) translateX(-10px); }
+            66% { transform: translateY(-10px) translateX(15px); }
+          }
+          @keyframes float-fast {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-15px) translateX(8px); }
+          }
+          .animate-float-slow {
+            animation: float-slow 12s ease-in-out infinite;
+          }
+          .animate-float-medium {
+            animation: float-medium 15s ease-in-out infinite;
+          }
+          .animate-float-fast {
+            animation: float-fast 18s ease-in-out infinite;
+          }
+        `}</style>
+      </section>
+
+      {/* Encarts informatifs */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
+              Pourquoi choisir la réalité augmentée ?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Une technologie révolutionnaire qui transforme votre événement en expérience immersive unique
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Encart 1 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 h-full border border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Expérience immersive</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Plongez vos invités dans un monde où réalité et virtuel se mélangent pour créer des moments magiques et inoubliables.
+                </p>
+              </div>
+            </div>
+
+            {/* Encart 2 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 h-full border border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Glasses className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Technologie accessible</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Sans installation d'application, accessible depuis n'importe quel smartphone pour une adoption instantanée par tous vos invités.
+                </p>
+              </div>
+            </div>
+
+            {/* Encart 3 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 h-full border border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Palette className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Personnalisation totale</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Adaptez entièrement l'expérience à votre marque, événement et objectifs avec des éléments virtuels sur mesure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistiques */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
+              L'impact de la réalité augmentée
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Des résultats exceptionnels qui transforment vos événements en succès mémorables
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Statistique 1 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/40 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+                  +85%
+                </div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">Engagement</div>
+                <div className="text-sm text-gray-600">Vs expérience classique</div>
+              </div>
+            </div>
+
+            {/* Statistique 2 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/40 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  92%
+                </div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">Mémorabilité</div>
+                <div className="text-sm text-gray-600">Souvenir à long terme</div>
+              </div>
+            </div>
+
+            {/* Statistique 3 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/40 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent mb-2">
+                  50+
+                </div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">Expériences AR</div>
+                <div className="text-sm text-gray-600">Créées et déployées</div>
+              </div>
+            </div>
+
+            {/* Statistique 4 */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-indigo-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/40 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent mb-2">
+                  4.8/5
+                </div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">Satisfaction</div>
+                <div className="text-sm text-gray-600">Note client moyenne</div>
               </div>
             </div>
           </div>

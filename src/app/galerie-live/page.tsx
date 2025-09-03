@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Monitor, Camera, Smartphone, Grid, Zap, Layout, Shield, RefreshCw } from 'lucide-react';
+import { Monitor, Camera, Smartphone, Grid, Zap, Layout, Shield, RefreshCw, Share2, ArrowRight, Eye, Sparkles, Users, BarChart } from 'lucide-react';
 
 export default function GalerieLive() {
   return (
@@ -31,6 +31,250 @@ export default function GalerieLive() {
                   <span className="px-3 py-1 bg-violet-600 text-white text-sm font-medium rounded-full">
                     Mise à jour en temps réel
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Galerie Live Interactive */}
+      <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.2),transparent_50%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 text-sm font-medium mb-8 backdrop-blur-sm border border-purple-500/30">
+                <Monitor className="w-5 h-5 mr-3" />
+                Galerie Live Interactive
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Créez un <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">mur photo vivant</span> en temps réel
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Transformez votre événement avec un affichage dynamique qui capte l'attention et 
+                encourage la participation de tous vos invités.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Interface Galerie */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
+                <div className="relative bg-slate-800/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-white">Interface Galerie Live</h3>
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-900/80 rounded-xl p-6 space-y-4">
+                    {/* Simulation d'interface galerie */}
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/pixie001.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/web001.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/a_line_bob_hair_style.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/bun_hair_style.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/pixie003.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-square bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-lg border border-purple-400/50 overflow-hidden">
+                        <Image 
+                          src="/coupe-cheveux/web005.jpg" 
+                          alt="Photo galerie live" 
+                          width={120} 
+                          height={120} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg border border-green-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-white font-medium">Mise à jour en temps réel</span>
+                      </div>
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">LIVE</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg border border-blue-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                          <Grid className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Sources connectées: 4</span>
+                      </div>
+                      <div className="text-blue-300 text-sm">Photobooth • App • Instagram • Facebook</div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-3 bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-lg border border-violet-500/30">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
+                          <Shield className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-medium">Modération active</span>
+                      </div>
+                      <div className="bg-violet-500 text-white px-3 py-1 rounded-full text-xs font-bold">AUTO</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      ⚡ Setup: 15 minutes
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                      🖥️ Affichage: Instantané
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Avantages spécifiques */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Animation événementielle</h4>
+                      <p className="text-gray-300">
+                        Créez un point focal captivant qui maintient l'énergie de votre événement et encourage naturellement les interactions entre invités.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Engagement collectif</h4>
+                      <p className="text-gray-300">
+                        Transformez l'activité photo individuelle en expérience partagée où chaque participant contribue à l'ambiance générale de l'événement.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <BarChart className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">Valeur ajoutée premium</h4>
+                      <p className="text-gray-300">
+                        Différenciez votre événement avec une technologie impressionnante qui marque les esprits et renforce l'image professionnelle.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
+              <h3 className="text-3xl font-bold text-white text-center mb-8">
+                Impact mesurable sur l'engagement
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">+320%</div>
+                  <p className="text-gray-300 text-sm">Participation photo</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">87%</div>
+                  <p className="text-gray-300 text-sm">Temps d'attention</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent mb-2">2.8 min</div>
+                  <p className="text-gray-300 text-sm">Temps moyen d'observation</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">x5</div>
+                  <p className="text-gray-300 text-sm">Mémorisation événement</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-3xl blur-xl"></div>
+                <div className="relative bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Prêt à créer un <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">spectacle visuel</span> ?
+                  </h3>
+                  <p className="text-xl text-gray-300 mb-8">
+                    Transformez votre événement en expérience immersive avec une galerie qui évolue en temps réel.
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-lg group"
+                    >
+                      <span>Installer ma galerie live</span>
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      href="/demo"
+                      className="inline-flex items-center px-8 py-4 rounded-2xl bg-transparent border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300 text-lg"
+                    >
+                      <Eye className="mr-2 w-5 h-5" />
+                      Voir une galerie en action
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -73,20 +317,17 @@ export default function GalerieLive() {
               </Link>
             </div>
             <div>
-              <div className="aspect-video relative rounded-xl overflow-hidden shadow-xl">
-                <video 
-                  className="w-full h-full object-cover"
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                >
-                  <source src="/galerie-live/gallery-demo.mp4" type="video/mp4" />
-                  Votre navigateur ne prend pas en charge la vidéo HTML5.
-                </video>
+              <div className="relative rounded-xl overflow-hidden shadow-xl">
+                <Image 
+                  src="/photolive/festival.jpg"
+                  alt="Galerie Live lors d'un festival"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
                   <div className="p-6 text-white">
-                    <p className="font-medium">Aperçu de notre galerie en fonctionnement</p>
+                    <p className="font-medium">Galerie Live en action lors d'un festival</p>
                   </div>
                 </div>
               </div>

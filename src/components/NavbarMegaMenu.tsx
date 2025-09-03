@@ -122,15 +122,15 @@ const megaMenuData = {
       links: [
        
         { 
-          name: 'Photo Live', 
-          href: '/photolive', 
-          description: 'Galerie temps réel',
+          name: 'Ia coiffure', 
+          href: '/photobooth-coiffure', 
+          description: 'IA coupe de Cheveux',
           icon: <ImageIcon size={18} />
         },
         { 
-          name: 'Video Live', 
-          href: '/videolive', 
-          description: 'Mur vidéo instantané',
+          name: 'Photo site Web', 
+          href: '/application-web', 
+          description: 'Photobooth intégré',
           icon: <Video size={18} />
         },
         { 
@@ -142,10 +142,10 @@ const megaMenuData = {
      
       ],
       featuredItem: {
-        title: 'PixelMotion',
+        title: 'Waibooth',
         description: 'Découvrez nos toutes nouvelles animations interactives pour vos événements',
         image: '/features/pixelmotion.jpg',
-        href: '/photolive',
+        href: '/photobooth-coiffure',
       }
     }
   ]
@@ -162,9 +162,14 @@ export default function NavbarMegaMenu({ onClose, isMobile = false }: NavbarMega
       <div className="space-y-4 mt-1 mb-2">
         {megaMenuData.columns.map((column, colIndex) => (
           <div key={colIndex} className="py-2">
-            <h4 className="flex items-center gap-1.5 font-semibold text-indigo-600 mb-2 px-3">
+            <h4 className="flex items-center gap-1.5 font-bold text-yellow-300 hover:text-orange-400 transition-colors mb-2 px-3">
               {column.icon}
-              {column.title}
+              <span className={column.title === 'Photobooth IA' ? 
+                'bg-gradient-to-r from-violet-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent font-black tracking-tight' : 
+                ''
+              }>
+                {column.title}
+              </span>
             </h4>
             <div className="space-y-3">
               {column.links.map((link, linkIndex) => (
@@ -214,9 +219,14 @@ export default function NavbarMegaMenu({ onClose, isMobile = false }: NavbarMega
             key={colIndex} 
             className={`p-6 ${column.featured ? 'bg-gradient-to-br from-indigo-50 to-violet-50' : ''}`}
           >
-            <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-indigo-600 mb-4">
+            <h3 className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-yellow-300 hover:text-orange-400 transition-colors mb-4">
               {column.icon}
-              {column.title}
+              <span className={column.title === 'Photobooth IA' ? 
+                'bg-gradient-to-r from-violet-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent font-black tracking-tight normal-case text-base' : 
+                ''
+              }>
+                {column.title}
+              </span>
             </h3>
             <ul className="space-y-4">
               {column.links.map((link, linkIndex) => (
