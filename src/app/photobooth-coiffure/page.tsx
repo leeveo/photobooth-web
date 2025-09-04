@@ -433,13 +433,13 @@ export default function PhotoboothCoiffure() {
       </section>
 
       {/* Section Avantages pour les salons */}
-      <section className="py-20 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50"></div>
+      <section className="py-20 bg-gray-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-transparent to-gray-50/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-white">Pourquoi choisir notre photobooth coiffure ?</h2>
-            <p className="text-lg text-gray-300">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Pourquoi choisir notre photobooth coiffure ?</h2>
+            <p className="text-lg text-gray-700">
               Transformez l'expérience client et augmentez votre chiffre d'affaires grâce à notre technologie d'IA générative
             </p>
           </div>
@@ -477,12 +477,12 @@ export default function PhotoboothCoiffure() {
                 description: "Tablette en salon, widget sur votre site web ou application mobile pour vos clients — WiBooth Hair s'adapte à votre environnement."
               }
             ].map((advantage, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-xl p-6 text-center hover:bg-white/15 hover:shadow-xl transition-all duration-300 rounded-2xl border border-white/20">
+              <div key={index} className="bg-white backdrop-blur-xl p-6 text-center hover:bg-gray-50 hover:shadow-xl transition-all duration-300 rounded-2xl border border-gray-200 shadow-lg">
                 <div className="flex justify-center mb-4">
                   {advantage.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{advantage.title}</h3>
-                <p className="text-gray-300">{advantage.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{advantage.title}</h3>
+                <p className="text-gray-700">{advantage.description}</p>
               </div>
             ))}
           </div>
@@ -585,18 +585,18 @@ export default function PhotoboothCoiffure() {
           {/* CTA section moderne */}
           <div className="text-center mt-20">
             <div className="relative max-w-4xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-100 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-300">
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
                     <Scissors className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Simple, Rapide, <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Révolutionnaire !</span>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Simple, Rapide, <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Révolutionnaire !</span>
                 </h3>
-                <p className="text-xl text-gray-300 mb-8">
-                  En moins de <span className="text-purple-400 font-bold">30 secondes</span>, découvrez votre coiffure idéale grâce à notre IA coiffure avancée.
+                <p className="text-xl text-gray-700 mb-8">
+                  En moins de <span className="text-purple-600 font-bold">30 secondes</span>, découvrez votre coiffure idéale grâce à notre IA coiffure avancée.
                 </p>
                 <Link
                   href="#demo"

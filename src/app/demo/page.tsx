@@ -910,25 +910,25 @@ export default function DemoPage() {
       </section>
 
       {/* Section Témoignages */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      <section className="py-20 bg-gray-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ils Ont Testé Notre{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Démonstration
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Découvrez les retours de nos clients après leur démonstration gratuite
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold text-lg">
@@ -936,19 +936,19 @@ export default function DemoPage() {
                     </span>
                   </div>
                   <div>
-                    <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-300">{testimonial.salon}</div>
-                    <div className="text-xs text-gray-400">{testimonial.location}</div>
+                    <div className="font-bold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-700">{testimonial.salon}</div>
+                    <div className="text-xs text-gray-600">{testimonial.location}</div>
                   </div>
                 </div>
                 
-                <div className="flex text-yellow-400 mb-3">
+                <div className="flex text-yellow-500 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
                 
-                <p className="text-gray-300 text-sm italic leading-relaxed">
+                <p className="text-gray-700 text-sm italic leading-relaxed">
                   "{testimonial.quote}"
                 </p>
               </div>
@@ -956,9 +956,9 @@ export default function DemoPage() {
           </div>
 
           <div className="text-center mt-12">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-white font-medium">98% des salons adoptent la solution après la démo</span>
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border border-gray-200 shadow-md">
+              <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+              <span className="text-gray-900 font-medium">98% des salons adoptent la solution après la démo</span>
             </div>
           </div>
         </div>

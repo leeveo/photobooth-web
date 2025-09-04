@@ -38,7 +38,7 @@ export default function ApplicationWeb() {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transformez n'importe quel smartphone en photobooth professionnel et gérez tous vos événements depuis votre appareil mobile.
+              Transformez n'importe quel smartphone ou site web en photobooth professionnel et gérez tous vos événements depuis votre appareil mobile.
             </p>
 
             {/* CTA Buttons */}
@@ -699,18 +699,18 @@ export default function ApplicationWeb() {
           {/* CTA section moderne */}
           <div className="text-center mt-20">
             <div className="relative max-w-4xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-100 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-300">
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
                     <Smartphone className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Simple, Puissant, <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Accessible !</span>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Simple, Puissant, <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Accessible !</span>
                 </h3>
-                <p className="text-xl text-gray-300 mb-8">
-                  Transformez <span className="text-purple-400 font-bold">n'importe quel smartphone</span> en photobooth professionnel avec notre application web.
+                <p className="text-xl text-gray-700 mb-8">
+                  Transformez <span className="text-purple-600 font-bold">n'importe quel smartphone</span> en photobooth professionnel avec notre application web.
                 </p>
                 <Link
                   href="/contact"

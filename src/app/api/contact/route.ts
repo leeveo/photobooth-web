@@ -13,16 +13,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configuration du transporteur email
+    // Configuration du transporteur email avec Brevo (ex-Sendinblue)
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true', // true pour 465, false pour autres ports
+      secure: process.env.SMTP_SECURE === 'true', // false pour port 587
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.SMTP_USER, // 835f53001@smtp-brevo.com
+        pass: process.env.SMTP_PASS, // Clé SMTP Brevo
       },
+      tls: {
+        rejectUnauthorized: false
+      },
+      debug: true, // Active le mode debug
+      logger: true // Active les logs détaillés
     });
+
+    // Test de la connexion avant d'envoyer
+    try {
+      await transporter.verify();
+      console.log('✅ Connexion SMTP établie avec succès');
+    } catch (verifyError: any) {
+      console.error('❌ Erreur de vérification SMTP:', verifyError);
+      throw new Error(`Erreur de configuration SMTP: ${verifyError.message}`);
+    }
 
     // Contenu de l'email pour l'équipe
     const teamEmailContent = `
@@ -55,6 +69,7 @@ export async function POST(request: NextRequest) {
       ---
       WaiBooth - Photobooth IA
       Email : contact@WaiBooth.app
+      Site web : https://waibooth.app
     `;
 
     // Envoi de l'email à l'équipe
@@ -74,6 +89,8 @@ export async function POST(request: NextRequest) {
       text: clientEmailContent,
       html: clientEmailContent.replace(/\n/g, '<br>'),
     });
+
+    console.log(`Email envoyé avec succès pour: ${name} (${email})`);
 
     return NextResponse.json(
       { message: 'Email envoyé avec succès' },

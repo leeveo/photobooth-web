@@ -89,6 +89,18 @@ const megaMenuData = {
           icon: <Share2 size={18} />
         },
         { 
+          name: 'Gamification', 
+          href: '/gamification', 
+          description: 'Compétition interactive',
+          icon: <Activity size={18} />
+        },
+        { 
+          name: 'Landing Page', 
+          href: '/landing-page', 
+          description: 'Page personnalisée',
+          icon: <Globe size={18} />
+        },
+        { 
           name: 'Galerie LIVE', 
           href: '/galerie-live', 
           description: 'Visualisation temps-réel',
@@ -165,7 +177,7 @@ export default function NavbarMegaMenu({ onClose, isMobile = false }: NavbarMega
             <h4 className="flex items-center gap-1.5 font-bold text-yellow-300 hover:text-orange-400 transition-colors mb-2 px-3">
               {column.icon}
               <span className={column.title === 'Photobooth IA' ? 
-                'bg-gradient-to-r from-violet-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent font-black tracking-tight' : 
+                'text-yellow-300 hover:text-orange-400 font-black tracking-tight' : 
                 ''
               }>
                 {column.title}
@@ -222,7 +234,7 @@ export default function NavbarMegaMenu({ onClose, isMobile = false }: NavbarMega
             <h3 className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-yellow-300 hover:text-orange-400 transition-colors mb-4">
               {column.icon}
               <span className={column.title === 'Photobooth IA' ? 
-                'bg-gradient-to-r from-violet-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent font-black tracking-tight normal-case text-base' : 
+                'text-yellow-300 hover:text-orange-400 font-black tracking-tight normal-case text-base' : 
                 ''
               }>
                 {column.title}

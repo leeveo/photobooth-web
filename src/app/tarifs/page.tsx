@@ -267,21 +267,21 @@ export default function Tarifs() {
 
           {/* Explication du système de crédits moderne */}
           <div className="mt-20 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-xl border border-white/20"></div>
-            <div className="relative p-8">
-              <h3 className="text-2xl font-bold text-center mb-8 text-white">Comment fonctionnent les crédits ?</h3>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-200/30 to-gray-300/20 rounded-3xl backdrop-blur-xl border border-gray-300"></div>
+            <div className="relative p-8 bg-gray-50 rounded-3xl">
+              <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Comment fonctionnent les crédits ?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">🤖</span>
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-white">Consommation selon le modèle IA</h4>
-                  <p className="text-gray-300 text-sm">
-                    <span className="text-blue-400 font-semibold">• Standard :</span> 1 crédit par essayage
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Consommation selon le modèle IA</h4>
+                  <p className="text-gray-700 text-sm">
+                    <span className="text-blue-600 font-semibold">• Standard :</span> 1 crédit par essayage
                     <br />
-                    <span className="text-purple-400 font-semibold">• Avancé :</span> 2 crédits par essayage
+                    <span className="text-purple-600 font-semibold">• Avancé :</span> 2 crédits par essayage
                     <br />
-                    <span className="text-pink-400 font-semibold">• Premium :</span> 3 crédits par essayage
+                    <span className="text-pink-600 font-semibold">• Premium :</span> 3 crédits par essayage
                   </p>
                 </div>
                 
@@ -289,8 +289,8 @@ export default function Tarifs() {
                   <div className="bg-gradient-to-r from-purple-500 to-pink-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">📊</span>
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-white">Suivi en temps réel</h4>
-                  <p className="text-gray-300 text-sm">
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Suivi en temps réel</h4>
+                  <p className="text-gray-700 text-sm">
                     Dashboard complet pour suivre votre consommation de crédits. 
                     Contrôle total de votre utilisation avec statistiques détaillées.
                   </p>
@@ -300,26 +300,26 @@ export default function Tarifs() {
                   <div className="bg-gradient-to-r from-green-500 to-teal-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">+</span>
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-white">Recharge automatique</h4>
-                  <p className="text-gray-300 text-sm">
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Recharge automatique</h4>
+                  <p className="text-gray-700 text-sm">
                     Vos crédits se rechargent chaque mois automatiquement. 
                     Crédits non utilisés reportés sur le mois suivant.
                   </p>
                 </div>
               </div>
               
-              <div className="mt-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+              <div className="mt-8 bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
                 <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2 text-white">💡 Besoin de plus de crédits ?</h4>
-                  <p className="text-gray-300 mb-4">
+                  <h4 className="text-lg font-bold mb-2 text-gray-900">💡 Besoin de plus de crédits ?</h4>
+                  <p className="text-gray-700 mb-4">
                     Achetez des crédits supplémentaires à tout moment ou passez à une offre supérieure.
                   </p>
                   <div className="flex justify-center space-x-4 text-sm">
-                    <span className="bg-white/10 px-3 py-1 rounded-full text-gray-300 backdrop-blur-sm">
-                      <strong className="text-blue-400">Pack 100 crédits :</strong> 15€
+                    <span className="bg-blue-50 px-3 py-1 rounded-full text-gray-700 border border-blue-200">
+                      <strong className="text-blue-600">Pack 100 crédits :</strong> 15€
                     </span>
-                    <span className="bg-white/10 px-3 py-1 rounded-full text-gray-300 backdrop-blur-sm">
-                      <strong className="text-purple-400">Pack 500 crédits :</strong> 65€
+                    <span className="bg-purple-50 px-3 py-1 rounded-full text-gray-700 border border-purple-200">
+                      <strong className="text-purple-600">Pack 500 crédits :</strong> 65€
                     </span>
                   </div>
                 </div>
@@ -330,45 +330,45 @@ export default function Tarifs() {
       </section>
 
       {/* Section Tableau Comparatif Moderne */}
-      <section className="py-20 relative">
+      <section className="py-20 bg-gray-100 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-white">Tableau Comparatif Détaillé</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Tableau Comparatif Détaillé</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Comparez toutes les fonctionnalités pour choisir l'offre parfaite pour votre salon
             </p>
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-xl border border-white/20"></div>
+            <div className="absolute inset-0 bg-white rounded-3xl border border-gray-200 shadow-lg"></div>
             <div className="relative p-8 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b-2 border-white/20">
-                    <th className="text-left py-4 px-6 font-bold text-white text-lg">Fonctionnalités</th>
-                    <th className="text-center py-4 px-4 font-bold text-gray-300">
+                  <tr className="border-b-2 border-gray-200">
+                    <th className="text-left py-4 px-6 font-bold text-gray-900 text-lg">Fonctionnalités</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-700">
                       <div className="flex flex-col items-center">
-                        <span className="text-xl font-bold text-white">Freemium</span>
-                        <span className="text-sm text-gray-400">0€</span>
+                        <span className="text-xl font-bold text-gray-900">Freemium</span>
+                        <span className="text-sm text-gray-600">0€</span>
                       </div>
                     </th>
-                    <th className="text-center py-4 px-4 font-bold text-blue-400">
+                    <th className="text-center py-4 px-4 font-bold text-blue-600">
                       <div className="flex flex-col items-center">
-                        <span className="text-xl font-bold text-white">Essentiel</span>
-                        <span className="text-sm text-blue-400">49€/mois</span>
+                        <span className="text-xl font-bold text-gray-900">Essentiel</span>
+                        <span className="text-sm text-blue-600">49€/mois</span>
                       </div>
                     </th>
-                    <th className="text-center py-4 px-4 font-bold text-purple-400">
+                    <th className="text-center py-4 px-4 font-bold text-purple-600">
                       <div className="flex flex-col items-center">
-                        <span className="text-xl font-bold text-white">Pro</span>
-                        <span className="text-sm text-purple-400">79€/mois</span>
-                        <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full mt-1 backdrop-blur-sm">Populaire</span>
+                        <span className="text-xl font-bold text-gray-900">Pro</span>
+                        <span className="text-sm text-purple-600">79€/mois</span>
+                        <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full mt-1">Populaire</span>
                       </div>
                     </th>
-                    <th className="text-center py-4 px-4 font-bold text-orange-400">
+                    <th className="text-center py-4 px-4 font-bold text-orange-600">
                       <div className="flex flex-col items-center">
-                        <span className="text-xl font-bold text-white">Premium</span>
-                        <span className="text-sm text-orange-400">129€/mois</span>
+                        <span className="text-xl font-bold text-gray-900">Premium</span>
+                        <span className="text-sm text-orange-600">129€/mois</span>
                       </div>
                     </th>
                   </tr>
@@ -460,19 +460,19 @@ export default function Tarifs() {
                       premium: "0.10€/crédit" 
                     }
                   ].map((row, index) => (
-                    <tr key={index} className="border-b border-white/10 hover:bg-white/5">
-                      <td className="py-4 px-6 font-bold text-white text-base">{row.feature}</td>
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                      <td className="py-4 px-6 font-bold text-gray-900 text-base">{row.feature}</td>
                       
                       {/* Freemium */}
                       <td className="py-4 px-4 text-center">
                         {typeof row.freemium === 'boolean' ? (
                           row.freemium ? (
-                            <Check className="w-6 h-6 text-green-400 mx-auto" />
+                            <Check className="w-6 h-6 text-green-500 mx-auto" />
                           ) : (
-                            <span className="text-gray-500 text-lg">—</span>
+                            <span className="text-gray-400 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-gray-300 text-base font-semibold">{row.freemium}</span>
+                          <span className="text-gray-700 text-base font-semibold">{row.freemium}</span>
                         )}
                       </td>
                       
@@ -480,25 +480,25 @@ export default function Tarifs() {
                       <td className="py-4 px-4 text-center">
                         {typeof row.essentiel === 'boolean' ? (
                           row.essentiel ? (
-                            <Check className="w-6 h-6 text-green-400 mx-auto" />
+                            <Check className="w-6 h-6 text-green-500 mx-auto" />
                           ) : (
-                            <span className="text-gray-500 text-lg">—</span>
+                            <span className="text-gray-400 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-blue-300 text-base font-semibold">{row.essentiel}</span>
+                          <span className="text-blue-700 text-base font-semibold">{row.essentiel}</span>
                         )}
                       </td>
                       
                       {/* Pro */}
-                      <td className="py-4 px-4 text-center bg-purple-500/10">
+                      <td className="py-4 px-4 text-center bg-purple-50">
                         {typeof row.pro === 'boolean' ? (
                           row.pro ? (
-                            <Check className="w-6 h-6 text-green-400 mx-auto" />
+                            <Check className="w-6 h-6 text-green-500 mx-auto" />
                           ) : (
-                            <span className="text-gray-500 text-lg">—</span>
+                            <span className="text-gray-400 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-purple-300 text-base font-semibold">{row.pro}</span>
+                          <span className="text-purple-700 text-base font-semibold">{row.pro}</span>
                         )}
                       </td>
                       
@@ -506,12 +506,12 @@ export default function Tarifs() {
                       <td className="py-4 px-4 text-center">
                         {typeof row.premium === 'boolean' ? (
                           row.premium ? (
-                            <Check className="w-6 h-6 text-green-400 mx-auto" />
+                            <Check className="w-6 h-6 text-green-500 mx-auto" />
                           ) : (
-                            <span className="text-gray-500 text-lg">—</span>
+                            <span className="text-gray-400 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-orange-300 text-base font-semibold">{row.premium}</span>
+                          <span className="text-orange-700 text-base font-semibold">{row.premium}</span>
                         )}
                       </td>
                     </tr>
@@ -527,19 +527,19 @@ export default function Tarifs() {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/10 rounded-3xl backdrop-blur-xl border border-purple-400/30"></div>
-            <div className="relative p-12">
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-200/30 to-gray-300/20 rounded-3xl backdrop-blur-xl border border-gray-300"></div>
+            <div className="relative p-12 bg-gray-50 rounded-3xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Contenu texte */}
                 <div>
                   <div className="mb-6">
-                    <div className="inline-block bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-4 py-2 rounded-full mb-4 backdrop-blur-sm border border-purple-400/30">
-                      <span className="text-purple-300 font-semibold text-sm">💡 Solution Professionnelle</span>
+                    <div className="inline-block bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 rounded-full mb-4 border border-purple-200">
+                      <span className="text-purple-700 font-semibold text-sm">💡 Solution Professionnelle</span>
                     </div>
-                    <h2 className="text-4xl font-bold mb-6 text-white">
+                    <h2 className="text-4xl font-bold mb-6 text-gray-900">
                       Tablette Tactile Interactive pour Votre Salon
                     </h2>
-                    <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                       Offrez à vos clients une expérience unique avec notre tablette tactile dédiée. 
                       Ils peuvent tester et choisir leur coupe de cheveux en temps réel, directement dans votre salon.
                     </p>
@@ -552,8 +552,8 @@ export default function Tarifs() {
                         <Check className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-lg text-white">Consultation Interactive</h4>
-                        <p className="text-gray-300">Visualisation instantanée, réduction des déceptions, satisfaction client maximale.</p>
+                        <h4 className="font-semibold text-lg text-gray-900">Consultation Interactive</h4>
+                        <p className="text-gray-700">Visualisation instantanée, réduction des déceptions, satisfaction client maximale.</p>
                       </div>
                     </div>
 
@@ -562,8 +562,8 @@ export default function Tarifs() {
                         <Check className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-lg text-white">Gain de Temps</h4>
-                        <p className="text-gray-300">Réduisez le temps de consultation jusqu'à 40% et optimisez votre planning.</p>
+                        <h4 className="font-semibold text-lg text-gray-900">Gain de Temps</h4>
+                        <p className="text-gray-700">Réduisez le temps de consultation jusqu'à 40% et optimisez votre planning.</p>
                       </div>
                     </div>
 
@@ -572,33 +572,33 @@ export default function Tarifs() {
                         <Check className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-lg text-white">Image Moderne</h4>
-                        <p className="text-gray-300">Démarquez-vous avec une technologie innovante qui attire une clientèle connectée.</p>
+                        <h4 className="font-semibold text-lg text-gray-900">Image Moderne</h4>
+                        <p className="text-gray-700">Démarquez-vous avec une technologie innovante qui attire une clientèle connectée.</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Options de tarification */}
-                  <div className="bg-black/20 rounded-xl p-6 backdrop-blur-sm border border-white/10 mb-8">
-                    <h3 className="text-xl font-bold mb-4 text-white">Solutions Flexibles</h3>
+                  <div className="bg-white rounded-xl p-6 border border-gray-200 mb-8 shadow-lg">
+                    <h3 className="text-xl font-bold mb-4 text-gray-900">Solutions Flexibles</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-purple-500/20 p-4 rounded-lg backdrop-blur-sm border border-purple-400/30">
+                      <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
                         <div className="flex items-center mb-2">
-                          <Tablet className="w-5 h-5 text-purple-400 mr-2" />
-                          <span className="font-semibold text-purple-300">Location</span>
+                          <Tablet className="w-5 h-5 text-purple-600 mr-2" />
+                          <span className="font-semibold text-purple-700">Location</span>
                         </div>
-                        <div className="text-2xl font-bold text-purple-400 mb-1">9,90€</div>
-                        <div className="text-sm text-purple-300">par mois</div>
-                        <div className="text-xs text-purple-400 mt-1">Maintenance incluse</div>
+                        <div className="text-2xl font-bold text-purple-600 mb-1">9,90€</div>
+                        <div className="text-sm text-purple-600">par mois</div>
+                        <div className="text-xs text-purple-500 mt-1">Maintenance incluse</div>
                       </div>
-                      <div className="bg-green-500/20 p-4 rounded-lg backdrop-blur-sm border border-green-400/30">
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <div className="flex items-center mb-2">
-                          <Crown className="w-5 h-5 text-green-400 mr-2" />
-                          <span className="font-semibold text-green-300">Achat</span>
+                          <Crown className="w-5 h-5 text-green-600 mr-2" />
+                          <span className="font-semibold text-green-700">Achat</span>
                         </div>
-                        <div className="text-2xl font-bold text-green-400 mb-1">149€</div>
-                        <div className="text-sm text-green-300">+ 49€/mois logiciel</div>
-                        <div className="text-xs text-green-400 mt-1">Garantie 2 ans</div>
+                        <div className="text-2xl font-bold text-green-600 mb-1">149€</div>
+                        <div className="text-sm text-green-600">+ 49€/mois logiciel</div>
+                        <div className="text-xs text-green-500 mt-1">Garantie 2 ans</div>
                       </div>
                     </div>
                   </div>
@@ -688,21 +688,21 @@ export default function Tarifs() {
           {/* CTA final */}
           <div className="text-center mt-16">
             <div className="relative max-w-4xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-100 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-300">
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
                     <Crown className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Prêt à Révolutionner{' '}
-                  <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                     Votre Salon ?
                   </span>
                 </h3>
-                <p className="text-xl text-gray-300 mb-8">
-                  Rejoignez plus de <span className="text-purple-400 font-bold">500 salons</span> qui utilisent déjà notre technologie IA.
+                <p className="text-xl text-gray-700 mb-8">
+                  Rejoignez plus de <span className="text-purple-600 font-bold">500 salons</span> qui utilisent déjà notre technologie IA.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -714,7 +714,7 @@ export default function Tarifs() {
                   </Link>
                   <Link
                     href="/photobooth-coiffure"
-                    className="inline-flex items-center px-8 py-4 rounded-2xl border-2 border-purple-400 text-purple-300 font-semibold hover:bg-purple-500/10 transition-all duration-300 text-lg"
+                    className="inline-flex items-center px-8 py-4 rounded-2xl border-2 border-purple-600 text-purple-700 font-semibold hover:bg-purple-100 transition-all duration-300 text-lg"
                   >
                     Voir la technologie
                   </Link>

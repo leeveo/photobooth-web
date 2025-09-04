@@ -196,23 +196,23 @@ export default function EventPage() {
       </section>
 
       {/* Section Information avec encarts */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <section className="py-20 bg-gray-100 relative overflow-hidden">
         {/* Background patterns */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_70%)]"></div>
-          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.05),transparent_70%)]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Des Concepts Créatifs pour{' '}
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
                 Vos Événements
               </span>
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
               Votre événement mérite quelque chose d'original et d'engageant. Voici une sélection de concepts créatifs 
               que nous pouvons personnaliser pour s'adapter parfaitement à votre marque, à votre public et à vos objectifs.
             </p>
@@ -220,34 +220,34 @@ export default function EventPage() {
             {/* Encarts modernes flottants */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* Encart 1 - Personnalisation */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+              <div className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group shadow-lg">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">100% Personnalisable</h3>
-                <p className="text-gray-300 text-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">100% Personnalisable</h3>
+                <p className="text-gray-700 text-sm">
                   Chaque concept s'adapte à votre identité visuelle et aux spécificités de votre événement
                 </p>
               </div>
 
               {/* Encart 2 - Engagement */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+              <div className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group shadow-lg">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Engagement Maximal</h3>
-                <p className="text-gray-300 text-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Engagement Maximal</h3>
+                <p className="text-gray-700 text-sm">
                   Activations conçues pour captiver et faire participer activement tous vos invités
                 </p>
               </div>
 
               {/* Encart 3 - ROI */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+              <div className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group shadow-lg">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">ROI Mesurable</h3>
-                <p className="text-gray-300 text-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">ROI Mesurable</h3>
+                <p className="text-gray-700 text-sm">
                   Analytics détaillés pour mesurer l'impact et le succès de votre activation
                 </p>
               </div>
@@ -256,86 +256,7 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* Section Statistiques & Avantages */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Pourquoi Choisir Nos{' '}
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                  Activations Événementielles
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Des solutions éprouvées qui transforment vos événements en expériences mémorables
-              </p>
-              
-              {/* Image d'illustration des activations */}
-              <div className="max-w-3xl mx-auto mt-12 mb-8">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/event/team-mosaic.jpg"
-                    alt="Team building et activations créatives"
-                    width={600}
-                    height={300}
-                    className="object-cover w-full h-[300px]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                      <h4 className="text-md font-bold text-gray-800">Activations Team Building</h4>
-                      <p className="text-gray-600 text-xs">Créez des souvenirs collectifs et renforcez l'esprit d'équipe</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Stat 1 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Clock className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">+40%</div>
-                <div className="text-purple-300 font-medium mb-1">Engagement</div>
-                <div className="text-gray-400 text-sm">Taux de participation moyen</div>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Camera className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">500+</div>
-                <div className="text-blue-300 font-medium mb-1">Événements</div>
-                <div className="text-gray-400 text-sm">Réalisés avec succès</div>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">50K+</div>
-                <div className="text-green-300 font-medium mb-1">Participants</div>
-                <div className="text-gray-400 text-sm">Expériences créées</div>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center group hover:from-white/15 hover:to-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">4.9/5</div>
-                <div className="text-yellow-300 font-medium mb-1">Satisfaction</div>
-                <div className="text-gray-400 text-sm">Note moyenne clients</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Section Expérience Événementielle Premium */}
       <section className="py-20 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden">
