@@ -68,93 +68,136 @@ export default function Tarifs() {
       </section>
 
       {/* Section Grille Tarifaire Sophistiquée */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-gradient-to-br from-slate-100 via-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-white">Nos Offres Tarifaires</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Nos Offres Tarifaires</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Choisissez l'offre qui correspond à vos besoins avec notre système de crédits flexible
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Offre Freemium */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-xl border border-white/20"></div>
+              <div className="absolute inset-0 bg-white rounded-3xl shadow-xl border border-gray-200"></div>
               <div className="relative p-8 text-center">
-                <div className="bg-gradient-to-r from-gray-400 to-gray-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-gray-500 to-gray-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-white">Freemium</h3>
-                <p className="text-gray-300 mb-6">Parfait pour tester nos services</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Freemium</h3>
+                <p className="text-gray-600 mb-6">Parfait pour tester nos services</p>
                 
                 <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">3 crédits inclus</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Coiffures de base</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Support communautaire</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Résolution standard</span>
                   </div>
                 </div>
 
-                <div className="bg-black/20 rounded-xl p-4 mb-6 backdrop-blur-sm border border-white/10">
+                <div className="bg-gray-50 rounded-xl p-4 mb-6 border border-gray-200">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-white">0€</div>
-                    <div className="text-sm text-gray-300">Gratuit</div>
-                    <div className="text-xs text-gray-400 mt-1">3 crédits offerts</div>
+                    <div className="text-3xl font-bold text-gray-900">0€</div>
+                    <div className="text-sm text-gray-600">Gratuit</div>
+                    <div className="text-xs text-gray-500 mt-1">3 crédits offerts</div>
                   </div>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-gray-400 to-gray-600 text-white py-3 rounded-xl font-semibold hover:from-gray-500 hover:to-gray-700 transition-all duration-300 shadow-lg">
+                <button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 text-white py-3 rounded-xl font-semibold hover:from-gray-600 hover:to-gray-700 transition-all duration-300 shadow-lg">
                   Commencer gratuitement
+                </button>
+              </div>
+            </div>
+
+            {/* Offre Start */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white rounded-3xl shadow-xl border border-green-200"></div>
+              <div className="relative p-8 text-center">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Start</h3>
+                <p className="text-gray-600 mb-6">Idéal pour commencer</p>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">100 crédits inclus</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">Coiffures de base</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">Support par email</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">Résolution HD</span>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 rounded-xl p-4 mb-6 border border-green-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-700">19€</div>
+                    <div className="text-sm text-green-600">par mois</div>
+                    <div className="text-xs text-green-500 mt-1">100 crédits inclus</div>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg">
+                  Choisir Start
                 </button>
               </div>
             </div>
 
             {/* Offre Essentiel */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl backdrop-blur-xl border border-blue-400/30"></div>
+              <div className="absolute inset-0 bg-white rounded-3xl shadow-xl border border-blue-200"></div>
               <div className="relative p-8 text-center">
                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Tablet className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-white">Essentiel</h3>
-                <p className="text-gray-300 mb-6">Idéal pour les petits salons</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Essentiel</h3>
+                <p className="text-gray-600 mb-6">Idéal pour les petits salons</p>
                 
                 <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
-                    <span className="text-lg font-bold">200 crédits inclus</span>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">400 crédits inclus</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Toutes les coiffures</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Support par email</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Résolution HD</span>
                   </div>
                 </div>
 
-                <div className="bg-blue-500/20 rounded-xl p-4 mb-6 backdrop-blur-sm border border-blue-400/20">
+                <div className="bg-blue-50 rounded-xl p-4 mb-6 border border-blue-200">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-white">49€</div>
-                    <div className="text-sm text-gray-300">par mois</div>
-                    <div className="text-xs text-gray-400 mt-1">200 crédits inclus</div>
+                    <div className="text-3xl font-bold text-blue-700">49€</div>
+                    <div className="text-sm text-blue-600">par mois</div>
+                    <div className="text-xs text-blue-500 mt-1">400 crédits inclus</div>
                   </div>
                 </div>
 
@@ -165,49 +208,49 @@ export default function Tarifs() {
             </div>
 
             {/* Offre Pro */}
-            <div className="relative group scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-purple-600/20 rounded-3xl backdrop-blur-xl border-2 border-purple-400/50 shadow-2xl"></div>
+            <div className="relative group scale-102">
+              <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl border-2 border-purple-300"></div>
               <div className="relative p-8 text-center">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-lg whitespace-nowrap">
                     ⭐ Le plus populaire
                   </span>
                 </div>
                 
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300 mt-4">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300 mt-6">
                   <Crown className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-white">Pro</h3>
-                <p className="text-gray-300 mb-6">Pour les salons moyens</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Pro</h3>
+                <p className="text-gray-600 mb-6">Pour les salons moyens</p>
                 
                 <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
-                    <span className="text-lg font-bold">500 crédits inclus</span>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">1000 crédits inclus</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Toutes les fonctionnalités</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Support prioritaire</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Analytics avancées</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Branding personnalisé</span>
                   </div>
                 </div>
 
-                <div className="bg-purple-500/20 rounded-xl p-4 mb-6 backdrop-blur-sm border border-purple-400/30">
+                <div className="bg-purple-50 rounded-xl p-4 mb-6 border border-purple-200">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-white">79€</div>
-                    <div className="text-sm text-gray-300">par mois</div>
-                    <div className="text-xs text-gray-400 mt-1">500 crédits inclus</div>
+                    <div className="text-3xl font-bold text-purple-700">89€</div>
+                    <div className="text-sm text-purple-600">par mois</div>
+                    <div className="text-xs text-purple-500 mt-1">1000 crédits inclus</div>
                   </div>
                 </div>
 
@@ -219,42 +262,42 @@ export default function Tarifs() {
 
             {/* Offre Premium */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/10 rounded-3xl backdrop-blur-xl border border-orange-400/30"></div>
+              <div className="absolute inset-0 bg-white rounded-3xl shadow-xl border border-orange-200"></div>
               <div className="relative p-8 text-center">
                 <div className="bg-gradient-to-r from-orange-500 to-red-600 p-4 rounded-2xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-white">Premium</h3>
-                <p className="text-gray-300 mb-6">Pour les grands salons</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Premium</h3>
+                <p className="text-gray-600 mb-6">Pour les grands salons</p>
                 
                 <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
-                    <span className="text-lg font-bold">1200 crédits inclus</span>
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
+                    <span className="text-lg font-bold">1500 crédits inclus</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Toutes les fonctionnalités Pro</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Support dédié 24/7</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">API personnalisée</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Check className="w-6 h-6 text-green-400" />
+                  <div className="flex items-center space-x-3 text-gray-700">
+                    <Check className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-bold">Formation équipe incluse</span>
                   </div>
                 </div>
 
-                <div className="bg-orange-500/20 rounded-xl p-4 mb-6 backdrop-blur-sm border border-orange-400/20">
+                <div className="bg-orange-50 rounded-xl p-4 mb-6 border border-orange-200">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-white">129€</div>
-                    <div className="text-sm text-gray-300">par mois</div>
-                    <div className="text-xs text-gray-400 mt-1">1200 crédits inclus</div>
+                    <div className="text-3xl font-bold text-orange-700">119€</div>
+                    <div className="text-sm text-orange-600">par mois</div>
+                    <div className="text-xs text-orange-500 mt-1">1500 crédits inclus</div>
                   </div>
                 </div>
 
@@ -352,6 +395,12 @@ export default function Tarifs() {
                         <span className="text-sm text-gray-600">0€</span>
                       </div>
                     </th>
+                    <th className="text-center py-4 px-4 font-bold text-green-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-xl font-bold text-gray-900">Start</span>
+                        <span className="text-sm text-green-600">19€/mois</span>
+                      </div>
+                    </th>
                     <th className="text-center py-4 px-4 font-bold text-blue-600">
                       <div className="flex flex-col items-center">
                         <span className="text-xl font-bold text-gray-900">Essentiel</span>
@@ -361,14 +410,14 @@ export default function Tarifs() {
                     <th className="text-center py-4 px-4 font-bold text-purple-600">
                       <div className="flex flex-col items-center">
                         <span className="text-xl font-bold text-gray-900">Pro</span>
-                        <span className="text-sm text-purple-600">79€/mois</span>
+                        <span className="text-sm text-purple-600">89€/mois</span>
                         <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full mt-1">Populaire</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 font-bold text-orange-600">
                       <div className="flex flex-col items-center">
                         <span className="text-xl font-bold text-gray-900">Premium</span>
-                        <span className="text-sm text-orange-600">129€/mois</span>
+                        <span className="text-sm text-orange-600">119€/mois</span>
                       </div>
                     </th>
                   </tr>
@@ -378,13 +427,15 @@ export default function Tarifs() {
                     { 
                       feature: "Crédits mensuels inclus", 
                       freemium: "3 crédits", 
-                      essentiel: "200 crédits", 
-                      pro: "500 crédits", 
-                      premium: "1200 crédits" 
+                      start: "100 crédits",
+                      essentiel: "400 crédits", 
+                      pro: "1000 crédits", 
+                      premium: "1500 crédits" 
                     },
                     { 
                       feature: "Essayage virtuel coiffures", 
                       freemium: true, 
+                      start: true,
                       essentiel: true, 
                       pro: true, 
                       premium: true 
@@ -392,6 +443,7 @@ export default function Tarifs() {
                     { 
                       feature: "Simulation couleurs", 
                       freemium: "Limitée", 
+                      start: true,
                       essentiel: true, 
                       pro: true, 
                       premium: true 
@@ -399,6 +451,7 @@ export default function Tarifs() {
                     { 
                       feature: "Résolution d'image", 
                       freemium: "Standard", 
+                      start: "HD",
                       essentiel: "HD", 
                       pro: "HD+", 
                       premium: "Ultra HD" 
@@ -406,6 +459,7 @@ export default function Tarifs() {
                     { 
                       feature: "Bibliothèque de coiffures", 
                       freemium: "Basique (50)", 
+                      start: "Basique (50)",
                       essentiel: "Complète (500+)", 
                       pro: "Complète (500+)", 
                       premium: "Complète (500+)" 
@@ -413,6 +467,7 @@ export default function Tarifs() {
                     { 
                       feature: "Support client", 
                       freemium: "Communautaire", 
+                      start: "Email",
                       essentiel: "Email", 
                       pro: "Prioritaire", 
                       premium: "Dédié 24/7" 
@@ -420,6 +475,7 @@ export default function Tarifs() {
                     { 
                       feature: "Branding personnalisé", 
                       freemium: false, 
+                      start: false,
                       essentiel: false, 
                       pro: true, 
                       premium: true 
@@ -427,6 +483,7 @@ export default function Tarifs() {
                     { 
                       feature: "Analytics et rapports", 
                       freemium: false, 
+                      start: false,
                       essentiel: "Basiques", 
                       pro: "Avancées", 
                       premium: "Complètes" 
@@ -434,6 +491,7 @@ export default function Tarifs() {
                     { 
                       feature: "API d'intégration", 
                       freemium: false, 
+                      start: false,
                       essentiel: false, 
                       pro: "Standard", 
                       premium: "Personnalisée" 
@@ -441,6 +499,7 @@ export default function Tarifs() {
                     { 
                       feature: "Formation équipe", 
                       freemium: false, 
+                      start: false,
                       essentiel: false, 
                       pro: "En ligne", 
                       premium: "Sur site incluse" 
@@ -448,6 +507,7 @@ export default function Tarifs() {
                     { 
                       feature: "Tablette tactile", 
                       freemium: false, 
+                      start: false,
                       essentiel: false, 
                       pro: "Option location 9,90€/mois", 
                       premium: "Incluse (location ou achat)" 
@@ -455,6 +515,7 @@ export default function Tarifs() {
                     { 
                       feature: "Crédits supplémentaires", 
                       freemium: "0.25€/crédit", 
+                      start: "0.22€/crédit",
                       essentiel: "0.20€/crédit", 
                       pro: "0.15€/crédit", 
                       premium: "0.10€/crédit" 
@@ -473,6 +534,19 @@ export default function Tarifs() {
                           )
                         ) : (
                           <span className="text-gray-700 text-base font-semibold">{row.freemium}</span>
+                        )}
+                      </td>
+                      
+                      {/* Start */}
+                      <td className="py-4 px-4 text-center">
+                        {typeof row.start === 'boolean' ? (
+                          row.start ? (
+                            <Check className="w-6 h-6 text-green-500 mx-auto" />
+                          ) : (
+                            <span className="text-gray-400 text-lg">—</span>
+                          )
+                        ) : (
+                          <span className="text-green-700 text-base font-semibold">{row.start}</span>
                         )}
                       </td>
                       
@@ -649,12 +723,12 @@ export default function Tarifs() {
         </div>
       </section>
 
-      {/* FAQ Section avec glassmorphism */}
-      <section className="py-20 relative">
+      {/* FAQ Section */}
+      <section className="py-20 relative bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-white">Questions Fréquentes</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Questions Fréquentes</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Trouvez rapidement des réponses à vos questions sur nos tarifs et fonctionnalités
             </p>
           </div>
@@ -662,22 +736,22 @@ export default function Tarifs() {
           <div className="max-w-4xl mx-auto space-y-4">
             {faqData.map((faq, index) => (
               <div key={index} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-xl backdrop-blur-xl border border-white/20"></div>
+                <div className="absolute inset-0 bg-white rounded-xl shadow-lg border border-gray-200"></div>
                 <div className="relative">
                   <button
-                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/5 transition-colors rounded-xl"
+                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                     onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                   >
-                    <span className="font-semibold text-white pr-4">{faq.question}</span>
+                    <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
                     {openFAQ === index ? (
-                      <ChevronUp className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-purple-600 flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-purple-600 flex-shrink-0" />
                     )}
                   </button>
                   {openFAQ === index && (
                     <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
                 </div>

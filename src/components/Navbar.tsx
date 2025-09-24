@@ -126,7 +126,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link 
-              href="https://discord.gg/KGwTafcA" 
+              href="https://photobooth.waibooth.app/photobooth-ia/admin/login" 
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-6 py-3 rounded-xl font-medium overflow-hidden
@@ -134,7 +134,7 @@ export default function Navbar() {
                        hover:shadow-[0_0_25px_rgba(139,92,246,0.5)] transition-all duration-300
                        border border-violet-400/30 flex items-center space-x-2"
             >
-              <span className="relative z-10">Se Connecter au discord avant lancement</span>
+              <span className="relative z-10">Se connecter</span>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className="h-5 w-5 relative z-10 transform transition-transform group-hover:translate-x-1" 

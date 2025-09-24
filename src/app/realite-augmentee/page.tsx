@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Glasses, Monitor, Users, Zap, Share2, Sparkles, Camera, Smartphone, Palette, Globe } from 'lucide-react';
@@ -7,6 +8,65 @@ import { Glasses, Monitor, Users, Zap, Share2, Sparkles, Camera, Smartphone, Pal
 export default function RealiteAugmentee() {
   return (
     <>
+      <Head>
+        <title>Réalité Augmentée Événements | Photobooth AR | Expérience AR Interactive</title>
+        <meta name="description" content="Découvrez nos solutions de réalité augmentée pour événements. Photobooth AR, miroir magique et expériences AR interactives. Technologie accessible sans application pour tous vos événements." />
+        <meta name="keywords" content="réalité augmentée, realité augmentée événement, photobooth AR, expérience AR, réalité augmentée interactive, AR photobooth, miroir magique AR, technologie réalité augmentée" />
+        <meta name="author" content="Photobooth IA" />
+        <meta property="og:title" content="Réalité Augmentée pour Événements | Photobooth AR Interactif" />
+        <meta property="og:description" content="Solutions de réalité augmentée révolutionnaires pour vos événements. Photobooth AR, expériences interactives et animations AR personnalisées." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://photobooth-ia.com/realite-augmentee" />
+        <meta property="og:image" content="/realite-augmentee/ar-photobooth.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Réalité Augmentée Événements | Photobooth AR" />
+        <meta name="twitter:description" content="Découvrez nos solutions de réalité augmentée pour créer des expériences AR inoubliables." />
+        <meta name="twitter:image" content="/realite-augmentee/ar-photobooth.jpg" />
+        <link rel="canonical" href="https://photobooth-ia.com/realite-augmentee" />
+      </Head>
+
+      {/* JSON-LD Schema for better SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Réalité Augmentée pour Événements - Solutions Photobooth AR",
+            "description": "Guide complet des solutions de réalité augmentée pour événements. Découvrez nos photobooth AR, miroir magique et expériences AR interactives personnalisées.",
+            "image": "/realite-augmentee/ar-photobooth.jpg",
+            "author": {
+              "@type": "Organization",
+              "name": "Photobooth IA"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Photobooth IA",
+              "url": "https://photobooth-ia.com"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://photobooth-ia.com/realite-augmentee"
+            },
+            "keywords": "réalité augmentée, photobooth AR, expérience AR, réalité augmentée événement, AR interactive",
+            "about": [
+              {
+                "@type": "Thing",
+                "name": "Augmented Reality Technology"
+              },
+              {
+                "@type": "Thing", 
+                "name": "AR Photobooth"
+              },
+              {
+                "@type": "Thing",
+                "name": "Interactive AR Experience"
+              }
+            ]
+          })
+        }}
+      />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
         {/* Gradient Background */}
@@ -34,11 +94,15 @@ export default function RealiteAugmentee() {
               </span>
               <br />
               <span className="text-white">Augmentée</span>
+              <br />
+              <span className="text-3xl md:text-4xl text-gray-300">
+                Photobooth AR & Expériences Interactives
+              </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Fusionnez le monde réel et virtuel pour créer des expériences interactives époustouflantes qui marqueront vos invités.
+              Fusionnez le monde réel et virtuel avec nos solutions de réalité augmentée pour créer des expériences AR interactives époustouflantes qui marqueront vos invités.
             </p>
 
             {/* CTA Buttons */}
@@ -124,10 +188,10 @@ export default function RealiteAugmentee() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Pourquoi choisir la réalité augmentée ?
+              Pourquoi choisir nos solutions de Réalité Augmentée ?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Une technologie révolutionnaire qui transforme votre événement en expérience immersive unique
+              Une technologie révolutionnaire qui transforme votre événement en expérience AR immersive unique
             </p>
           </div>
           
@@ -183,10 +247,10 @@ export default function RealiteAugmentee() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              L'impact de la réalité augmentée
+              L'impact de nos expériences en Réalité Augmentée
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Des résultats exceptionnels qui transforment vos événements en succès mémorables
+              Des résultats exceptionnels qui transforment vos événements AR en succès mémorables
             </p>
           </div>
           
@@ -247,15 +311,15 @@ export default function RealiteAugmentee() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-bold mb-6">Réinventez vos événements avec la réalité augmentée</h2>
+              <h2 className="text-3xl font-bold mb-6">Réinventez vos événements avec notre technologie de Réalité Augmentée</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Notre solution de réalité augmentée transforme n'importe quel espace en une expérience interactive où des éléments virtuels se superposent parfaitement au monde réel.
+                Notre solution de réalité augmentée transforme n'importe quel espace en une expérience AR interactive où des éléments virtuels se superposent parfaitement au monde réel.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Qu'il s'agisse de faire apparaître votre logo flottant dans l'air, de transformer une salle en environnement immersif ou de créer des animations interactives, notre technologie AR ouvre des possibilités infinies pour engager vos participants.
+                Qu'il s'agisse de faire apparaître votre logo flottant dans l'air, de transformer une salle en environnement immersif ou de créer des animations AR interactives, notre technologie de réalité augmentée ouvre des possibilités infinies pour engager vos participants.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
-                {["Sans application à télécharger", "Personnalisation complète", "Interactivité en temps réel", "Compatibilité multi-appareils"].map((feature, index) => (
+                {["Sans application pour expériences AR", "Personnalisation complète AR", "Réalité augmentée temps réel", "Compatibilité multi-appareils AR"].map((feature, index) => (
                   <span key={index} className="flex items-center px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm">
                     <Zap className="w-4 h-4 mr-1" />
                     {feature}
@@ -293,9 +357,9 @@ export default function RealiteAugmentee() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Nos expériences en réalité augmentée</h2>
+            <h2 className="text-3xl font-bold mb-4">Nos expériences Photobooth AR et Réalité Augmentée</h2>
             <p className="text-lg text-gray-700">
-              Des solutions interactives pour tous types d'événements.
+              Des solutions AR interactives pour tous types d'événements.
             </p>
           </div>
 
@@ -303,32 +367,32 @@ export default function RealiteAugmentee() {
             {[
               {
                 title: "Photobooth AR",
-                description: "Superposez des éléments virtuels sur vos photos - animaux fantastiques, accessoires 3D, effets spéciaux et bien plus encore.",
+                description: "Superposez des éléments virtuels sur vos photos avec notre photobooth en réalité augmentée - animaux fantastiques, accessoires 3D, effets spéciaux AR et bien plus encore.",
                 image: "/realite-augmentee/ar-photobooth.jpg"
               },
               {
-                title: "Miroir magique interactif",
-                description: "Un miroir qui transforme votre reflet en ajoutant des éléments virtuels interactifs qui réagissent à vos mouvements.",
+                title: "Miroir magique AR interactif",
+                description: "Un miroir en réalité augmentée qui transforme votre reflet en ajoutant des éléments virtuels interactifs qui réagissent à vos mouvements en temps réel.",
                 image: "/realite-augmentee/ar-mirror.jpg"
               },
               {
-                title: "Activation de marque AR",
-                description: "Faites prendre vie à votre logo, produit ou mascotte dans l'espace réel pour un impact marketing maximal.",
+                title: "Activation de marque en Réalité Augmentée",
+                description: "Faites prendre vie à votre logo, produit ou mascotte dans l'espace réel avec notre technologie AR pour un impact marketing maximal.",
                 image: "/realite-augmentee/ar-brand.jpg"
               },
               {
                 title: "Jeu interactif AR",
-                description: "Créez des expériences ludiques où vos invités interagissent avec des éléments virtuels dans l'espace réel.",
+                description: "Créez des expériences ludiques en réalité augmentée où vos invités interagissent avec des éléments virtuels dans l'espace réel.",
                 image: "/realite-augmentee/ar-game.jpg"
               },
               {
                 title: "Décoration AR",
-                description: "Transformez instantanément n'importe quel espace avec des décorations virtuelles spectaculaires et dynamiques.",
+                description: "Transformez instantanément n'importe quel espace avec des décorations virtuelles spectaculaires et dynamiques en réalité augmentée.",
                 image: "/realite-augmentee/ar-decor.jpg"
               },
               {
                 title: "Présentation produit AR",
-                description: "Présentez vos produits en 3D avec des animations interactives permettant d'explorer toutes leurs caractéristiques.",
+                description: "Présentez vos produits en 3D avec notre technologie de réalité augmentée et des animations interactives permettant d'explorer toutes leurs caractéristiques.",
                 image: "/realite-augmentee/ar-product.jpg"
               }
             ].map((experience, index) => (
@@ -336,7 +400,7 @@ export default function RealiteAugmentee() {
                 <div className="aspect-[4/3] relative">
                   <Image
                     src={experience.image}
-                    alt={experience.title}
+                    alt={`${experience.title} - Solutions réalité augmentée et expériences AR pour événements`}
                     fill
                     className="object-cover"
                   />
@@ -355,9 +419,9 @@ export default function RealiteAugmentee() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Pourquoi choisir notre solution AR</h2>
+            <h2 className="text-3xl font-bold mb-4">Pourquoi choisir notre solution de Réalité Augmentée</h2>
             <p className="text-lg text-gray-700">
-              Une technologie de pointe accessible qui transforme vos événements.
+              Une technologie AR de pointe accessible qui transforme vos événements.
             </p>
           </div>
 
@@ -365,33 +429,33 @@ export default function RealiteAugmentee() {
             {[
               {
                 icon: <Smartphone className="w-10 h-10 text-violet-600" />,
-                title: "Sans application",
-                description: "Notre technologie fonctionne directement depuis un navigateur web, sans nécessiter de téléchargement d'application."
+                title: "Sans application AR",
+                description: "Notre technologie de réalité augmentée fonctionne directement depuis un navigateur web, sans nécessiter de téléchargement d'application AR."
               },
               {
                 icon: <Palette className="w-10 h-10 text-violet-600" />,
-                title: "Personnalisation complète",
-                description: "Chaque expérience est entièrement personnalisable aux couleurs et à l'identité de votre marque ou événement."
+                title: "Personnalisation complète AR",
+                description: "Chaque expérience de réalité augmentée est entièrement personnalisable aux couleurs et à l'identité de votre marque ou événement."
               },
               {
                 icon: <Users className="w-10 h-10 text-violet-600" />,
-                title: "Engagement maximal",
-                description: "Les expériences AR génèrent en moyenne 2x plus d'engagement que les activations traditionnelles."
+                title: "Engagement maximal AR",
+                description: "Les expériences de réalité augmentée génèrent en moyenne 2x plus d'engagement que les activations traditionnelles."
               },
               {
                 icon: <Monitor className="w-10 h-10 text-violet-600" />,
-                title: "Multi-supports",
-                description: "Compatible avec smartphones, tablettes, écrans interactifs et projection selon vos besoins."
+                title: "Multi-supports AR",
+                description: "Compatible avec smartphones, tablettes, écrans interactifs et projection AR selon vos besoins de réalité augmentée."
               },
               {
                 icon: <Sparkles className="w-10 h-10 text-violet-600" />,
-                title: "Facteur wow garanti",
-                description: "Effet de surprise assuré qui laissera une impression durable à vos invités et participants."
+                title: "Facteur wow AR garanti",
+                description: "Effet de surprise assuré avec la réalité augmentée qui laissera une impression durable à vos invités et participants."
               },
               {
                 icon: <Globe className="w-10 h-10 text-violet-600" />,
-                title: "Expérience universelle",
-                description: "Accessible à tous les âges et profils, créant un moment de partage universel et mémorable."
+                title: "Expérience AR universelle",
+                description: "Expériences AR accessibles à tous les âges et profils, créant un moment de partage universel et mémorable."
               }
             ].map((advantage, index) => (
               <div key={index} className="flex items-start">
@@ -412,9 +476,9 @@ export default function RealiteAugmentee() {
       <section className="bg-gradient-to-r from-violet-600 to-indigo-600 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à ajouter une dimension augmentée à votre événement ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à ajouter une dimension de Réalité Augmentée à votre événement ?</h2>
             <p className="text-xl opacity-90 mb-8">
-              Créez des moments magiques et mémorables grâce à la réalité augmentée.
+              Créez des moments magiques et mémorables grâce à nos expériences AR interactives.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

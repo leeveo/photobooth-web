@@ -229,7 +229,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-gray-700">contact@WaiBooth.app</p>
+                    <p className="text-gray-700">waibooth.app@gmail.com</p>
                     <p className="text-sm text-gray-500 mt-1">Nous répondons sous 24h ouvrées</p>
                   </div>
                 </div>

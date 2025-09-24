@@ -194,17 +194,6 @@ export default function Blog() {
       readTime: "7 min",
       image: "/blog/qr-experience.jpg",
       category: "UX Design"
-    },
-    {
-      id: 18,
-      slug: "location-photobooth-hall-entreprise",
-      title: "Location Photobooth pour Halls d'Entreprise : Solution Autonome Long Terme",
-      excerpt: "Location de photobooth IA autonome pour halls d'entreprise. Installations permanentes ou temporaires avec changement quotidien de filtres IA. Formules semaine, mois, trimestre disponibles.",
-      author: "Alexandre Chen",
-      date: "24 Septembre 2025",
-      readTime: "10 min",
-      image: "/kit-photobooth/kit (1).jpg",
-      category: "Entreprise"
     }
   ];
 
@@ -213,7 +202,6 @@ export default function Blog() {
     { name: "Salon de Coiffure", slug: "salon-coiffure" },
     { name: "Street Marketing", slug: "street-marketing" },
     { name: "Événementiel", slug: "evenementiel" },
-    { name: "Entreprise", slug: "entreprise" },
     { name: "Budget", slug: "budget" },
     { name: "Retail", slug: "retail" },
     { name: "Tendances", slug: "tendances" },
@@ -232,7 +220,6 @@ export default function Blog() {
       'Salon de Coiffure': 'salon-coiffure',
       'Street Marketing': 'street-marketing',
       'Événementiel': 'evenementiel',
-      'Entreprise': 'entreprise',
       'Budget': 'budget',
       'Retail': 'retail',
       'Tendances': 'tendances',

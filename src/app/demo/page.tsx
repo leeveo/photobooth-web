@@ -372,11 +372,10 @@ export default function DemoPage() {
                     <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-2xl">
                       <h3 className="text-xl font-bold text-gray-800 mb-2 flex items-center">
                         <Settings className="w-5 h-5 text-purple-600 mr-2" />
-                        Envoi Tablette Express (2 min)
+                        Connexion Instantanée
                       </h3>
                       <p className="text-gray-600">
-                        Nous vous envoyons une tablette pré-configurée par express. Allumez-la et elle est 
-                        prête à l'emploi en moins de 2 minutes, sans configuration nécessaire.
+                        Connectez-vous à votre ordinateur ou à votre tablette, nous vous envoyons le lien de connexion pour profiter de l'expérience en direct.
                       </p>
                     </div>
                   </div>
@@ -478,8 +477,7 @@ export default function DemoPage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-                Fini les installations compliquées ! Nous vous envoyons une tablette pré-configurée 
-                que vous allumez et qui fonctionne immédiatement.
+                Fini les installations compliquées ! Connectez-vous simplement à votre ordinateur ou tablette avec le lien que nous vous envoyons pour une expérience immédiate.
               </p>
             </div>
 
@@ -495,8 +493,8 @@ export default function DemoPage() {
                       <div>
                         <h3 className="text-xl font-bold mb-2 text-gray-800">Livraison Express 48h</h3>
                         <p className="text-gray-600">
-                          Tablette pré-configurée, testée et personnalisée selon vos besoins. 
-                          Livraison sécurisée partout en France métropolitaine.
+                          Lien de connexion sécurisé, testé et personnalisé selon vos besoins. 
+                          Accès immédiat depuis n'importe quel appareil connecté.
                         </p>
                       </div>
                     </div>

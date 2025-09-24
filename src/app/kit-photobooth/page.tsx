@@ -26,7 +26,7 @@ export default function KitPhotobooth() {
       title: "Application WaiBooth préinstallée",
       description: "Interface intuitive avec plus de 500 filtres IA, photomosaïque en temps réel, galerie intelligente et partage instantané.",
       icon: <Camera className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/app-interface.jpg"
+      image: "/kit-photobooth/kit (1).jpg"
     },
     {
       title: "Support ajustable intégré",
@@ -38,19 +38,19 @@ export default function KitPhotobooth() {
       title: "Caméra haute résolution 13MP",
       description: "Capteur Ultra Wide 13 mégapixels pour des photos d'une netteté exceptionnelle et des détails parfaits même après transformation IA.",
       icon: <Zap className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/high-resolution.jpg"
+      image: "/kit-photobooth/kit (2).jpg"
     },
     {
       title: "Impression sans fil instantanée",
       description: "Connexion directe avec les imprimantes compatibles pour l'impression immédiate des photos personnalisées par l'IA.",
       icon: <Download className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/wireless-print.jpg"
+      image: "/kit-photobooth/printer.jpg"
     },
     {
       title: "Interface personnalisable",
       description: "Branding complet aux couleurs de votre événement, logos personnalisés et écrans d'accueil sur mesure disponibles.",
       icon: <Palette className="w-10 h-10 text-violet-600" />,
-      image: "/kit-photobooth/custom-interface.jpg"
+      image: "/kit-photobooth/option-branding.jpg"
     }
   ];
 
@@ -320,8 +320,8 @@ export default function KitPhotobooth() {
             <div className="relative">
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/kit-photobooth/tablet-complete.jpg"
-                  alt="Tablette Photobooth IA"
+                  src="/kit-photobooth/kit-complet.jpg"
+                  alt="Tablette Photobooth IA complète avec accessoires"
                   width={600}
                   height={500}
                   className="w-full h-auto"
@@ -572,8 +572,8 @@ export default function KitPhotobooth() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/kit-photobooth/usage-1.jpg"
-                    alt="Kit en action - Mariage"
+                    src="/kit-photobooth/kit (3).jpg"
+                    alt="Kit photobooth en action - Mariage"
                     width={300}
                     height={400}
                     className="w-full h-auto"
@@ -581,8 +581,8 @@ export default function KitPhotobooth() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg mt-6">
                   <Image
-                    src="/kit-photobooth/usage-2.jpg"
-                    alt="Kit en action - Événement corporate"
+                    src="/kit-photobooth/kit (4).jpg"
+                    alt="Kit photobooth - Événement corporate"
                     width={300}
                     height={400}
                     className="w-full h-auto"
@@ -590,8 +590,8 @@ export default function KitPhotobooth() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/kit-photobooth/usage-3.jpg"
-                    alt="Kit en action - Fête"
+                    src="/kit-photobooth/kit (5).jpg"
+                    alt="Kit photobooth - Configuration festival"
                     width={300}
                     height={400}
                     className="w-full h-auto"
@@ -599,8 +599,8 @@ export default function KitPhotobooth() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg mt-6">
                   <Image
-                    src="/kit-photobooth/usage-4.jpg"
-                    alt="Kit en action - Festival"
+                    src="/kit-photobooth/kit (6).jpg"
+                    alt="Kit photobooth - Utilisation soirée"
                     width={300}
                     height={400}
                     className="w-full h-auto"
@@ -717,53 +717,69 @@ export default function KitPhotobooth() {
         </div>
       </section>
 
-      {/* Options d'achat */}
+      {/* Contact pour acquisition */}
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Options d'acquisition</h2>
-            <p className="text-lg text-gray-700">
-              Flexibilité maximale : achetez, louez ou optez pour notre formule de location avec option d'achat.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {purchaseOptions.map((option, index) => (
-              <div 
-                key={index}
-                className={`card bg-white ${option.popular ? 'border-violet-400 shadow-lg relative transform scale-105' : 'border-violet-100'}`}
-              >
-                {option.popular && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <span className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Le plus populaire
-                    </span>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+              <div className="mb-8">
+                <div className="w-20 h-20 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Box className="w-10 h-10 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+                  Photobooth avec Tablette Intégrée
+                </h2>
+                <p className="text-xl text-gray-600 mb-6">
+                  Solutions complètes de location ou d'achat de photobooths avec tablettes intégrées pour tous vos événements
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                  <div className="bg-gradient-to-r from-violet-100 to-indigo-100 rounded-full px-4 py-2">
+                    <span className="text-violet-700 font-medium">📱 Tablette professionnelle</span>
                   </div>
-                )}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-2">{option.title}</h3>
-                  <p className="text-gray-600 mb-6">{option.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold">{option.price}</span>
-                    {option.period && <span className="text-gray-600">{option.period}</span>}
+                  <div className="bg-gradient-to-r from-violet-100 to-indigo-100 rounded-full px-4 py-2">
+                    <span className="text-violet-700 font-medium">⚡ Configuration rapide</span>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {option.features.map((feature, i) => (
-                      <li key={i} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href="/contact" 
-                    className={option.popular ? "btn-primary w-full text-center block" : "btn-secondary w-full text-center block"}
-                  >
-                    {option.cta}
-                  </Link>
+                  <div className="bg-gradient-to-r from-violet-100 to-indigo-100 rounded-full px-4 py-2">
+                    <span className="text-violet-700 font-medium">🎨 IA intégrée</span>
+                  </div>
+                  <div className="bg-gradient-to-r from-violet-100 to-indigo-100 rounded-full px-4 py-2">
+                    <span className="text-violet-700 font-medium">🚚 Livraison incluse</span>
+                  </div>
                 </div>
               </div>
-            ))}
+              
+              <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl p-6 mb-8">
+                <p className="text-white text-lg">
+                  <span className="font-semibold">Flexibilité totale :</span> Location événementielle, location longue durée ou achat définitif
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <span className="relative z-10 mr-2">Demander un devis</span>
+                  <svg className="w-5 h-5 relative z-10 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </Link>
+                <Link
+                  href="tel:+33123456789"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-violet-700 border-2 border-violet-300 rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Appel direct
+                </Link>
+              </div>
+              
+              <p className="mt-6 text-sm text-gray-500">
+                Réponse sous 2h • Devis personnalisé • Conseils d'experts
+              </p>
+            </div>
           </div>
         </div>
       </section>

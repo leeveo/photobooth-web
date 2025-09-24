@@ -4,6 +4,7 @@ import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 import { Camera, Wand2, Sparkles, Video, Grid, ArrowRight, MessageCircle, Clock, Figma } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 // Define interface for gallery images
 interface GalleryImage {
@@ -67,9 +68,79 @@ export default function Home() {
       .then((data: string[]) => setBrandLogos(data))
       .catch(() => setBrandLogos([]));
   }, []);
+
+  // Schema markup pour le SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WaiBooth",
+    "description": "Plateforme SaaS de photobooth avec intelligence artificielle pour événements et animations interactives",
+    "url": "https://www.waibooth.app",
+    "logo": "https://www.waibooth.app/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/waibooth",
+      "https://www.facebook.com/waibooth",
+      "https://www.instagram.com/waibooth"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33-1-23-45-67-89",
+      "contactType": "customer service",
+      "availableLanguage": "French"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Photobooth IA",
+      "description": "Solution complète de photobooth avec intelligence artificielle",
+      "category": "Logiciel SaaS"
+    }
+  };
   
   return (
     <>
+      <Head>
+        <title>Photobooth IA | Photobooth avec Intelligence Artificielle - WaiBooth</title>
+        <meta 
+          name="description" 
+          content="🤖 Photobooth IA révolutionnaire ! Transformez vos événements avec notre photobooth avec intelligence artificielle. Solution SaaS complète : filtres IA, videobooth, photomosaïque. ✨ Essai gratuit !" 
+        />
+        <meta 
+          name="keywords" 
+          content="photobooth ia, photobooth avec intelligence artificielle, photobooth ai, borne photo ia, animation ia événement, photobooth saas, solution photobooth, photobooth personnalisé, intelligence artificielle événement, photobooth innovant, waibooth" 
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="WaiBooth" />
+        <link rel="canonical" href="https://www.waibooth.app" />
+        
+        {/* Open Graph pour les réseaux sociaux */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Photobooth IA | Photobooth avec Intelligence Artificielle - WaiBooth" />
+        <meta property="og:description" content="🤖 Photobooth IA révolutionnaire ! Transformez vos événements avec notre photobooth avec intelligence artificielle. Solution SaaS complète avec filtres IA avancés." />
+        <meta property="og:url" content="https://www.waibooth.app" />
+        <meta property="og:image" content="https://www.waibooth.app/hero-photobooth.png" />
+        <meta property="og:site_name" content="WaiBooth" />
+        <meta property="og:locale" content="fr_FR" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Photobooth IA | Photobooth avec Intelligence Artificielle" />
+        <meta name="twitter:description" content="🤖 Photobooth IA révolutionnaire ! Transformez vos événements avec notre solution d'intelligence artificielle." />
+        <meta name="twitter:image" content="https://www.waibooth.app/hero-photobooth.png" />
+
+        {/* Données structurées JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        
+        {/* Préchargement des ressources critiques */}
+        <link rel="preload" href="/hero-photobooth.png" as="image" />
+        <link rel="preload" href="/fonts/primary-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </Head>
       {/* Hero Section Ultra-Moderne */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-screen flex items-center">
         {/* Background patterns */}
@@ -132,7 +203,7 @@ export default function Home() {
             <div className="lg:w-1/2 text-center lg:text-left">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-violet-500/20 to-indigo-500/20 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm border border-violet-500/30">
                 <Sparkles className="w-5 h-5 mr-3" />
-                Photobooth de nouvelle génération
+                Photobooth avec intelligence artificielle de nouvelle génération
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
@@ -140,15 +211,15 @@ export default function Home() {
                   Photobooth IA
                 </span>
                 <span className="block text-white/90 text-4xl md:text-5xl lg:text-6xl mb-2">
-                  pour des événements
+                  avec Intelligence Artificielle
                 </span>
                 <span className="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                  inoubliables
+                  pour événements inoubliables
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                Transformez vos événements avec notre solution innovante de photobooth propulsée par l'intelligence artificielle.
+                Révolutionnez vos événements avec notre photobooth IA de nouvelle génération. Notre plateforme SaaS propose des solutions de photobooth avec intelligence artificielle pour créer des animations interactives uniques et mémorables.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -181,7 +252,7 @@ export default function Home() {
                         src={`/avatars/avatar-${num}.jpg`} 
                         width={48} 
                         height={48} 
-                        alt={`User ${num}`} 
+                        alt={`Client satisfait photobooth IA ${num}`} 
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -195,7 +266,7 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-300 text-sm">Plus de <span className="text-white font-medium">2,500</span> événements réussis</p>
+                  <p className="text-gray-300 text-sm">Plus de <span className="text-white font-medium">2,500</span> événements avec photobooth IA réussis</p>
                 </div>
               </div>
             </div>
@@ -210,7 +281,7 @@ export default function Home() {
                     src="/hero-photobooth.png" 
                     width={700} 
                     height={700} 
-                    alt="PhotoBooth IA" 
+                    alt="Photobooth IA avec intelligence artificielle - Interface moderne pour événements innovants" 
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
@@ -254,11 +325,11 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Solutions <span className="text-gradient">innovantes</span> pour événements
+              Solutions Photobooth IA <span className="text-gradient">innovantes</span> pour événements
             </h2>
             
             <p className="text-lg text-gray-600">
-              Découvrez nos technologies exclusives conçues pour transformer chacun de vos événements
+              Découvrez nos technologies exclusives de photobooth avec intelligence artificielle conçues pour transformer chacun de vos événements en expérience mémorable
             </p>
           </div>
           
@@ -266,19 +337,19 @@ export default function Home() {
             {[{
               icon: <Camera className="w-10 h-10" />,
               title: "Photobooth IA",
-              description: "Transformez vos photos en œuvres d'art uniques grâce à nos filtres IA personnalisables.",
+              description: "Transformez vos photos en œuvres d'art uniques grâce à notre photobooth avec intelligence artificielle et ses filtres IA personnalisables de dernière génération.",
               link: "/photobooth-ai"
             },
             {
               icon: <Video className="w-10 h-10" />,
               title: "VideoBooth IA",
-              description: "Créez des clips vidéo dynamiques avec effets générés par intelligence artificielle.",
+              description: "Créez des clips vidéo dynamiques avec effets générés par intelligence artificielle. Notre solution videobooth révolutionne l'animation événementielle.",
               link: "/videobooth"
             },
             {
               icon: <Grid className="w-10 h-10" />,
-              title: "Photomosaïque",
-              description: "Une œuvre collaborative composée en temps réel à partir des photos de vos invités.",
+              title: "Photomosaïque IA",
+              description: "Une œuvre collaborative composée en temps réel à partir des photos de vos invités grâce à notre intelligence artificielle avancée.",
               link: "/photomosaique"
             },
             {
@@ -286,7 +357,7 @@ export default function Home() {
                 <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V7H4L6 6H10C10 7.66 11.34 9 13 9H21ZM7 20C7 18.9 7.9 18 9 18S11 18.9 11 20 10.1 22 9 22 7 21.1 7 20ZM13 20C13 18.9 13.9 18 15 18S17 18.9 17 20 16.1 22 15 22 13 21.1 13 20ZM12 13.5C11.2 13.5 10.5 14.2 10.5 15S11.2 16.5 12 16.5 13.5 15.8 13.5 15 12.8 13.5 12 13.5Z" fill="currentColor"/>
               </svg>,
               title: "Coiffure IA",
-              description: "Essayage virtuel de coiffures et couleurs avec simulation ultra-réaliste pour salons de coiffure.",
+              description: "Photobooth IA spécialisé pour salons de coiffure : essayage virtuel de coiffures et couleurs avec simulation ultra-réaliste powered by IA.",
               link: "/photobooth-coiffure"
             }].map((feature, index) => (
               <div key={index} className="nerko-card">
@@ -317,11 +388,11 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Photobooth IA : Comment ça <span className="text-gradient">fonctionne</span>
+              Photobooth IA : Comment fonctionne notre <span className="text-gradient">intelligence artificielle</span>
             </h2>
             
             <p className="text-lg text-gray-600">
-              Notre processus en 4 étapes vous garantit une expérience fluide de bout en bout
+              Notre processus optimisé en 4 étapes vous garantit une expérience photobooth avec intelligence artificielle fluide de bout en bout
             </p>
           </div>
           
@@ -329,8 +400,8 @@ export default function Home() {
             {[{
               icon: <MessageCircle className="w-6 h-6" />,
               number: '01',
-              title: "Création de votre projet",
-              description: "Démarrez en quelques clics et créez votre projet Photobooth IA sur la plateforme.",
+              title: "Création de votre projet Photobooth IA",
+              description: "Démarrez en quelques clics et créez votre projet de photobooth avec intelligence artificielle sur notre plateforme SaaS intuitive.",
               image: "/steps/step-1.png"
             },
             {
@@ -343,8 +414,8 @@ export default function Home() {
             {
               icon: <Wand2 className="w-6 h-6" />,
               number: '03',
-              title: "Choix des modèles IA",
-              description: "Sélectionnez parmi de nombreux modèles et styles IA pour vos photos.",
+              title: "Choix des modèles d'intelligence artificielle",
+              description: "Sélectionnez parmi de nombreux modèles et styles d'IA générative pour créer des effets photo uniques et personnalisés.",
               image: "/steps/step-3.png"
             },
             {
@@ -393,11 +464,11 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Avantages <span className="text-gradient">exclusifs</span> pour les agences événementielles
+              Avantages <span className="text-gradient">exclusifs</span> de notre photobooth IA pour agences événementielles
             </h2>
             
             <p className="text-lg text-gray-600 mb-12">
-              Offrez des expériences interactives inoubliables et personnalisez chaque événement selon les besoins de vos clients
+              Offrez des expériences photobooth avec intelligence artificielle inoubliables et personnalisez chaque événement selon les besoins de vos clients
             </p>
           </div>
           
@@ -767,7 +838,7 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Photobooth <span className="text-gradient">Coiffure IA</span> : Révolutionnez l'expérience salon
+              Photobooth <span className="text-gradient">Coiffure IA</span> : Révolutionnez l'expérience salon avec l'intelligence artificielle
             </h2>
             
             <div className="prose prose-lg max-w-4xl mx-auto text-gray-700 mb-12">
@@ -798,7 +869,7 @@ export default function Home() {
                 <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
                   <Image
                     src="/coupe-cheveux/web006.jpg"
-                    alt="Essayage virtuel de coiffures"
+                    alt="Photobooth IA coiffure - Essayage virtuel avec intelligence artificielle"
                     fill
                     className="object-cover"
                   />
@@ -850,7 +921,7 @@ export default function Home() {
                 <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
                   <Image
                     src="/coupe-cheveux/web005.jpg"
-                    alt="Simulation de couleurs de cheveux"
+                    alt="Simulation couleurs cheveux avec photobooth IA pour salon de coiffure"
                     fill
                     className="object-cover"
                   />
@@ -902,7 +973,7 @@ export default function Home() {
                 <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
                   <Image
                     src="/coupe-cheveux/web002.jpg"
-                    alt="Solution tablette pour salon de coiffure"
+                    alt="Solution tablette photobooth IA pour salon de coiffure avec intelligence artificielle"
                     fill
                     className="object-cover"
                   />
@@ -997,11 +1068,11 @@ export default function Home() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Découvrez la <span className="text-gradient">galerie intelligente</span> de notre solution
+              Découvrez la <span className="text-gradient">galerie photobooth IA</span> de notre solution
             </h2>
             
             <p className="text-lg text-gray-600 mb-12">
-              Découvrez comment notre plateforme SaaS Photobooth IA permet de créer des souvenirs uniques et personnalisés pour chaque événement.
+              Explorez notre galerie de créations réalisées avec notre photobooth IA. Découvrez comment notre plateforme SaaS avec intelligence artificielle permet de créer des souvenirs uniques et personnalisés pour chaque événement.
             </p>
           </div>
           
@@ -1204,11 +1275,11 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="text-center">
                   <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 leading-tight">
-                    Prêt à révolutionner <span className="text-gradient">vos événements</span> ?
+                    Prêt à révolutionner vos événements avec notre <span className="text-gradient">photobooth IA</span> ?
                   </h2>
                   
                   <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                    Rejoignez les organisateurs d'événements qui font confiance à nos solutions de photobooth IA
+                    Rejoignez les organisateurs d'événements qui font confiance à nos solutions de photobooth avec intelligence artificielle pour créer des expériences inoubliables
                   </p>
                   
                   <div className="flex flex-wrap justify-center gap-4">

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Grid, Users, Clock, Camera, Share2, Zap, BarChart, Heart, Sparkles, ArrowRight, Star, Eye } from 'lucide-react';
@@ -8,6 +9,65 @@ import { Grid, Users, Clock, Camera, Share2, Zap, BarChart, Heart, Sparkles, Arr
 export default function Photomosaique() {
   return (
     <>
+      <Head>
+        <title>Photo Mosaïque Interactive | Logiciel de Photo Mosaic Avancé | Photomosaic Wall</title>
+        <meta name="description" content="Découvrez notre photo mosaïque interactive révolutionnaire. Créez des photomosaic walls spectaculaires avec notre logiciel de photo mosaic. Art collaboratif et photo mosaique en temps réel pour tous vos événements." />
+        <meta name="keywords" content="photo mosaic, photo mosaïque, photomosaic wall, logiciel de photo mosaic, mosaïque photo interactive, photo mosaic événement, photomosaique temps réel, logiciel mosaique photo" />
+        <meta name="author" content="Photobooth IA" />
+        <meta property="og:title" content="Photo Mosaïque Interactive | Logiciel de Photo Mosaic" />
+        <meta property="og:description" content="Créez des photomosaic walls spectaculaires avec notre logiciel de photo mosaic révolutionnaire. Solution complète de photo mosaïque collaborative." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://photobooth-ia.com/photomosaique" />
+        <meta property="og:image" content="/photomosaique/mosaic-hero.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Photo Mosaïque Interactive | Logiciel de Photo Mosaic" />
+        <meta name="twitter:description" content="Solution de photo mosaïque interactive. Créez des photomosaic walls avec notre logiciel de photo mosaic avancé." />
+        <meta name="twitter:image" content="/photomosaique/mosaic-hero.jpg" />
+        <link rel="canonical" href="https://photobooth-ia.com/photomosaique" />
+      </Head>
+
+      {/* JSON-LD Schema for better SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Photo Mosaïque Interactive - Logiciel de Photo Mosaic Avancé",
+            "description": "Découvrez notre solution de photo mosaïque interactive. Créez des photomosaic walls collaboratives avec notre logiciel de photo mosaic avancé pour tous vos événements.",
+            "image": "/photomosaique/mosaic-hero.jpg",
+            "author": {
+              "@type": "Organization",
+              "name": "Photobooth IA"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Photobooth IA",
+              "url": "https://photobooth-ia.com"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://photobooth-ia.com/photomosaique"
+            },
+            "keywords": "photo mosaic, photo mosaïque, photomosaic wall, logiciel de photo mosaic, mosaïque photo interactive",
+            "about": [
+              {
+                "@type": "Thing",
+                "name": "Photo Mosaic Software"
+              },
+              {
+                "@type": "Thing", 
+                "name": "Interactive Photo Mosaic"
+              },
+              {
+                "@type": "Thing",
+                "name": "Collaborative Art"
+              }
+            ]
+          })
+        }}
+      />
+      
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Background patterns */}
@@ -73,16 +133,19 @@ export default function Photomosaique() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Photo{' '}
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                mosaïque
+                Mosaïque
+              </span>{' '}
+              <span className="text-3xl md:text-4xl block mt-2">
+                Logiciel de Photo Mosaic Interactif
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Transformez les photos de vos invités en une œuvre d'art spectaculaire et évolutive qui capte l'essence de votre événement.
+              Transformez les photos de vos invités en œuvre d'art spectaculaire avec notre logiciel de photo mosaic avancé. Créez des photomosaic walls évolutifs qui captent l'essence collaborative de votre événement.
             </p>
             <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
               <Image 
                 src="/photomosaique/mosaic-hero.jpg"
-                alt="Photomosaïque en action lors d'un événement"
+                alt="Photo mosaïque interactive en temps réel - Logiciel de photo mosaic lors d'un événement"
                 width={1200}
                 height={675}
                 className="w-full h-auto"
@@ -105,10 +168,10 @@ export default function Photomosaique() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Pourquoi choisir la photomosaïque ?
+              Pourquoi choisir notre Photo Mosaic ?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Une expérience collaborative unique qui transforme votre événement en œuvre d'art collective
+              Une expérience collaborative unique qui transforme votre événement en photomosaic wall spectaculaire
             </p>
           </div>
           
@@ -234,12 +297,12 @@ export default function Photomosaique() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que la photomosaïque ?</h2>
+              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que notre logiciel de Photo Mosaic ?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                La photomosaïque est une œuvre d'art collaborative qui se construit tout au long de votre événement. Elle transforme une image de votre choix (logo, portrait, message) en une impressionnante mosaïque composée de centaines de photos prises par vos invités.
+                Notre photo mosaïque est une œuvre d'art collaborative qui se construit tout au long de votre événement. Notre logiciel de photo mosaic transforme une image de votre choix (logo, portrait, message) en impressionnante mosaïque composée de centaines de photos prises par vos invités.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                À mesure que les participants prennent des photos, notre système les intègre automatiquement à la mosaïque, créant une expérience visuelle qui évolue en temps réel et renforce le sentiment d'appartenance collective.
+                À mesure que les participants prennent des photos, notre système les intègre automatiquement à la photomosaic wall, créant une expérience visuelle qui évolue en temps réel et renforce le sentiment d'appartenance collective.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -305,10 +368,10 @@ export default function Photomosaique() {
               Processus photomosaïque
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comment ça marche ?
+              Comment fonctionne notre Photo Mosaic ?
             </h2>
             <p className="text-xl text-gray-300">
-              Un processus révolutionnaire en 5 étapes pour créer une œuvre d'art collaborative unique
+              Un processus révolutionnaire en 5 étapes pour créer une photomosaic wall collaborative unique
             </p>
           </div>
 
@@ -322,35 +385,35 @@ export default function Photomosaique() {
                 {
                   step: "01",
                   title: "Prenez des photos",
-                  description: "Vos invités capturent leurs moments via photobooth ou smartphone",
+                  description: "Vos invités capturent leurs moments via photobooth ou smartphone pour alimenter la photo mosaïque",
                   color: "from-purple-500 to-pink-500",
                   icon: <Camera className="w-12 h-12" />
                 },
                 {
                   step: "02", 
-                  title: "Analyse automatique",
-                  description: "Notre IA analyse chaque photo pour optimiser son placement",
+                  title: "Analyse par IA",
+                  description: "Notre logiciel de photo mosaic analyse chaque photo pour optimiser son placement",
                   color: "from-blue-500 to-purple-500",
                   icon: <Sparkles className="w-12 h-12" />
                 },
                 {
                   step: "03",
                   title: "Intégration intelligente",
-                  description: "Chaque photo trouve sa place dans la mosaïque en temps réel",
+                  description: "Chaque photo trouve sa place dans la photomosaic wall en temps réel",
                   color: "from-green-500 to-blue-500",
                   icon: <Grid className="w-12 h-12" />
                 },
                 {
                   step: "04",
-                  title: "Œuvre révélée",
-                  description: "La mosaïque prend forme et révèle votre image maîtresse",
+                  title: "Mosaïque révélée",
+                  description: "La photo mosaïque prend forme et révèle votre image maîtresse sur écran géant",
                   color: "from-orange-500 to-red-500",
                   icon: <Eye className="w-12 h-12" />
                 },
                 {
                   step: "05",
                   title: "Partagez l'art",
-                  description: "Exportez et partagez votre création collaborative unique",
+                  description: "Exportez et partagez votre photomosaic wall collaborative en haute résolution",
                   color: "from-pink-500 to-purple-500",
                   icon: <Share2 className="w-12 h-12" />
                 }
@@ -400,7 +463,7 @@ export default function Photomosaique() {
                   Collaboratif, Évolutif, <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Spectaculaire !</span>
                 </h3>
                 <p className="text-xl text-gray-700 mb-8">
-                  En temps réel, créez une <span className="text-purple-600 font-bold">œuvre d'art collective</span> qui implique tous vos invités dans une expérience inoubliable.
+                  En temps réel, créez une <span className="text-purple-600 font-bold">photomosaic wall collaborative</span> avec notre logiciel de photo mosaic qui implique tous vos invités dans une expérience inoubliable.
                 </p>
                 <Link
                   href="/contact"
@@ -419,9 +482,9 @@ export default function Photomosaique() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Comment fonctionne la photomosaïque ?</h2>
+            <h2 className="text-3xl font-bold mb-4">Comment fonctionne la photomosaïque interactive ?</h2>
             <p className="text-lg text-gray-700">
-              Une expérience simple mais captivante qui évolue tout au long de votre événement.
+              Une expérience simple mais captivante qui évolue tout au long de votre événement avec notre logiciel de photo mosaic.
             </p>
           </div>
 
@@ -430,22 +493,22 @@ export default function Photomosaique() {
               {
                 icon: <Camera className="w-12 h-12 text-violet-600" />,
                 title: "Capture",
-                description: "Vos invités prennent des photos via notre photobooth ou leurs smartphones avec notre application web."
+                description: "Vos invités prennent des photos via notre photobooth ou leurs smartphones avec notre application web pour alimenter la photo mosaïque."
               },
               {
                 icon: <Zap className="w-12 h-12 text-violet-600" />,
                 title: "Analyse",
-                description: "Notre algorithme analyse chaque photo pour la placer au meilleur endroit dans la mosaïque."
+                description: "Notre logiciel de photo mosaic analyse chaque photo pour la placer au meilleur endroit dans la mosaïque."
               },
               {
                 icon: <Grid className="w-12 h-12 text-violet-600" />,
                 title: "Intégration",
-                description: "La photo est immédiatement intégrée à la mosaïque, visible sur les écrans en temps réel."
+                description: "La photo est immédiatement intégrée à la photomosaic wall, visible sur les écrans en temps réel."
               },
               {
                 icon: <Share2 className="w-12 h-12 text-violet-600" />,
                 title: "Partage",
-                description: "La mosaïque finale est partageable et imprimable en haute résolution après l'événement."
+                description: "La photo mosaïque finale est partageable et imprimable en haute résolution après l'événement."
               }
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -471,9 +534,9 @@ export default function Photomosaique() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Idéal pour tous types d'événements</h2>
+            <h2 className="text-3xl font-bold mb-4">Photomosaic Wall pour tous types d'événements</h2>
             <p className="text-lg text-gray-700">
-              Découvrez comment la photomosaïque peut transformer votre prochain événement.
+              Découvrez comment notre photo mosaïque peut transformer votre prochain événement.
             </p>
           </div>
 
@@ -483,44 +546,44 @@ export default function Photomosaique() {
                 title: "Mariages",
                 description: "Créez une œuvre mémorable avec tous vos invités qui représente parfaitement votre journée spéciale.",
                 image: "/photomosaique/use-wedding.jpg",
-                example: "Portrait des mariés composé des photos de tous les invités"
+                example: "Portrait des mariés composé des photos de tous les invités en photomosaic wall"
               },
               {
                 title: "Événements corporate",
                 description: "Renforcez l'identité de marque et l'esprit d'équipe avec une création collaborative impressionnante.",
                 image: "/photomosaique/use-corporate.jpg",
-                example: "Logo d'entreprise ou message composé des photos des collaborateurs"
+                example: "Logo d'entreprise ou message composé des photos des collaborateurs avec notre logiciel de photo mosaic"
               },
               {
                 title: "Salons et conférences",
                 description: "Engagez les visiteurs dans une activité interactive qui crée du trafic sur votre stand.",
                 image: "/photomosaique/use-conference.jpg",
-                example: "Représentation visuelle évolutive qui s'enrichit tout au long de l'événement"
+                example: "Photo mosaïque évolutive qui s'enrichit tout au long de l'événement"
               },
               {
                 title: "Lancement de produit",
                 description: "Visualisez l'engouement autour de votre nouveau produit avec une mosaïque thématique.",
                 image: "/photomosaique/use-product.jpg",
-                example: "Image du produit qui se révèle progressivement avec les photos des participants"
+                example: "Image du produit qui se révèle progressivement avec les photos des participants sur photomosaic wall"
               },
               {
                 title: "Événements caritatifs",
                 description: "Symbolisez la contribution collective avec une œuvre visuelle qui représente votre cause.",
                 image: "/photomosaique/use-charity.jpg",
-                example: "Chaque photo représente un don ou un soutien à la cause défendue"
+                example: "Chaque photo représente un don ou un soutien à la cause défendue dans la photo mosaïque"
               },
               {
                 title: "Festivals et concerts",
                 description: "Créez un souvenir collectif qui capture l'énergie et la diversité des participants.",
                 image: "/photomosaique/use-festival.jpg",
-                example: "Affiche ou logo du festival composé des photos du public"
+                example: "Affiche ou logo du festival composé des photos du public avec notre logiciel de photo mosaic"
               }
             ].map((useCase, index) => (
               <div key={index} className="card bg-white overflow-hidden">
                 <div className="relative h-48">
                   <Image
                     src={useCase.image}
-                    alt={`Photomosaïque pour ${useCase.title}`}
+                    alt={`Photo mosaïque et logiciel de photo mosaic pour ${useCase.title} - Photomosaic wall`}
                     fill
                     className="object-cover"
                   />
@@ -544,9 +607,9 @@ export default function Photomosaique() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Les avantages de la photomosaïque</h2>
+            <h2 className="text-3xl font-bold mb-4">Les avantages de notre logiciel de Photo Mosaic</h2>
             <p className="text-lg text-gray-700">
-              Bien plus qu'une simple animation, un véritable catalyseur d'engagement.
+              Bien plus qu'une simple animation, un véritable catalyseur d'engagement pour créer des photomosaic walls inoubliables.
             </p>
           </div>
 
@@ -601,9 +664,9 @@ export default function Photomosaique() {
       <section className="bg-gradient-to-r from-violet-600 to-indigo-600 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à créer une œuvre d'art collaborative ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à créer votre photomosaic wall collaborative ?</h2>
             <p className="text-xl opacity-90 mb-8">
-              Transformez votre prochain événement avec une photomosaïque interactive qui implique tous vos participants.
+              Transformez votre prochain événement avec notre photo mosaïque interactive qui implique tous vos participants dans une expérience unique.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

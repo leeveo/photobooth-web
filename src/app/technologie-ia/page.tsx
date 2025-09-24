@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import { CircuitBoard, Cpu, Sparkles, Wand2, Lightbulb, Camera, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -60,6 +61,39 @@ export default function TechnologieIA() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // Schema markup spécialisé pour la technologie IA
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Technologie Photobooth IA - Intelligence Artificielle pour Événements",
+    "description": "Découvrez notre technologie révolutionnaire de photobooth avec intelligence artificielle. Plus de 300 styles IA, traitement en temps réel et qualité professionnelle pour transformer vos événements.",
+    "author": {
+      "@type": "Organization",
+      "name": "WaiBooth"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "WaiBooth",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.waibooth.app/logo.png"
+      }
+    },
+    "datePublished": "2024-09-24",
+    "dateModified": "2024-09-24",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.waibooth.app/technologie-ia"
+    },
+    "image": "https://www.waibooth.app/carrousel/Futuriste.jpg",
+    "applicationCategory": "Business Software",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "category": "Software as a Service"
+    }
+  };
+
   // Effet pour faire défiler automatiquement les images
   useEffect(() => {
     if (artisticStyles.length === 0) return;
@@ -76,6 +110,45 @@ export default function TechnologieIA() {
 
   return (
     <>
+      <Head>
+        <title>Technologie Photobooth IA | Intelligence Artificielle pour Événements - WaiBooth</title>
+        <meta 
+          name="description" 
+          content="🤖 Découvrez notre technologie révolutionnaire de photobooth avec intelligence artificielle ! +300 styles IA, traitement temps réel, qualité 4K. Innovation événementielle garantie ✨" 
+        />
+        <meta 
+          name="keywords" 
+          content="technologie photobooth ia, photobooth avec intelligence artificielle, ia générative photobooth, intelligence artificielle événement, technologie ia avancée, photobooth ai innovation, système ia photobooth, waibooth technologie" 
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="WaiBooth" />
+        <link rel="canonical" href="https://www.waibooth.app/technologie-ia" />
+        
+        {/* Open Graph pour les réseaux sociaux */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Technologie Photobooth IA | Intelligence Artificielle pour Événements" />
+        <meta property="og:description" content="🤖 Découvrez notre technologie révolutionnaire de photobooth avec intelligence artificielle ! +300 styles IA, traitement temps réel, qualité 4K." />
+        <meta property="og:url" content="https://www.waibooth.app/technologie-ia" />
+        <meta property="og:image" content="https://www.waibooth.app/carrousel/Futuriste.jpg" />
+        <meta property="og:site_name" content="WaiBooth" />
+        <meta property="og:locale" content="fr_FR" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Technologie Photobooth IA | Intelligence Artificielle pour Événements" />
+        <meta name="twitter:description" content="🤖 Découvrez notre technologie révolutionnaire de photobooth avec intelligence artificielle !" />
+        <meta name="twitter:image" content="https://www.waibooth.app/carrousel/Futuriste.jpg" />
+
+        {/* Données structurées JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        
+        {/* Préchargement des ressources */}
+        <link rel="preload" href="/carrousel/Futuriste.jpg" as="image" />
+        <link rel="preload" href="/carrousel/Pop-art.jpg" as="image" />
+      </Head>
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-violet-900 via-indigo-900 to-purple-900 relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Background patterns */}
@@ -138,16 +211,19 @@ export default function TechnologieIA() {
             <div className="text-left">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-500/20 text-violet-300 text-sm font-medium mb-6">
                 <CircuitBoard className="w-4 h-4 mr-2" />
-                Technologie Avancée
+                Photobooth IA - Technologie Avancée
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 Technologie{' '}
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                  IA
+                  Photobooth IA
+                </span>
+                <span className="block text-3xl md:text-4xl mt-2">
+                  avec Intelligence Artificielle
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Découvrez comment notre intelligence artificielle avancée transforme de simples photos en œuvres d'art uniques et personnalisées.
+                Découvrez comment notre photobooth avec intelligence artificielle avancée transforme instantanément de simples photos en œuvres d'art uniques et personnalisées pour vos événements.
               </p>
               <div className="mt-8">
                 <Link
@@ -156,7 +232,7 @@ export default function TechnologieIA() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 text-lg group"
                 >
-                  <span>Tester l'IA maintenant</span>
+                  <span>Tester le Photobooth IA maintenant</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -175,7 +251,7 @@ export default function TechnologieIA() {
                     >
                       <Image 
                         src={style.image}
-                        alt={`Style ${style.name}`}
+                        alt={`Style photobooth IA ${style.name} - Intelligence artificielle pour événements`}
                         fill
                         className="object-cover"
                         priority={index === 0}
@@ -226,14 +302,14 @@ export default function TechnologieIA() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              L'IA au Service de{' '}
+              Photobooth IA au Service de{' '}
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                 Votre Créativité
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Notre technologie d'intelligence artificielle révolutionnaire transforme vos photos en œuvres d'art 
-              uniques, offrant une expérience personnalisée et immersive à vos invités.
+              Notre technologie révolutionnaire de photobooth avec intelligence artificielle transforme vos photos en œuvres d'art 
+              uniques, offrant une expérience personnalisée et immersive à vos invités lors de vos événements.
             </p>
 
             {/* Encarts modernes flottants */}
@@ -243,9 +319,9 @@ export default function TechnologieIA() {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Cpu className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">IA Générative</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Photobooth IA Générative</h3>
                 <p className="text-gray-300 text-sm">
-                  Modèles d'IA de pointe pour des transformations artistiques ultra-réalistes et créatives
+                  Modèles d'intelligence artificielle de pointe pour des transformations artistiques ultra-réalistes et créatives avec notre photobooth IA
                 </p>
               </div>
 
@@ -254,9 +330,9 @@ export default function TechnologieIA() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Wand2 className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Traitement Instantané</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Traitement Instantané IA</h3>
                 <p className="text-gray-300 text-sm">
-                  Résultats générés en quelques secondes pour une expérience fluide et interactive
+                  Résultats générés en quelques secondes par notre photobooth avec intelligence artificielle pour une expérience fluide et interactive
                 </p>
               </div>
 
@@ -265,9 +341,9 @@ export default function TechnologieIA() {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Camera className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Haute Résolution</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Qualité Professionnelle 4K</h3>
                 <p className="text-gray-300 text-sm">
-                  Images de qualité professionnelle parfaites pour l'impression et le partage
+                  Images haute résolution de qualité professionnelle parfaites pour l'impression et le partage sur réseaux sociaux
                 </p>
               </div>
             </div>
@@ -281,13 +357,13 @@ export default function TechnologieIA() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                Performance de Notre{' '}
+                Performance de Notre Photobooth avec{' '}
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                   Intelligence Artificielle
                 </span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Des chiffres qui témoignent de l'excellence de notre technologie IA
+                Des chiffres qui témoignent de l'excellence de notre technologie photobooth IA avancée
               </p>
             </div>
 
@@ -341,15 +417,15 @@ export default function TechnologieIA() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Une IA développée pour la créativité</h2>
+              <h2 className="text-3xl font-bold mb-6">Un photobooth IA développé pour la créativité événementielle</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Notre technologie d'intelligence artificielle a été spécifiquement conçue pour transformer instantanément n'importe quelle photo en une création artistique unique qui impressionnera vos invités.
+                Notre technologie de photobooth avec intelligence artificielle a été spécifiquement conçue pour transformer instantanément n'importe quelle photo en une création artistique unique qui impressionnera vos invités lors de vos événements.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Contrairement aux filtres traditionnels qui appliquent simplement des effets prédéfinis, notre IA analyse chaque image en profondeur pour comprendre sa composition et appliquer des transformations artistiques qui respectent l'essence du sujet.
+                Contrairement aux filtres traditionnels qui appliquent simplement des effets prédéfinis, notre photobooth IA analyse chaque image en profondeur pour comprendre sa composition et appliquer des transformations artistiques intelligentes qui respectent l'essence du sujet.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
-                {["Apprentissage profond", "Traitement en temps réel", "Personnalisation avancée", "+300 styles disponibles"].map((feature, index) => (
+                {["Apprentissage profond IA", "Traitement temps réel", "Personnalisation avancée", "+300 styles photobooth IA"].map((feature, index) => (
                   <span key={index} className="flex items-center px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm">
                     <Cpu className="w-4 h-4 mr-1" />
                     {feature}
@@ -362,7 +438,7 @@ export default function TechnologieIA() {
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 text-white font-semibold shadow-lg hover:from-fuchsia-600 hover:to-violet-700 transition-colors text-lg mt-6"
               >
-                Tester notre technologie
+                Tester notre photobooth IA
               </Link>
             </div>
             <div>
@@ -374,8 +450,8 @@ export default function TechnologieIA() {
                         <CircuitBoard className="w-5 h-5 text-violet-600" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-lg mb-1">Reconnaissance d'image avancée</h3>
-                        <p className="text-white/90 text-sm">Notre IA identifie précisément les sujets, expressions et contextes dans chaque photo</p>
+                        <h3 className="font-bold text-lg mb-1">Reconnaissance d'image avancée IA</h3>
+                        <p className="text-white/90 text-sm">Notre photobooth IA identifie précisément les sujets, expressions et contextes dans chaque photo grâce à l'intelligence artificielle</p>
                       </div>
                     </div>
                     
@@ -384,8 +460,8 @@ export default function TechnologieIA() {
                         <Sparkles className="w-5 h-5 text-violet-600" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-lg mb-1">Génération artistique</h3>
-                        <p className="text-white/90 text-sm">Transformation complète qui va au-delà des simples filtres pour créer un véritable effet artistique</p>
+                        <h3 className="font-bold text-lg mb-1">Génération artistique intelligente</h3>
+                        <p className="text-white/90 text-sm">Transformation complète qui va au-delà des simples filtres pour créer un véritable effet artistique avec notre photobooth IA</p>
                       </div>
                     </div>
                     
@@ -394,8 +470,8 @@ export default function TechnologieIA() {
                         <Lightbulb className="w-5 h-5 text-violet-600" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-lg mb-1">Adaptation intelligente</h3>
-                        <p className="text-white/90 text-sm">Chaque style s'adapte intelligemment au type de photo et au contexte de l'événement</p>
+                        <h3 className="font-bold text-lg mb-1">Adaptation intelligente événementielle</h3>
+                        <p className="text-white/90 text-sm">Chaque style s'adapte intelligemment au type de photo et au contexte de l'événement grâce à notre IA avancée</p>
                       </div>
                     </div>
                   </div>
@@ -410,9 +486,9 @@ export default function TechnologieIA() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Plus de 300 styles artistiques disponibles</h2>
+            <h2 className="text-3xl font-bold mb-4">Plus de 300 styles artistiques avec photobooth IA disponibles</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Notre technologie IA propose une bibliothèque de styles en constante expansion. Découvrez quelques exemples ci-dessous.
+              Notre technologie photobooth avec intelligence artificielle propose une bibliothèque de styles en constante expansion. Découvrez quelques exemples de notre photobooth IA ci-dessous.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {artisticStyles.map((style) => (
@@ -432,14 +508,14 @@ export default function TechnologieIA() {
                 <div className="aspect-[3/4] relative">
                   <Image 
                     src={style.image}
-                    alt={`Style ${style.name}`}
+                    alt={`Photobooth IA style ${style.name} - Intelligence artificielle pour transformation artistique`}
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
                     <div className="p-4">
                       <div className="px-3 py-1 bg-violet-600 text-white text-sm font-medium rounded-full inline-block mb-2">
-                        Filtre réalisé avec IA
+                        Photobooth IA - Filtre généré par intelligence artificielle
                       </div>
                     </div>
                   </div>
@@ -468,9 +544,9 @@ export default function TechnologieIA() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Comment fonctionne notre IA ?</h2>
+            <h2 className="text-3xl font-bold mb-4">Comment fonctionne notre photobooth avec intelligence artificielle ?</h2>
             <p className="text-lg text-gray-700">
-              Un processus en plusieurs étapes pour des résultats exceptionnels
+              Un processus optimisé en plusieurs étapes pour des résultats exceptionnels avec notre photobooth IA
             </p>
           </div>
 
@@ -481,23 +557,23 @@ export default function TechnologieIA() {
             {[
               {
                 step: "1",
-                title: "Analyse d'image",
-                description: "Notre IA analyse l'image pour identifier les sujets, le contexte, l'éclairage et les éléments clés."
+                title: "Analyse d'image par IA",
+                description: "Notre photobooth IA analyse l'image pour identifier les sujets, le contexte, l'éclairage et les éléments clés grâce à l'intelligence artificielle avancée."
               },
               {
                 step: "2",
-                title: "Application du style",
-                description: "Le système sélectionne et adapte le style artistique choisi en tenant compte des caractéristiques uniques de l'image."
+                title: "Application du style artistique IA",
+                description: "Le système sélectionne et adapte le style artistique choisi en tenant compte des caractéristiques uniques de l'image via notre technologie photobooth IA."
               },
               {
                 step: "3",
                 title: "Transformation intelligente",
-                description: "L'IA applique une transformation profonde qui va bien au-delà d'un simple filtre, en préservant l'essence du sujet."
+                description: "Notre photobooth avec intelligence artificielle applique une transformation profonde qui va bien au-delà d'un simple filtre, en préservant l'essence du sujet."
               },
               {
                 step: "4",
-                title: "Optimisation finale",
-                description: "Une phase d'affinage améliore les détails, ajuste les couleurs et perfectionne le rendu artistique final."
+                title: "Optimisation finale IA",
+                description: "Une phase d'affinage améliore les détails, ajuste les couleurs et perfectionne le rendu artistique final grâce à notre photobooth IA."
               }
             ].map((step, index) => (
               <div key={index} className="relative md:pl-12 mb-12 last:mb-0">
@@ -525,9 +601,9 @@ export default function TechnologieIA() {
       <section className="bg-gradient-to-r from-violet-600 to-indigo-600 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer vos photos avec notre IA ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer vos photos avec notre photobooth IA ?</h2>
             <p className="text-xl opacity-90 mb-8">
-              Offrez à vos invités une expérience photo unique qu'ils n'oublieront jamais.
+              Offrez à vos invités une expérience photobooth avec intelligence artificielle unique qu'ils n'oublieront jamais lors de vos événements.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

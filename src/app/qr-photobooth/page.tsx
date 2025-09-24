@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { QrCode, Smartphone, Zap, Share2, Globe, Shield, Users, Layout, Camera, Sparkles, ArrowRight, Star, Eye, Grid, Monitor, Tablet } from 'lucide-react';
@@ -8,6 +9,65 @@ import { QrCode, Smartphone, Zap, Share2, Globe, Shield, Users, Layout, Camera, 
 export default function QrPhotobooth() {
   return (
     <>
+      <Head>
+        <title>QR Photobooth Sans Contact | Photobooth QR Code | Solution Hygiénique</title>
+        <meta name="description" content="Découvrez notre QR Photobooth révolutionnaire sans contact. Photobooth QR code hygiénique permettant à vos invités de créer des photos IA directement depuis leur smartphone sans installation." />
+        <meta name="keywords" content="qr photobooth, photobooth qr code, photobooth sans contact, qr code photobooth, photobooth hygiénique, photobooth mobile, photobooth smartphone, solution photobooth qr" />
+        <meta name="author" content="Photobooth IA" />
+        <meta property="og:title" content="QR Photobooth Sans Contact | Solution Photobooth QR Code Moderne" />
+        <meta property="og:description" content="Révolutionnez vos événements avec notre QR Photobooth sans contact. Photobooth QR code hygiénique accessible depuis smartphone." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://photobooth-ia.com/qr-photobooth" />
+        <meta property="og:image" content="/qr-photobooth/qr-hero.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="QR Photobooth Sans Contact | Photobooth QR Code" />
+        <meta name="twitter:description" content="Solution QR Photobooth révolutionnaire. Photobooth sans contact via QR code depuis smartphone." />
+        <meta name="twitter:image" content="/qr-photobooth/qr-hero.jpg" />
+        <link rel="canonical" href="https://photobooth-ia.com/qr-photobooth" />
+      </Head>
+
+      {/* JSON-LD Schema for better SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "QR Photobooth Sans Contact - Guide Complet Solution Hygiénique",
+            "description": "Guide détaillé du QR Photobooth, solution photobooth sans contact accessible via QR code. Découvrez les avantages de cette technologie hygiénique pour vos événements.",
+            "image": "/qr-photobooth/qr-hero.jpg",
+            "author": {
+              "@type": "Organization",
+              "name": "Photobooth IA"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Photobooth IA",
+              "url": "https://photobooth-ia.com"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://photobooth-ia.com/qr-photobooth"
+            },
+            "keywords": "qr photobooth, photobooth qr code, photobooth sans contact, solution hygiénique",
+            "about": [
+              {
+                "@type": "Thing",
+                "name": "QR Code Technology"
+              },
+              {
+                "@type": "Thing", 
+                "name": "Contactless Photobooth"
+              },
+              {
+                "@type": "Thing",
+                "name": "Mobile Photobooth Solution"
+              }
+            ]
+          })
+        }}
+      />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
         {/* Gradient Background */}
@@ -35,11 +95,15 @@ export default function QrPhotobooth() {
               </span>
               <br />
               <span className="text-white">Sans Contact</span>
+              <br />
+              <span className="text-3xl md:text-4xl text-gray-300">
+                Solution Hygiénique QR Code
+              </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Une solution moderne et hygiénique qui transforme les smartphones de vos invités en photobooths IA personnels.
+              Une solution moderne et hygiénique qui transforme les smartphones de vos invités en photobooths IA personnels grâce à notre technologie QR Code avancée.
             </p>
 
             {/* CTA Buttons */}
@@ -127,10 +191,10 @@ export default function QrPhotobooth() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Pourquoi choisir le QR Photobooth ?
+              Pourquoi choisir notre QR Photobooth ?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              La solution photobooth la plus moderne, hygiénique et accessible pour tous vos événements
+              La solution photobooth QR code la plus moderne, hygiénique et accessible pour tous vos événements
             </p>
           </div>
           
@@ -186,10 +250,10 @@ export default function QrPhotobooth() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Impact du QR Photobooth
+              Impact de notre QR Photobooth
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Des résultats exceptionnels qui révolutionnent l'expérience photobooth traditionnelle
+              Des résultats exceptionnels qui révolutionnent l'expérience photobooth QR code traditionnelle
             </p>
           </div>
           
@@ -250,12 +314,12 @@ export default function QrPhotobooth() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que le QR Photobooth ?</h2>
+              <h2 className="text-3xl font-bold mb-6">Qu'est-ce que notre QR Photobooth Sans Contact ?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Le QR Photobooth est une solution innovante qui permet à vos invités de profiter d'une expérience photobooth complète directement depuis leur smartphone, sans télécharger d'application.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Un simple scan de QR code suffit pour accéder instantanément à notre interface web où ils pourront prendre des photos, appliquer des filtres IA personnalisés et partager leurs créations - le tout sans manipulation d'équipement partagé.
+                Un simple scan de QR code suffit pour accéder instantanément à notre interface web où ils pourront prendre des photos, appliquer des filtres IA personnalisés et partager leurs créations - le tout sans manipulation d'équipement partagé grâce à notre technologie photobooth QR code avancée.
               </p>
               <div className="bg-violet-50 border border-violet-100 rounded-lg p-6 mb-8">
                 <h3 className="font-bold text-lg mb-3 flex items-center">
@@ -280,7 +344,7 @@ export default function QrPhotobooth() {
                 <div className="absolute top-0 left-0 right-0 mx-auto w-64 h-[500px]">
                   <Image
                     src="/qr-photobooth/phone-frame.png"
-                    alt="Smartphone frame"
+                    alt="QR Photobooth sans contact - Interface smartphone avec QR code pour photobooth hygiénique"
                     fill
                     className="object-contain"
                   />
@@ -319,10 +383,10 @@ export default function QrPhotobooth() {
               Processus QR sans contact
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comment ça marche ?
+              Comment fonctionne notre QR Photobooth ?
             </h2>
             <p className="text-xl text-gray-300">
-              Un processus révolutionnaire sans contact en 5 étapes pour une expérience photo hygiénique
+              Un processus révolutionnaire sans contact en 5 étapes pour une expérience photobooth QR code hygiénique
             </p>
           </div>
 
@@ -336,35 +400,35 @@ export default function QrPhotobooth() {
                 {
                   step: "01",
                   title: "Scannez le QR code",
-                  description: "Simple scan avec l'appareil photo du smartphone",
+                  description: "Simple scan avec l'appareil photo du smartphone pour accéder au photobooth QR",
                   color: "from-purple-500 to-pink-500",
                   icon: <QrCode className="w-12 h-12" />
                 },
                 {
                   step: "02", 
                   title: "Interface web instantanée",
-                  description: "Accès direct sans téléchargement d'application",
+                  description: "Accès direct à notre QR photobooth sans téléchargement d'application",
                   color: "from-blue-500 to-purple-500",
                   icon: <Smartphone className="w-12 h-12" />
                 },
                 {
                   step: "03",
                   title: "Création photo IA",
-                  description: "Capture et transformation avec filtres personnalisés",
+                  description: "Capture et transformation avec filtres personnalisés dans le photobooth QR code",
                   color: "from-green-500 to-blue-500",
                   icon: <Sparkles className="w-12 h-12" />
                 },
                 {
                   step: "04",
                   title: "Aperçu et édition",
-                  description: "Prévisualisation et ajustements en temps réel",
+                  description: "Prévisualisation et ajustements en temps réel sur l'interface QR photobooth",
                   color: "from-orange-500 to-red-500",
                   icon: <Eye className="w-12 h-12" />
                 },
                 {
                   step: "05",
                   title: "Partage instantané",
-                  description: "Téléchargement et diffusion sur réseaux sociaux",
+                  description: "Téléchargement et diffusion sur réseaux sociaux depuis le photobooth sans contact",
                   color: "from-pink-500 to-purple-500",
                   icon: <Share2 className="w-12 h-12" />
                 }
@@ -414,7 +478,7 @@ export default function QrPhotobooth() {
                   Sans contact, Sans limite, <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Sans compromis !</span>
                 </h3>
                 <p className="text-xl text-gray-300 mb-8">
-                  En <span className="text-purple-400 font-bold">quelques secondes</span>, transformez chaque smartphone en photobooth IA personnel et hygiénique.
+                  En <span className="text-purple-400 font-bold">quelques secondes</span>, transformez chaque smartphone en QR photobooth IA personnel et hygiénique avec notre solution photobooth QR code révolutionnaire.
                 </p>
                 <Link
                   href="https://photobooth.waibooth.app"
@@ -436,9 +500,9 @@ export default function QrPhotobooth() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6">L'importance des QR codes dans notre solution SaaS</h2>
+              <h2 className="text-4xl font-bold mb-6">L'importance des QR codes dans notre solution SaaS Photobooth</h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Les QR codes sont le cœur de notre stratégie de scalabilité et de partage, révolutionnant l'expérience photobooth traditionnelle
+                Les QR codes sont le cœur de notre stratégie de scalabilité et de partage, révolutionnant l'expérience photobooth QR code traditionnelle
               </p>
             </div>
 
@@ -572,9 +636,9 @@ export default function QrPhotobooth() {
       <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Comment fonctionne le QR Photobooth ?</h2>
+            <h2 className="text-3xl font-bold mb-4">Comment fonctionne le QR Photobooth Sans Contact ?</h2>
             <p className="text-lg text-gray-700">
-              Une expérience utilisateur fluide en seulement quelques étapes.
+              Une expérience utilisateur fluide en seulement quelques étapes avec notre solution photobooth QR code.
             </p>
           </div>
 
@@ -583,22 +647,22 @@ export default function QrPhotobooth() {
               {
                 icon: <QrCode className="w-12 h-12 text-violet-600" />,
                 title: "Scannez",
-                description: "L'invité scanne le QR code affiché sur votre stand ou sur les tables de votre événement."
+                description: "L'invité scanne le QR code affiché sur votre stand ou sur les tables de votre événement pour accéder au photobooth QR."
               },
               {
                 icon: <Smartphone className="w-12 h-12 text-violet-600" />,
                 title: "Accédez",
-                description: "L'interface web s'ouvre immédiatement sans téléchargement d'application nécessaire."
+                description: "L'interface web du QR photobooth s'ouvre immédiatement sans téléchargement d'application nécessaire."
               },
               {
                 icon: <Zap className="w-12 h-12 text-violet-600" />,
                 title: "Créez",
-                description: "L'utilisateur prend des photos et applique des filtres IA personnalisés à votre événement."
+                description: "L'utilisateur prend des photos et applique des filtres IA personnalisés à votre événement dans le photobooth sans contact."
               },
               {
                 icon: <Share2 className="w-12 h-12 text-violet-600" />,
                 title: "Partagez",
-                description: "Les créations peuvent être téléchargées, partagées sur les réseaux sociaux ou ajoutées à la galerie."
+                description: "Les créations du QR photobooth peuvent être téléchargées, partagées sur les réseaux sociaux ou ajoutées à la galerie."
               }
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -624,9 +688,9 @@ export default function QrPhotobooth() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Les avantages du QR Photobooth</h2>
+            <h2 className="text-3xl font-bold mb-4">Les avantages de notre QR Photobooth Sans Contact</h2>
             <p className="text-lg text-gray-700">
-              Une solution moderne qui allie simplicité, hygiène et impact visuel.
+              Une solution photobooth QR code moderne qui allie simplicité, hygiène et impact visuel.
             </p>
           </div>
 
@@ -684,41 +748,41 @@ export default function QrPhotobooth() {
 <section className="py-20 bg-gradient-to-br from-violet-50 to-indigo-50">
   <div className="container mx-auto px-4">
     <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-3xl font-bold mb-4">Cas d'usage du QR Photobooth</h2>
+      <h2 className="text-3xl font-bold mb-4">Cas d'usage du QR Photobooth Sans Contact</h2>
       <p className="text-lg text-gray-700">
-        Découvrez comment le QR Photobooth s'adapte à tous vos événements et contextes pour maximiser l'engagement et la viralité.
+        Découvrez comment notre QR Photobooth s'adapte à tous vos événements et contextes pour maximiser l'engagement et la viralité.
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {[
         {
           title: "Mariages & fêtes privées",
-          description: "Offrez à vos invités la possibilité de capturer des souvenirs uniques et de les partager instantanément, sans file d'attente ni manipulation d'équipement.",
+          description: "Offrez à vos invités la possibilité de capturer des souvenirs uniques et de les partager instantanément avec notre QR photobooth, sans file d'attente ni manipulation d'équipement.",
           image: "/qr-photobooth/use-wedding.jpg"
         },
         {
           title: "Événements d'entreprise",
-          description: "Renforcez la cohésion d'équipe et la visibilité de votre marque lors de séminaires, team building ou soirées corporate grâce à une expérience photo moderne et personnalisée.",
+          description: "Renforcez la cohésion d'équipe et la visibilité de votre marque lors de séminaires, team building ou soirées corporate grâce à notre solution photobooth QR code moderne et personnalisée.",
           image: "/qr-photobooth/use-corporate.jpg"
         },
         {
           title: "Salons & expositions",
-          description: "Générez du trafic sur votre stand et collectez des leads qualifiés en proposant une animation photo innovante et virale.",
+          description: "Générez du trafic sur votre stand et collectez des leads qualifiés en proposant une animation QR photobooth innovante et virale.",
           image: "/qr-photobooth/use-expo.jpg"
         },
         {
           title: "Festivals & concerts",
-          description: "Permettez à chaque participant de repartir avec un souvenir personnalisé et partageable sur les réseaux sociaux, amplifiant la portée de votre événement.",
+          description: "Permettez à chaque participant de repartir avec un souvenir personnalisé et partageable sur les réseaux sociaux, amplifiant la portée de votre événement grâce au photobooth sans contact.",
           image: "/qr-photobooth/use-festival.jpg"
         },
         {
           title: "Lancements de produit",
-          description: "Créez le buzz autour de votre nouveauté en invitant les participants à générer et partager des photos brandées à votre image.",
+          description: "Créez le buzz autour de votre nouveauté en invitant les participants à générer et partager des photos brandées à votre image via notre QR photobooth.",
           image: "/qr-photobooth/use-product.jpg"
         },
         {
           title: "Événements caritatifs",
-          description: "Fédérez votre communauté autour d'une cause en facilitant la création et le partage de contenus solidaires et engageants.",
+          description: "Fédérez votre communauté autour d'une cause en facilitant la création et le partage de contenus solidaires et engageants avec notre solution photobooth QR code.",
           image: "/qr-photobooth/use-charity.jpg"
         }
       ].map((useCase, idx) => (
@@ -726,7 +790,7 @@ export default function QrPhotobooth() {
           <div className="relative h-48 w-full">
             <Image
               src={useCase.image}
-              alt={useCase.title}
+              alt={`${useCase.title} - QR Photobooth sans contact et solution photobooth QR code`}
               fill
               className="object-cover"
             />
@@ -750,9 +814,9 @@ export default function QrPhotobooth() {
       <section className="bg-gradient-to-r from-violet-600 to-indigo-600 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à moderniser l'expérience photo de votre événement ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à moderniser l'expérience photo de votre événement avec notre QR Photobooth ?</h2>
             <p className="text-xl opacity-90 mb-8">
-              Offrez à vos invités une solution photo contemporaine, hygiénique et sans contrainte.
+              Offrez à vos invités une solution photobooth QR code contemporaine, hygiénique et sans contrainte.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                <Link
