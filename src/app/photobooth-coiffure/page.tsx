@@ -82,7 +82,7 @@ export default function PhotoboothCoiffure() {
     },
     {
       question: "Combien de styles de coiffures sont disponibles ?",
-      answer: "Nous proposons plus de 500 coupes différentes (bob, pixie, dégradés, etc.) et plus de 200 couleurs (naturelles, highlights, ombré, couleurs fantaisie). Notre bibliothèque s'enrichit chaque mois avec les dernières tendances."
+      answer: "Nous proposons plus de 200 coupes différentes (bob, pixie, dégradés, etc.) et plus de 50 teintes (naturelles, highlights, ombré, couleurs fantaisie). Notre bibliothèque s'enrichit chaque mois avec les dernières tendances."
     },
     {
       question: "La tablette est-elle facile à utiliser pour mes clients ?",
@@ -183,11 +183,11 @@ export default function PhotoboothCoiffure() {
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-pink-100">
                   <Scissors className="w-5 h-5 text-pink-600 mr-2" />
-                  <span className="font-medium">+500 coupes disponibles</span>
+                  <span className="font-medium">+200 coupes disponibles</span>
                 </div>
                 <div className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-purple-100">
                   <Palette className="w-5 h-5 text-purple-600 mr-2" />
-                  <span className="font-medium">+200 couleurs</span>
+                  <span className="font-medium">+50 teintes</span>
                 </div>
                 <div className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-indigo-100">
                   <Sparkles className="w-5 h-5 text-indigo-600 mr-2" />
@@ -293,7 +293,7 @@ export default function PhotoboothCoiffure() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2">Essayage Virtuel</h3>
                 <p className="text-gray-600 text-sm">
-                  +500 styles de coiffures et couleurs pour des simulations ultra-réalistes
+                  +200 styles de coiffures et couleurs pour des simulations ultra-réalistes
                 </p>
               </div>
 
@@ -359,7 +359,7 @@ export default function PhotoboothCoiffure() {
                 </p>
                 <div className="flex items-center text-purple-400">
                   <Scissors className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">+500 styles disponibles</span>
+                  <span className="font-semibold">+200 styles disponibles</span>
                 </div>
               </div>
             </div>
@@ -529,7 +529,7 @@ export default function PhotoboothCoiffure() {
                 {
                   step: "02", 
                   title: "Choisissez une coupe",
-                  description: "Parcourez plus de 500 styles de coiffures",
+                  description: "Parcourez plus de 200 styles de coiffures",
                   color: "from-blue-500 to-purple-500",
                   icon: <Scissors className="w-8 h-8" />
                 },
@@ -598,13 +598,15 @@ export default function PhotoboothCoiffure() {
                 <p className="text-xl text-gray-700 mb-8">
                   En moins de <span className="text-purple-600 font-bold">30 secondes</span>, découvrez votre coiffure idéale grâce à notre IA coiffure avancée.
                 </p>
-                <Link
-                  href="#demo"
+                <a
+                  href="https://photobooth.waibooth.app/photobooth-ia/admin/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-lg group"
                 >
                   <span>Essayer maintenant</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -1198,12 +1200,14 @@ export default function PhotoboothCoiffure() {
             <p className="text-lg text-gray-700 mb-6">
               <strong>+497 autres styles disponibles</strong> dans notre photobooth IA
             </p>
-            <Link
-              href="#demo"
+            <a
+              href="https://photobooth.waibooth.app/photobooth-ia/admin/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
             >
               Essayer maintenant
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -1403,7 +1407,7 @@ export default function PhotoboothCoiffure() {
                       
                       // Ouverture de la fenêtre
                       const photoboothWindow = window.open(
-                        'https://localhost:3000/photobooth-coiffure/coiffure003',
+                        'https://photobooth.waibooth.app/photobooth-ia/admin/login',
                         'photobooth',
                         windowFeatures
                       );
@@ -1438,7 +1442,7 @@ export default function PhotoboothCoiffure() {
                       e.currentTarget.style.boxShadow = '0 4px 15px rgba(127, 90, 240, 0.3)';
                     }}
                   >
-                    📸 Ouvrir le Photobooth
+                     Ouvrir le Photobooth
                   </button>
                 </div>
                 
@@ -1566,116 +1570,74 @@ export default function PhotoboothCoiffure() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Nos Offres Tarifaires</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Choisissez l'offre qui correspond à vos besoins avec notre système de crédits flexible
+              Choisissez l'offre qui correspond à vos besoins avec nos formules mensuelles flexibles
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Offre Freemium */}
+            {/* Offre Start */}
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="bg-gradient-to-r from-gray-400 to-gray-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-blue-400 to-blue-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Offre Freemium</h3>
-                <p className="text-gray-600">Parfait pour tester nos services</p>
+                <h3 className="text-2xl font-bold mb-2">Start</h3>
+                <p className="text-gray-600">Idéal pour une expérience photo ludique lors d'événements et de fêtes du quotidien.</p>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>3 crédits inclus</span>
+                  <span>100 photos / mois</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Accès aux coiffures de base</span>
+                  <span>Génération IA illimitée</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Support communautaire</span>
+                  <span>Support standard</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Résolution standard</span>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">0€</div>
-                  <div className="text-sm text-gray-600">Gratuit</div>
-                  <div className="text-xs text-gray-500 mt-1">3 crédits offerts</div>
-                </div>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-gray-400 to-gray-600 text-white py-3 rounded-xl font-semibold hover:from-gray-500 hover:to-gray-700 transition-all duration-300">
-                Commencer gratuitement
-              </button>
-            </div>
-
-            {/* Offre Essentiel */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="text-center mb-6">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Tablet className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Offre Essentiel</h3>
-                <p className="text-gray-600">Idéal pour les petits salons</p>
-              </div>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>200 crédits inclus</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>Accès à toutes les coiffures</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>Support par email</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>Résolution HD</span>
+                  <span>Accès web uniquement</span>
                 </div>
               </div>
 
               <div className="bg-blue-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">49€</div>
+                  <div className="text-3xl font-bold text-gray-800">19€</div>
                   <div className="text-sm text-gray-600">par mois</div>
-                  <div className="text-xs text-gray-500 mt-1">200 crédits inclus</div>
+                  <div className="text-xs text-gray-500 mt-1">100 photos incluses</div>
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
-                Choisir Essentiel
+              <button className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 rounded-xl font-semibold hover:from-blue-500 hover:to-blue-700 transition-all duration-300">
+                Choisir
               </button>
             </div>
 
-            {/* Offre Pro */}
+            {/* Offre Essentiel - Populaire */}
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group border-2 border-purple-200">
               <div className="text-center mb-6">
                 <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Crown className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Offre Pro</h3>
-                <p className="text-gray-600">Pour les salons moyens</p>
+                <h3 className="text-2xl font-bold mb-2">Essentiel</h3>
+                <p className="text-gray-600">Parfait pour les événements réguliers et les petites entreprises.</p>
                 <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mt-2 inline-block">
-                  Le plus populaire
+                  Populaire
                 </div>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>500 crédits inclus</span>
+                  <span>400 photos / mois</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Toutes les fonctionnalités</span>
+                  <span>Toutes les fonctionnalités Start</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
@@ -1683,24 +1645,66 @@ export default function PhotoboothCoiffure() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Analytics avancées</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span>Branding personnalisé</span>
+                  <span>API dédiée</span>
                 </div>
               </div>
 
               <div className="bg-purple-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">79€</div>
+                  <div className="text-3xl font-bold text-gray-800">49€</div>
                   <div className="text-sm text-gray-600">par mois</div>
-                  <div className="text-xs text-gray-500 mt-1">500 crédits inclus</div>
+                  <div className="text-xs text-gray-500 mt-1">400 photos incluses</div>
                 </div>
               </div>
 
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300">
-                Choisir Pro
+                Choisir
+              </button>
+            </div>
+
+            {/* Offre Pro */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Pro</h3>
+                <p className="text-gray-600">Conçu pour les professionnels souhaitant automatiser et personnaliser leurs animations photo.</p>
+              </div>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>1000 photos / mois</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Toutes les fonctionnalités Essentiel</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Personnalisation avancée</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>Gestion multi-utilisateurs</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-500" />
+                  <span>SLA 99.9%</span>
+                </div>
+              </div>
+
+              <div className="bg-indigo-50 rounded-xl p-4 mb-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-800">89€</div>
+                  <div className="text-sm text-gray-600">par mois</div>
+                  <div className="text-xs text-gray-500 mt-1">1000 photos incluses</div>
+                </div>
+              </div>
+
+              <button className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-indigo-700 transition-all duration-300">
+                Choisir
               </button>
             </div>
 
@@ -1708,16 +1712,16 @@ export default function PhotoboothCoiffure() {
             <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="text-center mb-6">
                 <div className="bg-gradient-to-r from-orange-500 to-red-600 p-4 rounded-2xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-8 h-8 text-white" />
+                  <Crown className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Offre Premium</h3>
-                <p className="text-gray-600">Pour les grands salons</p>
+                <h3 className="text-2xl font-bold mb-2">Premium</h3>
+                <p className="text-gray-600">Solution premium pour les entreprises exigeantes avec besoins avancés et support dédié.</p>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>1200 crédits inclus</span>
+                  <span>1500 photos / mois</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
@@ -1725,46 +1729,167 @@ export default function PhotoboothCoiffure() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Support dédié 24/7</span>
+                  <span>Support 24/7</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>API personnalisée</span>
+                  <span>Intégrations avancées</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>Formation équipe incluse</span>
+                  <span>Accès prioritaire aux nouvelles fonctionnalités</span>
                 </div>
               </div>
 
               <div className="bg-orange-50 rounded-xl p-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">129€</div>
+                  <div className="text-3xl font-bold text-gray-800">119€</div>
                   <div className="text-sm text-gray-600">par mois</div>
-                  <div className="text-xs text-gray-500 mt-1">1200 crédits inclus</div>
+                  <div className="text-xs text-gray-500 mt-1">1500 photos incluses</div>
                 </div>
               </div>
 
               <button className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300">
-                Choisir Premium
+                Choisir
               </button>
             </div>
           </div>
 
-          {/* Explication du système de crédits */}
+          {/* Section Packs Additionnels */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4">Packs Photos Additionnels</h3>
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                Besoin de plus de photos ? Ajoutez des packs à votre quota actuel
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* Pack +100 Photos */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-gray-100">
+                <div className="text-center mb-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 mb-6">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">+100</div>
+                    <div className="text-sm text-blue-500 uppercase tracking-wider">Photos</div>
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-800">Pack Starter</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">Perfect pour augmenter ponctuellement votre quota mensuel</p>
+                </div>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Photos additionnelles</span>
+                    <span className="text-sm font-bold text-blue-600">+100</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Validité</span>
+                    <span className="text-sm font-bold text-gray-800">Ajouté immédiatement</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-700 mb-1">9.9€</div>
+                    <div className="text-sm text-blue-600 font-medium">paiement unique</div>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Ajouter au panier
+                </button>
+              </div>
+
+              {/* Pack +500 Photos - Populaire */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:scale-105 border-2 border-green-200 relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    Le plus populaire
+                  </div>
+                </div>
+                
+                <div className="text-center mb-6 pt-4">
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 mb-6">
+                    <div className="text-3xl font-bold text-green-600 mb-2">+500</div>
+                    <div className="text-sm text-green-500 uppercase tracking-wider">Photos</div>
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-800">Pack Business</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">Idéal pour les périodes de forte activité et les événements</p>
+                </div>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Photos additionnelles</span>
+                    <span className="text-sm font-bold text-green-600">+500</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Économie vs 5x Pack +100</span>
+                    <span className="text-sm font-bold text-green-600">-10€</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-50 to-emerald-100 rounded-2xl p-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-700 mb-1">39.9€</div>
+                    <div className="text-sm text-green-600 font-medium">paiement unique</div>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-2xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Ajouter au panier
+                </button>
+              </div>
+
+              {/* Pack +1000 Photos */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-gray-100">
+                <div className="text-center mb-6">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 mb-6">
+                    <div className="text-3xl font-bold text-purple-600 mb-2">+1000</div>
+                    <div className="text-sm text-purple-500 uppercase tracking-wider">Photos</div>
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-800">Pack Premium</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">Pour les professionnels avec de gros volumes de production</p>
+                </div>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Photos additionnelles</span>
+                    <span className="text-sm font-bold text-purple-600">+1000</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Économie vs 10x Pack +100</span>
+                    <span className="text-sm font-bold text-purple-600">-19€</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-700 mb-1">79.9€</div>
+                    <div className="text-sm text-purple-600 font-medium">paiement unique</div>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-2xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Ajouter au panier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Explication du système de photos */}
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-center mb-8">Comment fonctionnent les crédits ?</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">Comment fonctionnent les photos ?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">🤖</span>
+                  <span className="text-white font-bold text-xl">📸</span>
                 </div>
-                <h4 className="text-xl font-bold mb-2">Consommation selon le modèle IA</h4>
+                <h4 className="text-xl font-bold mb-2">Quota mensuel de photos</h4>
                 <p className="text-gray-600">
-                  La consommation de crédits dépend du modèle IA choisi :
-                  <br />• <strong>Modèle Standard :</strong> 1 crédit par essayage
-                  <br />• <strong>Modèle Avancé :</strong> 2 crédits par essayage
-                  <br />• <strong>Modèle Premium :</strong> 3 crédits par essayage
+                  Chaque formule inclut un nombre défini de photos générées par mois :
+                  <br />• <strong>Start :</strong> 100 photos/mois
+                  <br />• <strong>Essentiel :</strong> 400 photos/mois
+                  <br />• <strong>Pro :</strong> 1000 photos/mois
+                  <br />• <strong>Premium :</strong> 1500 photos/mois
                 </p>
               </div>
               
@@ -1772,38 +1897,41 @@ export default function PhotoboothCoiffure() {
                 <div className="bg-gradient-to-r from-purple-500 to-pink-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white font-bold text-xl">📊</span>
                 </div>
-                <h4 className="text-xl font-bold mb-2">Suivi de consommation en temps réel</h4>
+                <h4 className="text-xl font-bold mb-2">Suivi en temps réel</h4>
                 <p className="text-gray-600">
-                  Suivez votre consommation de crédits en temps réel avec notre dashboard. 
-                  Chaque essayage consomme 1 crédit, vous gardez le contrôle total de votre utilisation.
+                  Suivez votre consommation de photos en temps réel avec notre dashboard. 
+                  Chaque photo générée avec l'IA compte dans votre quota mensuel.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="bg-gradient-to-r from-green-500 to-teal-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">+</span>
+                  <span className="text-white font-bold text-xl">🔄</span>
                 </div>
-                <h4 className="text-xl font-bold mb-2">Recharge automatique</h4>
+                <h4 className="text-xl font-bold mb-2">Renouvellement automatique</h4>
                 <p className="text-gray-600">
-                  Vos crédits se rechargent automatiquement chaque mois selon votre abonnement. 
-                  Crédits non utilisés reportés sur le mois suivant.
+                  Votre quota se renouvelle automatiquement chaque mois à la date d'anniversaire de votre abonnement. 
+                  Photos non utilisées perdues en fin de mois.
                 </p>
               </div>
             </div>
             
             <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
               <div className="text-center">
-                <h4 className="text-lg font-bold mb-2">💡 Besoin de plus de crédits ?</h4>
+                <h4 className="text-lg font-bold mb-2">💡 Besoin de plus de photos ?</h4>
                 <p className="text-gray-700 mb-4">
-                  Vous pouvez acheter des crédits supplémentaires à tout moment ou passer à une offre supérieure. 
-                  Contactez notre équipe pour des besoins spécifiques.
+                  Vous pouvez acheter des packs de photos supplémentaires à tout moment ou passer à une formule supérieure. 
+                  Les packs s'ajoutent à votre quota actuel.
                 </p>
                 <div className="flex justify-center space-x-4 text-sm">
                   <span className="bg-white px-3 py-1 rounded-full">
-                    <strong>Pack 100 crédits :</strong> 15€
+                    <strong>Pack +100 photos :</strong> 9.9€
                   </span>
                   <span className="bg-white px-3 py-1 rounded-full">
-                    <strong>Pack 500 crédits :</strong> 65€
+                    <strong>Pack +500 photos :</strong> 39.9€
+                  </span>
+                  <span className="bg-white px-3 py-1 rounded-full">
+                    <strong>Pack +1000 photos :</strong> 79.9€
                   </span>
                 </div>
               </div>
@@ -1818,29 +1946,29 @@ export default function PhotoboothCoiffure() {
                 <thead>
                   <tr className="border-b-2 border-gray-200">
                     <th className="text-left py-4 px-6 font-bold text-gray-800">Fonctionnalités</th>
-                    <th className="text-center py-4 px-4 font-bold text-gray-600">
-                      <div className="flex flex-col items-center">
-                        <span className="text-lg font-bold text-gray-800">Freemium</span>
-                        <span className="text-sm text-gray-500">0€</span>
-                      </div>
-                    </th>
                     <th className="text-center py-4 px-4 font-bold text-blue-600">
                       <div className="flex flex-col items-center">
-                        <span className="text-lg font-bold text-blue-800">Essentiel</span>
-                        <span className="text-sm text-blue-600">49€/mois</span>
+                        <span className="text-lg font-bold text-blue-800">Start</span>
+                        <span className="text-sm text-blue-600">19€/mois</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 font-bold text-purple-600">
                       <div className="flex flex-col items-center">
-                        <span className="text-lg font-bold text-purple-800">Pro</span>
-                        <span className="text-sm text-purple-600">79€/mois</span>
+                        <span className="text-lg font-bold text-purple-800">Essentiel</span>
+                        <span className="text-sm text-purple-600">49€/mois</span>
                         <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full mt-1">Populaire</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 font-bold text-indigo-600">
+                      <div className="flex flex-col items-center">
+                        <span className="text-lg font-bold text-indigo-800">Pro</span>
+                        <span className="text-sm text-indigo-600">89€/mois</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 font-bold text-orange-600">
                       <div className="flex flex-col items-center">
                         <span className="text-lg font-bold text-orange-800">Premium</span>
-                        <span className="text-sm text-orange-600">129€/mois</span>
+                        <span className="text-sm text-orange-600">119€/mois</span>
                       </div>
                     </th>
                   </tr>
@@ -1848,11 +1976,11 @@ export default function PhotoboothCoiffure() {
                 <tbody>
                   {[
                     { 
-                      feature: "Crédits mensuels inclus", 
-                      freemium: "3 crédits", 
-                      essentiel: "200 crédits", 
-                      pro: "500 crédits", 
-                      premium: "1200 crédits" 
+                      feature: "Photos mensuelles incluses", 
+                      start: "100 photos", 
+                      essentiel: "400 photos", 
+                      pro: "1000 photos", 
+                      premium: "1500 photos" 
                     },
                     { 
                       feature: "Essayage virtuel coiffures", 
@@ -1956,21 +2084,21 @@ export default function PhotoboothCoiffure() {
                     <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-4 px-6 font-medium text-gray-800">{row.feature}</td>
                       
-                      {/* Freemium */}
+                      {/* Start */}
                       <td className="py-4 px-4 text-center">
-                        {typeof row.freemium === 'boolean' ? (
-                          row.freemium ? (
+                        {typeof row.start === 'boolean' ? (
+                          row.start ? (
                             <Check className="w-5 h-5 text-green-500 mx-auto" />
                           ) : (
                             <span className="text-gray-300 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-gray-700 text-sm">{row.freemium}</span>
+                          <span className="text-blue-700 text-sm font-medium">{row.start}</span>
                         )}
                       </td>
                       
                       {/* Essentiel */}
-                      <td className="py-4 px-4 text-center">
+                      <td className="py-4 px-4 text-center bg-purple-50">
                         {typeof row.essentiel === 'boolean' ? (
                           row.essentiel ? (
                             <Check className="w-5 h-5 text-green-500 mx-auto" />
@@ -1978,12 +2106,12 @@ export default function PhotoboothCoiffure() {
                             <span className="text-gray-300 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-blue-700 text-sm font-medium">{row.essentiel}</span>
+                          <span className="text-purple-700 text-sm font-medium">{row.essentiel}</span>
                         )}
                       </td>
                       
                       {/* Pro */}
-                      <td className="py-4 px-4 text-center bg-purple-50">
+                      <td className="py-4 px-4 text-center">
                         {typeof row.pro === 'boolean' ? (
                           row.pro ? (
                             <Check className="w-5 h-5 text-green-500 mx-auto" />
@@ -1991,7 +2119,7 @@ export default function PhotoboothCoiffure() {
                             <span className="text-gray-300 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-purple-700 text-sm font-medium">{row.pro}</span>
+                          <span className="text-indigo-700 text-sm font-medium">{row.pro}</span>
                         )}
                       </td>
                       
@@ -2099,9 +2227,14 @@ export default function PhotoboothCoiffure() {
                       "Découvrez votre nouveau look avant de prendre rendez-vous"
                     </p>
                   </div>
-                  <button className="w-full py-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg font-semibold">
+                  <a 
+                    href="https://photobooth.waibooth.app/photobooth-ia/admin/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg font-semibold inline-block text-center hover:from-pink-700 hover:to-purple-700 transition-colors"
+                  >
                     Essayer maintenant
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2370,290 +2503,7 @@ export default function PhotoboothCoiffure() {
       {/* Container pour le popup photobooth */}
       <div id="photobooth-popup-container"></div>
       
-      {/* Script pour le bouton popup photobooth */}
-      <Script id="photobooth-popup-script" strategy="afterInteractive">
-        {`
-          (function() {
-            // Configuration du popup
-            const photoboothConfig = {
-              url: "https://localhost:3000/photobooth-coiffure/coiffure003",
-              buttonText: "📸 Photobooth",
-              buttonColor: "#7f5af0",
-              popupWidth: "480px",
-              popupHeight: "720px", // Augmenté de 600px à 720px pour réduire le scroll
-              useNewWindow: false // Changez à true pour forcer l'ouverture en nouvelle fenêtre
-            };
-
-            // CSS pour le popup
-            const styles = \`
-              #photobooth-trigger-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background: \${photoboothConfig.buttonColor};
-                color: white;
-                border: none;
-                border-radius: 50px;
-                padding: 15px 20px;
-                font-size: 16px;
-                font-weight: bold;
-                cursor: pointer;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                z-index: 9998;
-                transition: all 0.3s ease;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-              }
-              
-              #photobooth-trigger-btn:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-              }
-              
-              #photobooth-popup {
-                position: fixed;
-                bottom: 90px;
-                right: 20px;
-                width: \${photoboothConfig.popupWidth};
-                height: \${photoboothConfig.popupHeight};
-                background: white;
-                border-radius: 12px;
-                box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-                z-index: 9999;
-                display: none;
-                overflow: hidden;
-                border: 2px solid \${photoboothConfig.buttonColor};
-              }
-              
-              #photobooth-popup.show {
-                display: block;
-                animation: slideUp 0.3s ease;
-              }
-              
-              #photobooth-popup iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-              }
-              
-              #photobooth-close-btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: rgba(0,0,0,0.7);
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                font-size: 18px;
-                z-index: 10000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              }
-              
-              #photobooth-newwindow-btn {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                background: rgba(127, 90, 240, 0.9);
-                color: white;
-                border: none;
-                border-radius: 15px;
-                padding: 5px 10px;
-                font-size: 12px;
-                cursor: pointer;
-                z-index: 10000;
-                transition: all 0.3s ease;
-              }
-              
-              #photobooth-newwindow-btn:hover {
-                background: rgba(127, 90, 240, 1);
-                transform: scale(1.05);
-              }
-              
-              /* Notification d'aide pour la caméra */
-              #camera-help-notification {
-                position: absolute;
-                bottom: 50px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 193, 7, 0.95);
-                color: #856404;
-                padding: 8px 12px;
-                border-radius: 8px;
-                font-size: 11px;
-                font-weight: 500;
-                z-index: 10001;
-                display: none;
-                text-align: center;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                border: 1px solid #ffeaa7;
-              }
-              
-              @keyframes slideUp {
-                from { 
-                  opacity: 0; 
-                  transform: translateY(20px) scale(0.95); 
-                }
-                to { 
-                  opacity: 1; 
-                  transform: translateY(0) scale(1); 
-                }
-              }
-              
-              /* Responsive pour mobile */
-              @media (max-width: 768px) {
-                #photobooth-popup {
-                  bottom: 0;
-                  right: 0;
-                  left: 0;
-                  width: 100% !important;
-                  height: 85vh !important; /* Augmenté de 80vh à 85vh pour plus d'espace */
-                  border-radius: 12px 12px 0 0;
-                  max-height: 90vh; /* Hauteur maximale pour éviter les débordements */
-                }
-                
-                #photobooth-trigger-btn {
-                  bottom: 15px;
-                  right: 15px;
-                  padding: 12px 16px;
-                  font-size: 14px;
-                }
-              }
-              
-              /* Optimisation pour tablettes */
-              @media (max-width: 1024px) and (min-width: 769px) {
-                #photobooth-popup {
-                  width: 500px !important;
-                  height: 750px !important;
-                }
-              }
-            \`;
-
-            // Injection du CSS
-            const styleSheet = document.createElement('style');
-            styleSheet.textContent = styles;
-            document.head.appendChild(styleSheet);
-
-            // Fonction pour ouvrir en nouvelle fenêtre
-            function openInNewWindow() {
-              const screenWidth = window.screen.width;
-              const screenHeight = window.screen.height;
-              const windowWidth = Math.min(1200, screenWidth * 0.8);
-              const windowHeight = Math.min(800, screenHeight * 0.8);
-              const left = (screenWidth - windowWidth) / 2;
-              const top = (screenHeight - windowHeight) / 2;
-              
-              const windowFeatures = [
-                \`width=\${windowWidth}\`,
-                \`height=\${windowHeight}\`,
-                \`left=\${left}\`,
-                \`top=\${top}\`,
-                'resizable=yes',
-                'scrollbars=yes',
-                'status=no',
-                'menubar=no',
-                'toolbar=no',
-                'location=no'
-              ].join(',');
-              
-              const photoboothWindow = window.open(photoboothConfig.url, 'photobooth', windowFeatures);
-              if (photoboothWindow) {
-                photoboothWindow.focus();
-              } else {
-                alert('Les popups sont bloqués. Veuillez autoriser les popups pour ce site.');
-              }
-            }
-
-            // Création du bouton trigger
-            const triggerBtn = document.createElement('button');
-            triggerBtn.id = 'photobooth-trigger-btn';
-            triggerBtn.textContent = photoboothConfig.buttonText;
-            
-            // Création du popup
-            const popup = document.createElement('div');
-            popup.id = 'photobooth-popup';
-            
-            const closeBtn = document.createElement('button');
-            closeBtn.id = 'photobooth-close-btn';
-            closeBtn.innerHTML = '&times;';
-            
-            const newWindowBtn = document.createElement('button');
-            newWindowBtn.id = 'photobooth-newwindow-btn';
-            newWindowBtn.innerHTML = '🚀 Nouvelle fenêtre';
-            newWindowBtn.title = 'Ouvrir dans une nouvelle fenêtre pour un meilleur accès caméra';
-            
-            // Notification d'aide pour la caméra
-            const cameraHelp = document.createElement('div');
-            cameraHelp.id = 'camera-help-notification';
-            cameraHelp.innerHTML = '💡 Caméra bloquée ? Cliquez sur "Nouvelle fenêtre" ↑';
-            
-            const iframe = document.createElement('iframe');
-            iframe.src = photoboothConfig.url;
-            iframe.title = 'Photobooth';
-            // Permissions étendues pour un meilleur accès à la caméra
-            iframe.setAttribute('allow', 'camera *; microphone *; autoplay; encrypted-media; fullscreen; picture-in-picture; display-capture; geolocation');
-            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-presentation allow-downloads');
-            // Ajout de l'attribut importance pour prioriser le chargement
-            iframe.setAttribute('importance', 'high');
-            iframe.setAttribute('loading', 'eager');
-            
-            popup.appendChild(closeBtn);
-            popup.appendChild(newWindowBtn);
-            popup.appendChild(cameraHelp);
-            popup.appendChild(iframe);
-            
-            // Ajout au DOM
-            document.body.appendChild(triggerBtn);
-            document.body.appendChild(popup);
-            
-            // Gestion des événements
-            triggerBtn.addEventListener('click', function() {
-              if (photoboothConfig.useNewWindow) {
-                openInNewWindow();
-              } else {
-                popup.classList.add('show');
-                // Message d'aide pour l'accès caméra
-                setTimeout(() => {
-                  console.log('💡 Astuce: Si la caméra ne s\\'active pas, utilisez le bouton "Nouvelle fenêtre" pour un accès garanti.');
-                }, 1000);
-                
-                // Afficher la notification d'aide après 8 secondes
-                setTimeout(() => {
-                  if (popup.classList.contains('show')) {
-                    cameraHelp.style.display = 'block';
-                    // Masquer la notification après 5 secondes
-                    setTimeout(() => {
-                      cameraHelp.style.display = 'none';
-                    }, 5000);
-                  }
-                }, 8000);
-              }
-            });
-            
-            closeBtn.addEventListener('click', function() {
-              popup.classList.remove('show');
-              cameraHelp.style.display = 'none'; // Masquer la notification
-            });
-            
-            newWindowBtn.addEventListener('click', function() {
-              popup.classList.remove('show');
-              cameraHelp.style.display = 'none'; // Masquer la notification
-              openInNewWindow();
-            });
-            
-            // Fermer en cliquant à l'extérieur
-            document.addEventListener('click', function(e) {
-              if (!popup.contains(e.target) && e.target !== triggerBtn) {
-                popup.classList.remove('show');
-                cameraHelp.style.display = 'none'; // Masquer la notification
-              }
-            });
-          })();
-        `}
-      </Script>
+     
     </>
   );
 }

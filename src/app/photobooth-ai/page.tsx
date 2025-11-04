@@ -17,7 +17,7 @@ export default function PhotoBoothAI() {
             </p>
             <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
               <Image 
-                src="/photobooth-ai/hero.jpg"
+                src="/carrousel/pop-art.jpg"
                 alt="Photobooth IA en action"
                 width={1200}
                 height={675}
@@ -67,7 +67,7 @@ export default function PhotoBoothAI() {
             <div>
               <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl border-8 border-white">
                 <Image
-                  src="/photobooth-ai/preview.jpg"
+                  src="/steps/003_bis.png"
                   alt="Exemple de photobooth IA"
                   fill
                   className="object-cover"
@@ -157,42 +157,42 @@ export default function PhotoBoothAI() {
               {
                 title: "Artistique",
                 description: "Transformez vos photos en véritables œuvres d’art grâce à des styles IA variés (aquarelle, pop art, cartoon, etc).",
-                image: "/photobooth-ai/style-artistique.jpg",
+                image: "/carrousel/pop-art.jpg",
                 tag: "Populaire"
               },
               {
                 title: "Corporate",
                 description: "Personnalisez vos photos avec le branding de votre entreprise ou événement professionnel.",
-                image: "/photobooth-ai/style-corporate.jpg",
+                image: "/carrousel/Ancien.jpg",
                 tag: ""
               },
               {
                 title: "Fête & Mariage",
                 description: "Des cadres festifs et élégants pour sublimer les souvenirs de vos plus beaux événements.",
-                image: "/photobooth-ai/style-fete.jpg",
+                image: "/carrousel/Neon.jpg",
                 tag: ""
               },
               {
                 title: "Futuriste",
                 description: "Effets néon, cyberpunk et innovations visuelles pour des photos résolument modernes.",
-                image: "/photobooth-ai/style-futuriste.jpg",
+                image: "/carrousel/Cyberpunk.jpg",
                 tag: "Nouveau"
               },
               {
                 title: "Vintage",
                 description: "Filtres rétro et ambiance nostalgique pour un effet intemporel.",
-                image: "/photobooth-ai/style-vintage.jpg",
+                image: "/carrousel/Vintage.jpg",
                 tag: ""
               },
               {
                 title: "Sur-mesure",
                 description: "Nous créons des styles et modèles IA personnalisés selon vos besoins et votre identité.",
-                image: "/photobooth-ai/style-surmesure.jpg",
+                image: "/carrousel/retro.jpg",
                 tag: "Exclusif"
               }
             ].map((style, index) => (
               <div key={index} className="card bg-white overflow-hidden">
-                <div className="relative h-48">
+                <div className="relative h-96">
                   <Image
                     src={style.image}
                     alt={`Style photo ${style.title}`}
