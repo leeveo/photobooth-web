@@ -1977,7 +1977,7 @@ export default function PhotoboothCoiffure() {
                   {[
                     { 
                       feature: "Photos mensuelles incluses", 
-                      start: "100 photos", 
+                      freemium: "100 photos", 
                       essentiel: "400 photos", 
                       pro: "1000 photos", 
                       premium: "1500 photos" 
@@ -2086,14 +2086,14 @@ export default function PhotoboothCoiffure() {
                       
                       {/* Start */}
                       <td className="py-4 px-4 text-center">
-                        {typeof row.start === 'boolean' ? (
-                          row.start ? (
+                        {typeof row.freemium === 'boolean' ? (
+                          row.freemium ? (
                             <Check className="w-5 h-5 text-green-500 mx-auto" />
                           ) : (
                             <span className="text-gray-300 text-lg">—</span>
                           )
                         ) : (
-                          <span className="text-blue-700 text-sm font-medium">{row.start}</span>
+                          <span className="text-blue-700 text-sm font-medium">{row.freemium}</span>
                         )}
                       </td>
                       
